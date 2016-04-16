@@ -65,6 +65,18 @@ I called it *"Framework Oriented Programming"* and brought the joyfulness of pla
 
 # 4 - Example
 
+There's an example project in this repository that includes:
+- External dependencies resolved using CocoaPods.
+- Local dependencies added manually to the same workspace.
+- External dependencies for local frameworks using Carthage.
+
+1. Git clone the repository `git@github.com:pepibumur/framework-oriented-programming.git`
+2. Install bundle dependencies `bundle install`
+3. Install carthage if you didn't have it installed `brew install carthage`
+4. Execute `bundle exec pod install` to resolve CocoaPods dependencies and create the workspace with them.
+5. Execute `carthage update` to resolve Carthage dependencies.
+6. Open the project using `Example.xcworkspace`.
+
 # 5 - Open questions
 
 ### Is it possible to setup this architecture with CocoaPods/Carthage?
