@@ -29,6 +29,7 @@
 		2396F56D1CC49F7000F7373A /* FPersistencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FPersistencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2396F5721CC49F7000F7373A /* FPersistencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPersistencyTests.swift; sourceTree = "<group>"; };
 		2396F5741CC49F7000F7373A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2396F5A41CC509B900F7373A /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Config/Base.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,8 @@
 		2396F5591CC49F7000F7373A = {
 			isa = PBXGroup;
 			children = (
+				2396F5A31CC509A900F7373A /* Config */,
+				2396F5A21CC5099F00F7373A /* Frameworks */,
 				2396F5651CC49F7000F7373A /* FPersistency */,
 				2396F5711CC49F7000F7373A /* FPersistencyTests */,
 				2396F5641CC49F7000F7373A /* Products */,
@@ -84,6 +87,21 @@
 				2396F5741CC49F7000F7373A /* Info.plist */,
 			);
 			path = FPersistencyTests;
+			sourceTree = "<group>";
+		};
+		2396F5A21CC5099F00F7373A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2396F5A31CC509A900F7373A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				2396F5A41CC509B900F7373A /* Base.xcconfig */,
+			);
+			name = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +236,7 @@
 /* Begin XCBuildConfiguration section */
 		2396F5751CC49F7000F7373A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2396F5A41CC509B900F7373A /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -267,6 +286,7 @@
 		};
 		2396F5761CC49F7000F7373A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2396F5A41CC509B900F7373A /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -378,6 +398,7 @@
 				2396F5791CC49F7000F7373A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2396F57A1CC49F7000F7373A /* Build configuration list for PBXNativeTarget "FPersistencyTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +407,7 @@
 				2396F57C1CC49F7000F7373A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
