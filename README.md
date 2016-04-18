@@ -12,7 +12,8 @@ The ideas behind this paper are not new. They're based on existing principles an
 4. [Testing](#testing)
 5. [Example](#example)
 6. [Open questions](#open-questions)
-7. [References](#references)
+7. [Contribute](#contribute)
+8. [References](#references)
 
 # 1 - Context
 
@@ -127,5 +128,13 @@ Ideally external dependencies should be simplified because otherwise your depend
   - Checkout using **Git Submodules**.
 
 
-# 7 - References
-//TODO
+# 7 - Contribute
+If you want to contribute with the paper, you can:
+
+- **Create a PR:** With your proposal. Make sure to include an explicit description about what you're trying to merge into the source project.
+- **Open an Issue:** With any error or incoherence you might have found.
+
+
+# 8 - References
+
+- **Library Oriented Programming** *(Justin Spahr-Summers)* - [Link](https://realm.io/news/justin-spahr-summers-library-oriented-programming/)
