@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:FCore/FCore.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FPersistency/FPersistency.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FNetworking/FNetworking.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FFoundation/FFoundation.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:OSX/OSX.xcodeproj">
    </FileRef>
    <FileRef
