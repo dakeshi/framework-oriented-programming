@@ -84,6 +84,7 @@ There's an example project in this repository that includes:
 - External dependencies for local frameworks using Carthage.
 
 To setup the project locally:
+
 1. Git clone the repository `git@github.com:pepibumur/framework-oriented-programming.git`
 2. Install bundle dependencies `bundle install`
 3. Install carthage if you didn't have it installed `brew install carthage`
