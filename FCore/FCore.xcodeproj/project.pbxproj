@@ -10,6 +10,9 @@
 		2396F58B1CC49FB900F7373A /* FCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2396F58A1CC49FB900F7373A /* FCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2396F5921CC49FB900F7373A /* FCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F5871CC49FB900F7373A /* FCore.framework */; };
 		2396F5971CC49FB900F7373A /* FCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396F5961CC49FB900F7373A /* FCoreTests.swift */; };
+		2396F5BB1CC52BE600F7373A /* FFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F5B61CC52BE600F7373A /* FFoundation.framework */; };
+		2396F5BD1CC52BE600F7373A /* FPersistency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F5B81CC52BE600F7373A /* FPersistency.framework */; };
+		2396F5C21CC52C1A00F7373A /* FNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F5C11CC52C1A00F7373A /* FNetworking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,12 @@
 		2396F5911CC49FB900F7373A /* FCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2396F5961CC49FB900F7373A /* FCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCoreTests.swift; sourceTree = "<group>"; };
 		2396F5981CC49FB900F7373A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2396F5B51CC52BC400F7373A /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		2396F5B61CC52BE600F7373A /* FFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2396F5B81CC52BE600F7373A /* FPersistency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FPersistency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2396F5B91CC52BE600F7373A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2396F5BA1CC52BE600F7373A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2396F5C11CC52C1A00F7373A /* FNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +45,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2396F5C21CC52C1A00F7373A /* FNetworking.framework in Frameworks */,
+				2396F5BB1CC52BE600F7373A /* FFoundation.framework in Frameworks */,
+				2396F5BD1CC52BE600F7373A /* FPersistency.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +65,8 @@
 		2396F57D1CC49FB900F7373A = {
 			isa = PBXGroup;
 			children = (
+				2396F5C01CC52BEC00F7373A /* Frameworks */,
+				2396F5B41CC52BC400F7373A /* Config */,
 				2396F5891CC49FB900F7373A /* FCore */,
 				2396F5951CC49FB900F7373A /* FCoreTests */,
 				2396F5881CC49FB900F7373A /* Products */,
@@ -84,6 +98,27 @@
 				2396F5981CC49FB900F7373A /* Info.plist */,
 			);
 			path = FCoreTests;
+			sourceTree = "<group>";
+		};
+		2396F5B41CC52BC400F7373A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				2396F5B51CC52BC400F7373A /* Base.xcconfig */,
+			);
+			name = Config;
+			path = ../Config;
+			sourceTree = "<group>";
+		};
+		2396F5C01CC52BEC00F7373A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2396F5C11CC52C1A00F7373A /* FNetworking.framework */,
+				2396F5B61CC52BE600F7373A /* FFoundation.framework */,
+				2396F5B81CC52BE600F7373A /* FPersistency.framework */,
+				2396F5B91CC52BE600F7373A /* Realm.framework */,
+				2396F5BA1CC52BE600F7373A /* RealmSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +253,7 @@
 /* Begin XCBuildConfiguration section */
 		2396F5991CC49FB900F7373A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2396F5B51CC52BC400F7373A /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -267,6 +303,7 @@
 		};
 		2396F59A1CC49FB900F7373A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2396F5B51CC52BC400F7373A /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -378,6 +415,7 @@
 				2396F59D1CC49FB900F7373A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2396F59E1CC49FB900F7373A /* Build configuration list for PBXNativeTarget "FCoreTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +424,7 @@
 				2396F5A01CC49FB900F7373A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

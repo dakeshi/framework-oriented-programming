@@ -1,0 +1,9 @@
+use_frameworks!
+
+target 'iOS' do
+
+end
+
+target 'iOSTests' do
+
+end

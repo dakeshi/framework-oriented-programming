@@ -29,6 +29,7 @@
 		2396F5251CC49F4800F7373A /* FFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2396F52A1CC49F4800F7373A /* FFoundationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFoundationTests.swift; sourceTree = "<group>"; };
 		2396F52C1CC49F4800F7373A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2396F5A61CC50A2100F7373A /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Config/Base.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 		2396F5111CC49F4800F7373A = {
 			isa = PBXGroup;
 			children = (
+				2396F5A51CC50A1500F7373A /* Config */,
 				2396F51D1CC49F4800F7373A /* FFoundation */,
 				2396F5291CC49F4800F7373A /* FFoundationTests */,
 				2396F51C1CC49F4800F7373A /* Products */,
@@ -84,6 +86,14 @@
 				2396F52C1CC49F4800F7373A /* Info.plist */,
 			);
 			path = FFoundationTests;
+			sourceTree = "<group>";
+		};
+		2396F5A51CC50A1500F7373A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				2396F5A61CC50A2100F7373A /* Base.xcconfig */,
+			);
+			name = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +228,7 @@
 /* Begin XCBuildConfiguration section */
 		2396F52D1CC49F4800F7373A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2396F5A61CC50A2100F7373A /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -267,6 +278,7 @@
 		};
 		2396F52E1CC49F4800F7373A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2396F5A61CC50A2100F7373A /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -378,6 +390,7 @@
 				2396F5311CC49F4800F7373A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2396F5321CC49F4800F7373A /* Build configuration list for PBXNativeTarget "FFoundationTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +399,7 @@
 				2396F5341CC49F4800F7373A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

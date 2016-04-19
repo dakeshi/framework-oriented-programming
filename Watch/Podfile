@@ -1,0 +1,17 @@
+use_frameworks!
+
+target 'Watch' do
+
+end
+
+target 'WatchTests' do
+
+end
+
+target 'Watch WatchKit App' do
+
+end
+
+target 'Watch WatchKit Extension' do
+
+end

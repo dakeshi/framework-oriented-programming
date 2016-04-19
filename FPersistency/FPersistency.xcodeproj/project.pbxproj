@@ -10,6 +10,9 @@
 		2396F5671CC49F7000F7373A /* FPersistency.h in Headers */ = {isa = PBXBuildFile; fileRef = 2396F5661CC49F7000F7373A /* FPersistency.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2396F56E1CC49F7000F7373A /* FPersistency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F5631CC49F7000F7373A /* FPersistency.framework */; };
 		2396F5731CC49F7000F7373A /* FPersistencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396F5721CC49F7000F7373A /* FPersistencyTests.swift */; };
+		2396F5AE1CC50F0700F7373A /* FFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F5AD1CC50F0700F7373A /* FFoundation.framework */; };
+		2396F5C31CC52CFA00F7373A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F5A91CC50B3200F7373A /* Realm.framework */; };
+		2396F5C41CC52CFA00F7373A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F5AB1CC50B4000F7373A /* RealmSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +33,9 @@
 		2396F5721CC49F7000F7373A /* FPersistencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPersistencyTests.swift; sourceTree = "<group>"; };
 		2396F5741CC49F7000F7373A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2396F5A41CC509B900F7373A /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Config/Base.xcconfig; sourceTree = "<group>"; };
+		2396F5A91CC50B3200F7373A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2396F5AB1CC50B4000F7373A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2396F5AD1CC50F0700F7373A /* FFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2396F5C31CC52CFA00F7373A /* Realm.framework in Frameworks */,
+				2396F5C41CC52CFA00F7373A /* RealmSwift.framework in Frameworks */,
+				2396F5AE1CC50F0700F7373A /* FFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +101,9 @@
 		2396F5A21CC5099F00F7373A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2396F5AD1CC50F0700F7373A /* FFoundation.framework */,
+				2396F5AB1CC50B4000F7373A /* RealmSwift.framework */,
+				2396F5A91CC50B3200F7373A /* Realm.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

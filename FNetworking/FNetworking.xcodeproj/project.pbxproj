@@ -10,6 +10,7 @@
 		2396F5431CC49F5900F7373A /* FNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 2396F5421CC49F5900F7373A /* FNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2396F54A1CC49F5900F7373A /* FNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F53F1CC49F5900F7373A /* FNetworking.framework */; };
 		2396F54F1CC49F5900F7373A /* FNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396F54E1CC49F5900F7373A /* FNetworkingTests.swift */; };
+		2396F5B01CC52B4700F7373A /* FFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F5AF1CC52B4700F7373A /* FFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,8 @@
 		2396F5491CC49F5900F7373A /* FNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2396F54E1CC49F5900F7373A /* FNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNetworkingTests.swift; sourceTree = "<group>"; };
 		2396F5501CC49F5900F7373A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2396F5AF1CC52B4700F7373A /* FFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2396F5B31CC52BA700F7373A /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2396F5B01CC52B4700F7373A /* FFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +57,8 @@
 		2396F5351CC49F5900F7373A = {
 			isa = PBXGroup;
 			children = (
+				2396F5B21CC52BA700F7373A /* Config */,
+				2396F5B11CC52B4A00F7373A /* Frameworks */,
 				2396F5411CC49F5900F7373A /* FNetworking */,
 				2396F54D1CC49F5900F7373A /* FNetworkingTests */,
 				2396F5401CC49F5900F7373A /* Products */,
@@ -84,6 +90,23 @@
 				2396F5501CC49F5900F7373A /* Info.plist */,
 			);
 			path = FNetworkingTests;
+			sourceTree = "<group>";
+		};
+		2396F5B11CC52B4A00F7373A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2396F5AF1CC52B4700F7373A /* FFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2396F5B21CC52BA700F7373A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				2396F5B31CC52BA700F7373A /* Base.xcconfig */,
+			);
+			name = Config;
+			path = ../Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +241,7 @@
 /* Begin XCBuildConfiguration section */
 		2396F5511CC49F5900F7373A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2396F5B31CC52BA700F7373A /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -267,6 +291,7 @@
 		};
 		2396F5521CC49F5900F7373A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2396F5B31CC52BA700F7373A /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -378,6 +403,7 @@
 				2396F5551CC49F5900F7373A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2396F5561CC49F5900F7373A /* Build configuration list for PBXNativeTarget "FNetworkingTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +412,7 @@
 				2396F5581CC49F5900F7373A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
