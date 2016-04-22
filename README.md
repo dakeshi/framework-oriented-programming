@@ -5,14 +5,17 @@
 
 The ideas behind this paper are not new. They're based on existing principles and programming paradigms. My goal is to put them together, motivating and introducing Swift/Objective-C developers into something I called "Framework Oriented Programming (FOP)".
 
-
-1. [Context](#context)
-2. [Motivation](#motivation)
-3. [Principles](#principles)
-4. [Example](#example)
-5. [Open questions](#open-questions)
-6. [Contribute](#contribute)
-7. [References](#references)
+|   |  Section |
+|---|---|
+| :mag: |  [**Context**](#context) state of art in project architectures |
+| :candy: |  [**Motivation**](#motivation) why we came up with this architecture |
+| :one: |  [**Principles**](#principles): for a right implementation |
+| :metal: |  [**Example**](#example) to dive into |
+| :surfer: |  [**Tutorial**](#tutorial) how to implement it in your projects|
+| :question: |  [**Open Questions**](#open-questions) that you might also have |
+| :point_up: |  [**Contribute**](#contribute) and improve FOP |
+| :family: |  [**Contributors**](#contributors) because we, all, are part of this |
+| :book: |  [**Reference**](#reference) and resources that might be useful |
 
 ## Checklist :white_check_mark:
 
@@ -118,7 +121,16 @@ To setup the project locally:
 5. Execute `carthage update` to resolve Carthage dependencies.
 6. Open the project using `Example.xcworkspace`.
 
-# 5 - Open questions
+# 5 - Tutorial
+
+### 1. Workspace
+The first thing you need is a workspace where all the projects will be. If you already got the one from CocoaPods you can use that one. If not, from Xcode you can easily create it. From `File` select `Save as Workspace...`. Voila! :tada:, workspace created.
+
+### 2. Adding your first framework
+
+
+
+# 6 - Open questions
 
 ## Dependency managers
 
@@ -173,14 +185,17 @@ Ideally external dependencies should be simplified because otherwise your depend
   - Checkout using **Git Submodules**.
 
 
-# 6 - Contribute
+# 7 - Contribute
 If you want to contribute with the paper, you can:
 
 - **Create a PR:** With your proposal. Make sure to include an explicit description about what you're trying to merge into the source project.
 - **Open an Issue:** With any error or incoherence you might have found.
 
+# 8 - Contributors
 
-# 7 - References
+- Felix Gabel - [@blinker13](https://github.com/blinker13)
+
+# 9 - Reference
 
 - **Library Oriented Programming** *(Justin Spahr-Summers)* - [Link](https://realm.io/news/justin-spahr-summers-library-oriented-programming/)
 - **Building Modern Frameworks** *(Apple)* - [Link](https://developer.apple.com/videos/play/wwdc2014/416/)
