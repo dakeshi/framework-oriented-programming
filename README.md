@@ -159,7 +159,7 @@ If your frameworks code is `Swift` you don't have alternative other than using *
   - If your framework has only Objective-C.
   - If your framework is not shared across multiple frameworks.
   - **Disadvantages**
-    - Worse compilation time.
+    - Higher disk/memory consumption
 
 
 If you want to read more about static and dynamic frameworks and libraries I recommend you to go through [this](https://pewpewthespells.com/blog/static_and_dynamic_libraries.html) website.
