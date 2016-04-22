@@ -196,18 +196,29 @@ Using CocoaPods saves setup time since once you create the frameworks using the 
 ### Carthage
 Using Carthage for setting up your local dependencies doesn't make sense at all. However, if you need any external dependency, you can use the dependency resolution component of Carthage to checkout these projects in a `Carthage/Checkouts` folder and add them to the same workspace where all the frameworks projects are. If ask Carthage to build these dependencies into `.framework`s and use them instead, keep in mind that these frameworks are compiled with an *Xcode* and either if you update Xcode or checkout the project from the scratch, you will be forced to recompile them.
 
-## Git project/s
+## Git repository
 
 Another question that arises in regards frameworks is where should these frameworks be? Should they be in the same repository? Should they be in multiple repositories?
 
-You can choose what's best for you, the same principles explained above apply. However, if you don't want to make your development slower I'd recommend you to keep them in the same repository. **Why?** When you have the frameworks in multiples repositories every change involves a new commit, that has to be validates, reviewed and pushed to the remote repository, and then an update in the
+You can choose what's best for you, the same principles explained above apply. However, if you don't want to make your development slower I'd recommend you to keep them in the same repository.
 
-:warning: TODO :warning:
+**Why?**
+
+When you have the frameworks in multiples repositories every change involves a new commit, that has to be validated, reviewed and pushed to the remote repository. Then, your project has to be updated to point to the last `version`/`commit`/`tag` of your updated framework.
+
+**When should I move them into a different repository?**
+- When it's a consolidated Framework.
+- When it support versioning either using a Git tags, pod version, ...
+- When you designed it to be open source.
 
 ## Versioning
-Frameworks support versioning. Versioning is also supported by dependency managers. In case of CocoaPods, it's specified in the framework `.podspec` file and in Carthage using *Git releases*.
+Frameworks support versioning. Versioning is also supported by dependency managers. In case of CocoaPods, it's specified in the framework `.podspec` file and in Carthage using *Git releases*. Connected to the previous point, versioning doesn't make sense at all if all the frameworks are in the same repository. Only if you have them extracted in their own repositories versioning becomes useful.
 
-:warning: TODO :warning:
+**Why?**
+
+- You know what's new with each version.
+- You can easily point your app back to a previous version if a regression/bug was introduced.
+- You have stable snapshots of your frameworks instead of a constantly evolving codebase.
 
 ## Static or dynamic
 
