@@ -138,11 +138,13 @@ Using Carthage for setting up your local dependencies doesn't make sense at all.
 Another question that arises in regards frameworks is where should these frameworks be? Should they be in the same repository? Should they be in multiple repositories?
 
 You can choose what's best for you, the same principles explained above apply. However, if you don't want to make your development slower I'd recommend you to keep them in the same repository. **Why?** When you have the frameworks in multiples repositories every change involves a new commit, that has to be validates, reviewed and pushed to the remote repository, and then an update in the
-//todo
+
+:warning: TODO :warning:
 
 ## Versioning
 Frameworks support versioning. Versioning is also supported by dependency managers. In case of CocoaPods, it's specified in the framework `.podspec` file and in Carthage using *Git releases*.
-//TODO
+
+:warning: TODO :warning:
 
 ## Static or dynamic
 
