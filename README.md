@@ -84,7 +84,7 @@ This makes replacement in the future easier. For example if you used another per
 
 > Don't expose lower dependencies to upper levels. Wrap them!
 
-### 5. Private by default
+### 5. Internal by default
 If you're using **Swift**, congrats :tada:, you get this for free. All components are by default `internal` and they won't be visible form other frameworks unless you specify it with the `public` modifier. As soon as you start *"consuming"* your frameworks you'll figure out which components have to be `public`. In case of **Objective-C** keep the headers private in the target headers configuration and make `public` only these that must be visible. When a component is `public` the developers that are depending on that frameworks feel the *"freedom"* and *"flexibility"* that lead to a misuse and coupling with private code.
 
 > Make all the frameworks private by default and make public only these needed.
@@ -92,11 +92,15 @@ If you're using **Swift**, congrats :tada:, you get this for free. All component
 ### 6. Framework models
 Each framework should implement their own models. If you share models between multiple frameworks you are coupling these frameworks to the frameworks that provide these models. That said, a `Networking` framework should have defined models representing API responses, and a `Database` framework should have their own `Database` models. If these models are combined in a business logic framework, `Core` then they should be wrapped into different models.
 
-### 7. Platform frameworks
-Decouple your framework from platform specific frameworks. What does it mean? If there's a Framework that is `macOS` or `iOS` only, for example `UIKit` or `AppKit`, try to not couple your framework to it. Instead come up with these components that you might need, a `Color` or a `Font`  class/struct. Then you can create extensions and platform macros to convert these framework components into components that are easier to work with from the application.
+> Each framework defines its own models
+
+### 7. Platform abstraction
+Decouple your framework from platform specific frameworks. What does it mean? If there's a Framework that is `macOS` or `iOS` only, for example `UIKit` or `AppKit`, try to not couple your framework to it. Instead come up with these components that you might need, a `Color` or a `Font`  class/struct. You can create extensions and platform macros to convert these frameworks components into components that are easier to work with from the application.
 
 - Swift Preprocessor Directives: [Link](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/InteractingWithCAPIs.html#//apple_ref/doc/uid/TP40014216-CH8-XID_20)
 - Target conditionals and availability: [Link](https://www.cocoanetics.com/2012/09/target-conditionals-and-availability/)
+
+> Decoupled from platforms, extended to make it nicer to play with for platforms.
 
 # 4 - Example
 
@@ -134,13 +138,29 @@ Using Carthage for setting up your local dependencies doesn't make sense at all.
 Another question that arises in regards frameworks is where should these frameworks be? Should they be in the same repository? Should they be in multiple repositories?
 
 You can choose what's best for you, the same principles explained above apply. However, if you don't want to make your development slower I'd recommend you to keep them in the same repository. **Why?** When you have the frameworks in multiples repositories every change involves a new commit, that has to be validates, reviewed and pushed to the remote repository, and then an update in the
+//todo
 
 ## Versioning
 Frameworks support versioning. Versioning is also supported by dependency managers. In case of CocoaPods, it's specified in the framework `.podspec` file and in Carthage using *Git releases*.
 //TODO
 
 ## Static or dynamic
-//TODO
+
+If your frameworks code is `Swift` you don't have alternative other than using **dynamic frameworks**. They were recently introduced for iOS. Dynamic frameworks are linked with your app in runtime and allow embedding resources. Dynamically linked code allows reusability of your code, you can have two frameworks depending on the same framework without getting duplicated symbols errors. `Objective-C` can be either statically or dynamically linked. The benefit of static linking is that launch time is much better but these frameworks or libraries are hard to reuse unless you use a tool like [CocoaPods](https://cocoapods.orb) that helps with these conflicts that might arise with static libraries, making sure that they're not duplicated.
+
+- **Dynamic**
+  - If you framework includes Swift code.
+  - **Disadvantages**
+    - Worse load time.
+
+- **Static**
+  - If your framework has only Objective-C.
+  - If your framework is not shared across multiple frameworks.
+  - **Disadvantages**
+    - Worse compilation time.
+
+
+If you want to read more about static and dynamic frameworks and libraries I recommend you to go through [this](https://pewpewthespells.com/blog/static_and_dynamic_libraries.html) website.
 
 ## External dependencies
 Ideally external dependencies should be simplified because otherwise your dependencies tree complexity increases and you tie all your frameworks to these external sources. Try to avoid *wrappers* around system provided frameworks like `CoreData` or `Foundation`. If it's not possible to remove an external dependency from a local framework then find the best approach for integrating that dependency into your workspace:
@@ -166,3 +186,4 @@ If you want to contribute with the paper, you can:
 - **Awesome iOS** - [Link](https://github.com/vsouza/awesome-ios)
 - **How to create a Framework for iOS** - [Link](https://www.raywenderlich.com/65964/create-a-framework-for-ios)
 - **Framework vs Library** - [Link](http://www.knowstack.com/framework-vs-library-cocoa-ios/)
+- **Static and Dynamic LIbraries** - [Link](https://pewpewthespells.com/blog/static_and_dynamic_libraries.html)
