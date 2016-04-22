@@ -59,9 +59,24 @@ Frameworks that apparently had only one responsibility might get more later. It'
 
 Defining the responsibility of a framework is not easy. Think about a Framework as a box, that you give data to, it **does something** with your data, and provides you with some results. Does something is your framework's purpose. Keep that purpose simple and under a defined scope.
 
-### 2. Vertical dependency
+### 2. Vertical dependencies over horizontal
 
 Design your frameworks graph as a stack with multiple layers where the application is on the top. Avoid horizontal dependencies between frameworks in the same layer and prefer vertical dependencies down in the stack. If any framework needed to know about other, you might need a layer that *"puts them in touch"*, on top of them. A very simple example would be the data synchronization in your app. We might have a framework for an HTTP interaction with your API, another one for persisting the data and think about getting to know each other to persist the responses from one using the other one. You're unconsciously coupling these two frameworks horizontally. Let's come up with a new framework on top of these responsible of that *synchronization* between local and remote.
+
+### 3 - Lower in the stack, fewer dependencies
+The number of external dependencies should be directly proportional with the level of the framework in the stack *(i.e, the lower in the stack the less the external dependencies it should have)*. Dependencies of lower levels are also dependencies of upper levels, thus, the more dependencies we we have in these levels the more complex the graph and the setup becomes. Figure out if your Framework really needs that external dependency that you are thinking about. Most of the times we end up checking out dependencies to use only a few components from them. Checkout only these components/extensions/classes that you really need, or implement them by your own whenever it's possible.
+
+### 4. External dependencies wrapping
+If you needed an external dependency from your Frameworks, don't expose it to upper levels. Use it in `private` and wrap it if you need to expose it up in the stack.
+
+- **Models:** Wrap your dependency models into your framework ones.
+- **Protocols:** Proxy the dependency protocols with your framework ones.
+
+This makes replacement in the future easier. For example if you used another persistency solution like [Realm](https://realm.io) that uses their own defined models
+
+
+### 5. Private by default
+If you're using **Swift**, congrats :tada:, you get this for free. All components are by default `internal` and they won't be visible form other frameworks unless you specify it with the `public` modifier. As soon as you start *"consuming"* your frameworks you'll figure out which components have to be `public`. In case of **Objective-C** keep the headers private in the target headers configuration and make `public` only these that must be visible. When a component is `public` the developers that are depending on that frameworks feel the *"freedom"* and *"flexibility"* that lead to a misuse and coupling with private code.
 
 ### 3. One step dependencies
 
@@ -72,7 +87,6 @@ Design your frameworks graph as a stack with multiple layers where the applicati
 
 ### 6. Public protocol oriented interface
 
-### 7. Wrapped external dependencies
 
 # 4 - Testing
 
