@@ -151,7 +151,7 @@ Frameworks support versioning. Versioning is also supported by dependency manage
 If your frameworks code is `Swift` you don't have alternative other than using **dynamic frameworks**. They were recently introduced for iOS. Dynamic frameworks are linked with your app in runtime and allow embedding resources. Dynamically linked code allows reusability of your code, you can have two frameworks depending on the same framework without getting duplicated symbols errors. `Objective-C` can be either statically or dynamically linked. The benefit of static linking is that launch time is much better but these frameworks or libraries are hard to reuse unless you use a tool like [CocoaPods](https://cocoapods.orb) that helps with these conflicts that might arise with static libraries, making sure that they're not duplicated.
 
 - **Dynamic**
-  - If you framework includes Swift code.
+  - If your framework includes Swift code.
   - **Disadvantages**
     - Worse load time.
 
