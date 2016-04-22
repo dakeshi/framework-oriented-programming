@@ -12,7 +12,6 @@
 		2396F5971CC49FB900F7373A /* FCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396F5961CC49FB900F7373A /* FCoreTests.swift */; };
 		2396F5BB1CC52BE600F7373A /* FFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F5B61CC52BE600F7373A /* FFoundation.framework */; };
 		2396F5BD1CC52BE600F7373A /* FPersistency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F5B81CC52BE600F7373A /* FPersistency.framework */; };
-		2396F5C21CC52C1A00F7373A /* FNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F5C11CC52C1A00F7373A /* FNetworking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +36,6 @@
 		2396F5B81CC52BE600F7373A /* FPersistency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FPersistency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2396F5B91CC52BE600F7373A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2396F5BA1CC52BE600F7373A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2396F5C11CC52C1A00F7373A /* FNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +43,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2396F5C21CC52C1A00F7373A /* FNetworking.framework in Frameworks */,
 				2396F5BB1CC52BE600F7373A /* FFoundation.framework in Frameworks */,
 				2396F5BD1CC52BE600F7373A /* FPersistency.framework in Frameworks */,
 			);
@@ -112,7 +109,6 @@
 		2396F5C01CC52BEC00F7373A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2396F5C11CC52C1A00F7373A /* FNetworking.framework */,
 				2396F5B61CC52BE600F7373A /* FFoundation.framework */,
 				2396F5B81CC52BE600F7373A /* FPersistency.framework */,
 				2396F5B91CC52BE600F7373A /* Realm.framework */,
