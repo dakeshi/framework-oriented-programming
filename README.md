@@ -1,4 +1,4 @@
-# Framework Oriented Programming
+# Framework Oriented Programming (iOS/OSX/tvOS/watchOS)
 #### *Iteration 0.0.1*
 
 > The concept of Framework Oriented Programming is formulated as a set of principles that has been are and are improved as I iterate over this idea in real scenarios. Some of these principles might change. **Any open question that you might have feel free to propose it via email [pepibumur@gmail.com](mailto://pepibumur@gmail.com)**
@@ -17,10 +17,12 @@ The ideas behind this paper are not new. They're based on existing principles an
 | :family: |  [**Contributors**](#contributors) because we, all, are part of this |
 | :book: |  [**Reference**](#reference) and resources that might be useful |
 
-## Checklist :white_check_mark:
+## Checklist
 
 - [ ] Include a testing section.
-- [ ] Include a section explaining how to create and connect frameworks in the workspace.
+- [ ] Explain migration approaches.
+
+## Changelog
 
 # 1 - Context
 
@@ -104,6 +106,11 @@ Decouple your framework from platform specific frameworks. What does it mean? If
 - Target conditionals and availability: [Link](https://www.cocoanetics.com/2012/09/target-conditionals-and-availability/)
 
 > Decoupled from platforms, extended to make it nicer to play with for platforms.
+
+### 8. Protocol oriented interfaces
+Abstract your public interfaces with protocols. That decouples the access layer from the implementation. If a framework `A` depends on the protocol based interface of `B`, `B` can update its implementation without requiring any change in `A` *(since the exposed interface is the same)*. This principle is aligned with the Swift philosophy based on protocols, and that is well known as *Protocol Oriented Programming*. The same programming paradigm that applies to this principle. Your frameworks are responsible of certain tasks and you define them in a protocol based interface.
+
+> Define your Frameworks interfaces using protocols
 
 # 4 - Example
 
@@ -248,3 +255,4 @@ If you want to contribute with the paper, you can:
 - **How to create a Framework for iOS** - [Link](https://www.raywenderlich.com/65964/create-a-framework-for-ios)
 - **Framework vs Library** - [Link](http://www.knowstack.com/framework-vs-library-cocoa-ios/)
 - **Static and Dynamic LIbraries** - [Link](https://pewpewthespells.com/blog/static_and_dynamic_libraries.html)
+- **The Unofficial Guide to xccconfig files** - [Link](https://pewpewthespells.com/blog/xcconfig_guide.html)
