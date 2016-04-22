@@ -9,11 +9,15 @@ The ideas behind this paper are not new. They're based on existing principles an
 1. [Context](#context)
 2. [Motivation](#motivation)
 3. [Principles](#principles)
-4. [Testing](#testing)
-5. [Example](#example)
-6. [Open questions](#open-questions)
-7. [Contribute](#contribute)
-8. [References](#references)
+4. [Example](#example)
+5. [Open questions](#open-questions)
+6. [Contribute](#contribute)
+7. [References](#references)
+
+## Checklist :white_check_mark:
+
+- [ ] Include a testing section.
+- [ ] Include a section explaining how to create and connect frameworks in the workspace.
 
 # 1 - Context
 
@@ -59,38 +63,42 @@ Frameworks that apparently had only one responsibility might get more later. It'
 
 Defining the responsibility of a framework is not easy. Think about a Framework as a box, that you give data to, it **does something** with your data, and provides you with some results. Does something is your framework's purpose. Keep that purpose simple and under a defined scope.
 
+> Build single purpose boxes
+
 ### 2. Vertical dependencies over horizontal
 
 Design your frameworks graph as a stack with multiple layers where the application is on the top. Avoid horizontal dependencies between frameworks in the same layer and prefer vertical dependencies down in the stack. If any framework needed to know about other, you might need a layer that *"puts them in touch"*, on top of them. A very simple example would be the data synchronization in your app. We might have a framework for an HTTP interaction with your API, another one for persisting the data and think about getting to know each other to persist the responses from one using the other one. You're unconsciously coupling these two frameworks horizontally. Let's come up with a new framework on top of these responsible of that *synchronization* between local and remote.
 
+> Design your stack dependencies vertically
+
 ### 3 - Lower in the stack, fewer dependencies
 The number of external dependencies should be directly proportional with the level of the framework in the stack *(i.e, the lower in the stack the less the external dependencies it should have)*. Dependencies of lower levels are also dependencies of upper levels, thus, the more dependencies we we have in these levels the more complex the graph and the setup becomes. Figure out if your Framework really needs that external dependency that you are thinking about. Most of the times we end up checking out dependencies to use only a few components from them. Checkout only these components/extensions/classes that you really need, or implement them by your own whenever it's possible.
 
-### 4. External dependencies wrapping
-If you needed an external dependency from your Frameworks, don't expose it to upper levels. Use it in `private` and wrap it if you need to expose it up in the stack.
+> Reduce external dependencies as you go lower in the stack.
 
-- **Models:** Wrap your dependency models into your framework ones.
-- **Protocols:** Proxy the dependency protocols with your framework ones.
+### 4. One step dependencies
 
-This makes replacement in the future easier. For example if you used another persistency solution like [Realm](https://realm.io) that uses their own defined models
+Frameworks should know only about the framework below *(one step)*. Further dependencies should be wrapped by the framework you are depending on *(either these further dependencies are local or external)*. Never expose them up, proxy the protocols, and wrap the models from the framework.
 
+This makes replacement in the future easier. For example if you used another persistency solution like [Realm](https://realm.io) that uses their own defined models and you exposed them from your Framework
+
+> Don't expose lower dependencies to upper levels. Wrap them!
 
 ### 5. Private by default
 If you're using **Swift**, congrats :tada:, you get this for free. All components are by default `internal` and they won't be visible form other frameworks unless you specify it with the `public` modifier. As soon as you start *"consuming"* your frameworks you'll figure out which components have to be `public`. In case of **Objective-C** keep the headers private in the target headers configuration and make `public` only these that must be visible. When a component is `public` the developers that are depending on that frameworks feel the *"freedom"* and *"flexibility"* that lead to a misuse and coupling with private code.
 
-### 3. One step dependencies
+> Make all the frameworks private by default and make public only these needed.
 
+### 6. Framework models
+Each framework should implement their own models. If you share models between multiple frameworks you are coupling these frameworks to the frameworks that provide these models. That said, a `Networking` framework should have defined models representing API responses, and a `Database` framework should have their own `Database` models. If these models are combined in a business logic framework, `Core` then they should be wrapped into different models.
 
-### 3. Foundation
+### 7. Platform frameworks
+Decouple your framework from platform specific frameworks. What does it mean? If there's a Framework that is `macOS` or `iOS` only, for example `UIKit` or `AppKit`, try to not couple your framework to it. Instead come up with these components that you might need, a `Color` or a `Font`  class/struct. Then you can create extensions and platform macros to convert these framework components into components that are easier to work with from the application.
 
-### 5. Model domains
+- Swift Preprocessor Directives: [Link](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/InteractingWithCAPIs.html#//apple_ref/doc/uid/TP40014216-CH8-XID_20)
+- Target conditionals and availability: [Link](https://www.cocoanetics.com/2012/09/target-conditionals-and-availability/)
 
-### 6. Public protocol oriented interface
-
-
-# 4 - Testing
-
-# 5 - Example
+# 4 - Example
 
 There's an example project in this repository that includes:
 - External dependencies resolved using CocoaPods.
@@ -106,35 +114,35 @@ To setup the project locally:
 5. Execute `carthage update` to resolve Carthage dependencies.
 6. Open the project using `Example.xcworkspace`.
 
-# 6 - Open questions
+# 5 - Open questions
 
-### Dependency managers
+## Dependency managers
 
 It's possible. Both dependencies managers support either local or remote dependencies. Let's see the advantages/disadvantages of each approach:
 
-#### Manual
+### Manual
 When you setup everything manually, you have more control over it and it's harder to get the setup broken with Xcode updates. You have to invest some time to setup everything properly but once done you don't have to change it anymore unless you introduce new frameworks in the stack. Not exactly a disadvantage, but the manual process requires more context about *build settings*. Something you save with dependency managers like CocoaPods where the setup is abstracted in a specification file `.podspec` *(where you specify how your framework will be integrated with the application project)*.
 
-#### CocoaPods
+### CocoaPods
 Using CocoaPods saves setup time since once you create the frameworks using the command line script, the only thing the developer has to do is adding the dependencies between them in the `.podspec` files. As a disadvantage of this approach is that the control of the framework configuration is more on the CocoaPods side and it might get broken easily with Xcode updates. Moreover if you use any Swift dependency in your project, you're force to use `dynamic libraries` with all your dependencies, including your local ones. What if you want one of them to be static?. It's also hard to connect local dependencies since you cannot specify a `path` for your dependencies in the `.podspec`. There are workaround to that problem though, either you help CocoaPods discovering these dependencies in the Podfile, or just move them into different repositories and having a private CocoaPods repository.
 
-#### Carthage
+### Carthage
 Using Carthage for setting up your local dependencies doesn't make sense at all. However, if you need any external dependency, you can use the dependency resolution component of Carthage to checkout these projects in a `Carthage/Checkouts` folder and add them to the same workspace where all the frameworks projects are. If ask Carthage to build these dependencies into `.framework`s and use them instead, keep in mind that these frameworks are compiled with an *Xcode* and either if you update Xcode or checkout the project from the scratch, you will be forced to recompile them.
 
-### Git project/s
+## Git project/s
 
 Another question that arises in regards frameworks is where should these frameworks be? Should they be in the same repository? Should they be in multiple repositories?
 
 You can choose what's best for you, the same principles explained above apply. However, if you don't want to make your development slower I'd recommend you to keep them in the same repository. **Why?** When you have the frameworks in multiples repositories every change involves a new commit, that has to be validates, reviewed and pushed to the remote repository, and then an update in the
 
-### Versioning
+## Versioning
 Frameworks support versioning. Versioning is also supported by dependency managers. In case of CocoaPods, it's specified in the framework `.podspec` file and in Carthage using *Git releases*.
 //TODO
 
-### Static or dynamic
+## Static or dynamic
 //TODO
 
-### External dependencies
+## External dependencies
 Ideally external dependencies should be simplified because otherwise your dependencies tree complexity increases and you tie all your frameworks to these external sources. Try to avoid *wrappers* around system provided frameworks like `CoreData` or `Foundation`. If it's not possible to remove an external dependency from a local framework then find the best approach for integrating that dependency into your workspace:
 
 - If you used **CocoaPods** for managing all your project dependencies then the best approach is using the same dependency manager. Specify these external dependencies in the respective `.podspec` files and that's all.
@@ -143,14 +151,14 @@ Ideally external dependencies should be simplified because otherwise your depend
   - Checkout using **Git Submodules**.
 
 
-# 7 - Contribute
+# 6 - Contribute
 If you want to contribute with the paper, you can:
 
 - **Create a PR:** With your proposal. Make sure to include an explicit description about what you're trying to merge into the source project.
 - **Open an Issue:** With any error or incoherence you might have found.
 
 
-# 8 - References
+# 7 - References
 
 - **Library Oriented Programming** *(Justin Spahr-Summers)* - [Link](https://realm.io/news/justin-spahr-summers-library-oriented-programming/)
 - **Building Modern Frameworks** *(Apple)* - [Link](https://developer.apple.com/videos/play/wwdc2014/416/)
