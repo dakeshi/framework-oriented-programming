@@ -1,15 +1,15 @@
 //
-//  FCoreTests.swift
-//  FCoreTests
+//  FDesignTests.swift
+//  FDesignTests
 //
 //  Created by Pedro Pinera Buendia on 25/04/16.
 //  Copyright © 2016 com.fop. All rights reserved.
 //
 
 import XCTest
-@testable import FCore
+@testable import FDesign
 
-class FCoreTests: XCTestCase {
+class FDesignTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

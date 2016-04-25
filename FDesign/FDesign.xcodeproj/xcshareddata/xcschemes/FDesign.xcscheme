@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2332D4221CCDF60D00BFB174"
-               BuildableName = "FNetworking.framework"
-               BlueprintName = "FNetworking"
-               ReferencedContainer = "container:FNetworking.xcodeproj">
+               BlueprintIdentifier = "2332D4751CCDFD7B00BFB174"
+               BuildableName = "FDesign.framework"
+               BlueprintName = "FDesign"
+               ReferencedContainer = "container:FDesign.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2332D42C1CCDF60D00BFB174"
-               BuildableName = "FNetworkingTests.xctest"
-               BlueprintName = "FNetworkingTests"
-               ReferencedContainer = "container:FNetworking.xcodeproj">
+               BlueprintIdentifier = "2332D47F1CCDFD7B00BFB174"
+               BuildableName = "FDesignTests.xctest"
+               BlueprintName = "FDesignTests"
+               ReferencedContainer = "container:FDesign.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2332D4221CCDF60D00BFB174"
-            BuildableName = "FNetworking.framework"
-            BlueprintName = "FNetworking"
-            ReferencedContainer = "container:FNetworking.xcodeproj">
+            BlueprintIdentifier = "2332D4751CCDFD7B00BFB174"
+            BuildableName = "FDesign.framework"
+            BlueprintName = "FDesign"
+            ReferencedContainer = "container:FDesign.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,10 +64,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2332D4221CCDF60D00BFB174"
-            BuildableName = "FNetworking.framework"
-            BlueprintName = "FNetworking"
-            ReferencedContainer = "container:FNetworking.xcodeproj">
+            BlueprintIdentifier = "2332D4751CCDFD7B00BFB174"
+            BuildableName = "FDesign.framework"
+            BlueprintName = "FDesign"
+            ReferencedContainer = "container:FDesign.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,10 +82,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2332D4221CCDF60D00BFB174"
-            BuildableName = "FNetworking.framework"
-            BlueprintName = "FNetworking"
-            ReferencedContainer = "container:FNetworking.xcodeproj">
+            BlueprintIdentifier = "2332D4751CCDFD7B00BFB174"
+            BuildableName = "FDesign.framework"
+            BlueprintName = "FDesign"
+            ReferencedContainer = "container:FDesign.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

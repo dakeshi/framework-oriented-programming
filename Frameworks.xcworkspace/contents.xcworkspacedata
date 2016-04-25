@@ -2,7 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Carthage/Checkouts/realm-cocoa/Realm.xcodeproj">
+      location = "group:WatchApp/WatchApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FDesign/FDesign.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:FCore/FCore.xcodeproj">
@@ -14,16 +17,10 @@
       location = "group:FNetworking/FNetworking.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:FFoundation/FFoundation.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:OSX/OSX.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:TV/TV.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Watch/Watch.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:iOS/iOS.xcodeproj">

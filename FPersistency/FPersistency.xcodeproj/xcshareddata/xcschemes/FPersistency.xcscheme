@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2396F5621CC49F7000F7373A"
+               BlueprintIdentifier = "2332D3FE1CCDF5FB00BFB174"
                BuildableName = "FPersistency.framework"
                BlueprintName = "FPersistency"
                ReferencedContainer = "container:FPersistency.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2396F56C1CC49F7000F7373A"
+               BlueprintIdentifier = "2332D4081CCDF5FB00BFB174"
                BuildableName = "FPersistencyTests.xctest"
                BlueprintName = "FPersistencyTests"
                ReferencedContainer = "container:FPersistency.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2396F5621CC49F7000F7373A"
+            BlueprintIdentifier = "2332D3FE1CCDF5FB00BFB174"
             BuildableName = "FPersistency.framework"
             BlueprintName = "FPersistency"
             ReferencedContainer = "container:FPersistency.xcodeproj">
@@ -64,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2396F5621CC49F7000F7373A"
+            BlueprintIdentifier = "2332D3FE1CCDF5FB00BFB174"
             BuildableName = "FPersistency.framework"
             BlueprintName = "FPersistency"
             ReferencedContainer = "container:FPersistency.xcodeproj">
@@ -82,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2396F5621CC49F7000F7373A"
+            BlueprintIdentifier = "2332D3FE1CCDF5FB00BFB174"
             BuildableName = "FPersistency.framework"
             BlueprintName = "FPersistency"
             ReferencedContainer = "container:FPersistency.xcodeproj">

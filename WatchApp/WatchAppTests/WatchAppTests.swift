@@ -1,15 +1,15 @@
 //
-//  FCoreTests.swift
-//  FCoreTests
+//  WatchAppTests.swift
+//  WatchAppTests
 //
 //  Created by Pedro Pinera Buendia on 25/04/16.
 //  Copyright © 2016 com.fop. All rights reserved.
 //
 
 import XCTest
-@testable import FCore
+@testable import WatchApp
 
-class FCoreTests: XCTestCase {
+class WatchAppTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

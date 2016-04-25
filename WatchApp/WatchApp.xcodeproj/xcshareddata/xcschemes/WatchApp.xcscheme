@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2332D4221CCDF60D00BFB174"
-               BuildableName = "FNetworking.framework"
-               BlueprintName = "FNetworking"
-               ReferencedContainer = "container:FNetworking.xcodeproj">
+               BlueprintIdentifier = "23A4B8F11CCE002C001BBF15"
+               BuildableName = "WatchApp.app"
+               BlueprintName = "WatchApp"
+               ReferencedContainer = "container:WatchApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2332D42C1CCDF60D00BFB174"
-               BuildableName = "FNetworkingTests.xctest"
-               BlueprintName = "FNetworkingTests"
-               ReferencedContainer = "container:FNetworking.xcodeproj">
+               BlueprintIdentifier = "23A4B9051CCE002C001BBF15"
+               BuildableName = "WatchAppTests.xctest"
+               BlueprintName = "WatchAppTests"
+               ReferencedContainer = "container:WatchApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2332D4221CCDF60D00BFB174"
-            BuildableName = "FNetworking.framework"
-            BlueprintName = "FNetworking"
-            ReferencedContainer = "container:FNetworking.xcodeproj">
+            BlueprintIdentifier = "23A4B8F11CCE002C001BBF15"
+            BuildableName = "WatchApp.app"
+            BlueprintName = "WatchApp"
+            ReferencedContainer = "container:WatchApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -61,15 +61,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2332D4221CCDF60D00BFB174"
-            BuildableName = "FNetworking.framework"
-            BlueprintName = "FNetworking"
-            ReferencedContainer = "container:FNetworking.xcodeproj">
+            BlueprintIdentifier = "23A4B8F11CCE002C001BBF15"
+            BuildableName = "WatchApp.app"
+            BlueprintName = "WatchApp"
+            ReferencedContainer = "container:WatchApp.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -79,15 +80,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2332D4221CCDF60D00BFB174"
-            BuildableName = "FNetworking.framework"
-            BlueprintName = "FNetworking"
-            ReferencedContainer = "container:FNetworking.xcodeproj">
+            BlueprintIdentifier = "23A4B8F11CCE002C001BBF15"
+            BuildableName = "WatchApp.app"
+            BlueprintName = "WatchApp"
+            ReferencedContainer = "container:WatchApp.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

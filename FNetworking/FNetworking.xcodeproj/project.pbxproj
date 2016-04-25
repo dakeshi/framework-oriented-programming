@@ -7,130 +7,117 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2396F5431CC49F5900F7373A /* FNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 2396F5421CC49F5900F7373A /* FNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2396F54A1CC49F5900F7373A /* FNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F53F1CC49F5900F7373A /* FNetworking.framework */; };
-		2396F54F1CC49F5900F7373A /* FNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396F54E1CC49F5900F7373A /* FNetworkingTests.swift */; };
-		2396F5B01CC52B4700F7373A /* FFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F5AF1CC52B4700F7373A /* FFoundation.framework */; };
+		2332D4271CCDF60D00BFB174 /* FNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 2332D4261CCDF60D00BFB174 /* FNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2332D42E1CCDF60D00BFB174 /* FNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2332D4231CCDF60D00BFB174 /* FNetworking.framework */; };
+		2332D4331CCDF60D00BFB174 /* FNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332D4321CCDF60D00BFB174 /* FNetworkingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2396F54B1CC49F5900F7373A /* PBXContainerItemProxy */ = {
+		2332D42F1CCDF60D00BFB174 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2396F5361CC49F5900F7373A /* Project object */;
+			containerPortal = 2332D41A1CCDF60D00BFB174 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2396F53E1CC49F5900F7373A;
+			remoteGlobalIDString = 2332D4221CCDF60D00BFB174;
 			remoteInfo = FNetworking;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2396F53F1CC49F5900F7373A /* FNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2396F5421CC49F5900F7373A /* FNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNetworking.h; sourceTree = "<group>"; };
-		2396F5441CC49F5900F7373A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2396F5491CC49F5900F7373A /* FNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2396F54E1CC49F5900F7373A /* FNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNetworkingTests.swift; sourceTree = "<group>"; };
-		2396F5501CC49F5900F7373A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2396F5AF1CC52B4700F7373A /* FFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2396F5B31CC52BA700F7373A /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		2332D4231CCDF60D00BFB174 /* FNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2332D4261CCDF60D00BFB174 /* FNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNetworking.h; sourceTree = "<group>"; };
+		2332D4281CCDF60D00BFB174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2332D42D1CCDF60D00BFB174 /* FNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2332D4321CCDF60D00BFB174 /* FNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNetworkingTests.swift; sourceTree = "<group>"; };
+		2332D4341CCDF60D00BFB174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2332D4661CCDF67600BFB174 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Config/Base.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2396F53B1CC49F5900F7373A /* Frameworks */ = {
+		2332D41F1CCDF60D00BFB174 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2396F5B01CC52B4700F7373A /* FFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2396F5461CC49F5900F7373A /* Frameworks */ = {
+		2332D42A1CCDF60D00BFB174 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2396F54A1CC49F5900F7373A /* FNetworking.framework in Frameworks */,
+				2332D42E1CCDF60D00BFB174 /* FNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2396F5351CC49F5900F7373A = {
+		2332D4191CCDF60D00BFB174 = {
 			isa = PBXGroup;
 			children = (
-				2396F5B21CC52BA700F7373A /* Config */,
-				2396F5B11CC52B4A00F7373A /* Frameworks */,
-				2396F5411CC49F5900F7373A /* FNetworking */,
-				2396F54D1CC49F5900F7373A /* FNetworkingTests */,
-				2396F5401CC49F5900F7373A /* Products */,
+				2332D4651CCDF66B00BFB174 /* Config */,
+				2332D4251CCDF60D00BFB174 /* FNetworking */,
+				2332D4311CCDF60D00BFB174 /* FNetworkingTests */,
+				2332D4241CCDF60D00BFB174 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2396F5401CC49F5900F7373A /* Products */ = {
+		2332D4241CCDF60D00BFB174 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2396F53F1CC49F5900F7373A /* FNetworking.framework */,
-				2396F5491CC49F5900F7373A /* FNetworkingTests.xctest */,
+				2332D4231CCDF60D00BFB174 /* FNetworking.framework */,
+				2332D42D1CCDF60D00BFB174 /* FNetworkingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2396F5411CC49F5900F7373A /* FNetworking */ = {
+		2332D4251CCDF60D00BFB174 /* FNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				2396F5421CC49F5900F7373A /* FNetworking.h */,
-				2396F5441CC49F5900F7373A /* Info.plist */,
+				2332D4261CCDF60D00BFB174 /* FNetworking.h */,
+				2332D4281CCDF60D00BFB174 /* Info.plist */,
 			);
 			path = FNetworking;
 			sourceTree = "<group>";
 		};
-		2396F54D1CC49F5900F7373A /* FNetworkingTests */ = {
+		2332D4311CCDF60D00BFB174 /* FNetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
-				2396F54E1CC49F5900F7373A /* FNetworkingTests.swift */,
-				2396F5501CC49F5900F7373A /* Info.plist */,
+				2332D4321CCDF60D00BFB174 /* FNetworkingTests.swift */,
+				2332D4341CCDF60D00BFB174 /* Info.plist */,
 			);
 			path = FNetworkingTests;
 			sourceTree = "<group>";
 		};
-		2396F5B11CC52B4A00F7373A /* Frameworks */ = {
+		2332D4651CCDF66B00BFB174 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				2396F5AF1CC52B4700F7373A /* FFoundation.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2396F5B21CC52BA700F7373A /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				2396F5B31CC52BA700F7373A /* Base.xcconfig */,
+				2332D4661CCDF67600BFB174 /* Base.xcconfig */,
 			);
 			name = Config;
-			path = ../Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2396F53C1CC49F5900F7373A /* Headers */ = {
+		2332D4201CCDF60D00BFB174 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2396F5431CC49F5900F7373A /* FNetworking.h in Headers */,
+				2332D4271CCDF60D00BFB174 /* FNetworking.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2396F53E1CC49F5900F7373A /* FNetworking */ = {
+		2332D4221CCDF60D00BFB174 /* FNetworking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2396F5531CC49F5900F7373A /* Build configuration list for PBXNativeTarget "FNetworking" */;
+			buildConfigurationList = 2332D4371CCDF60D00BFB174 /* Build configuration list for PBXNativeTarget "FNetworking" */;
 			buildPhases = (
-				2396F53A1CC49F5900F7373A /* Sources */,
-				2396F53B1CC49F5900F7373A /* Frameworks */,
-				2396F53C1CC49F5900F7373A /* Headers */,
-				2396F53D1CC49F5900F7373A /* Resources */,
+				2332D41E1CCDF60D00BFB174 /* Sources */,
+				2332D41F1CCDF60D00BFB174 /* Frameworks */,
+				2332D4201CCDF60D00BFB174 /* Headers */,
+				2332D4211CCDF60D00BFB174 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -138,72 +125,72 @@
 			);
 			name = FNetworking;
 			productName = FNetworking;
-			productReference = 2396F53F1CC49F5900F7373A /* FNetworking.framework */;
+			productReference = 2332D4231CCDF60D00BFB174 /* FNetworking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2396F5481CC49F5900F7373A /* FNetworkingTests */ = {
+		2332D42C1CCDF60D00BFB174 /* FNetworkingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2396F5561CC49F5900F7373A /* Build configuration list for PBXNativeTarget "FNetworkingTests" */;
+			buildConfigurationList = 2332D43A1CCDF60D00BFB174 /* Build configuration list for PBXNativeTarget "FNetworkingTests" */;
 			buildPhases = (
-				2396F5451CC49F5900F7373A /* Sources */,
-				2396F5461CC49F5900F7373A /* Frameworks */,
-				2396F5471CC49F5900F7373A /* Resources */,
+				2332D4291CCDF60D00BFB174 /* Sources */,
+				2332D42A1CCDF60D00BFB174 /* Frameworks */,
+				2332D42B1CCDF60D00BFB174 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2396F54C1CC49F5900F7373A /* PBXTargetDependency */,
+				2332D4301CCDF60D00BFB174 /* PBXTargetDependency */,
 			);
 			name = FNetworkingTests;
 			productName = FNetworkingTests;
-			productReference = 2396F5491CC49F5900F7373A /* FNetworkingTests.xctest */;
+			productReference = 2332D42D1CCDF60D00BFB174 /* FNetworkingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2396F5361CC49F5900F7373A /* Project object */ = {
+		2332D41A1CCDF60D00BFB174 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = com.fop;
 				TargetAttributes = {
-					2396F53E1CC49F5900F7373A = {
+					2332D4221CCDF60D00BFB174 = {
 						CreatedOnToolsVersion = 7.3;
 					};
-					2396F5481CC49F5900F7373A = {
+					2332D42C1CCDF60D00BFB174 = {
 						CreatedOnToolsVersion = 7.3;
 					};
 				};
 			};
-			buildConfigurationList = 2396F5391CC49F5900F7373A /* Build configuration list for PBXProject "FNetworking" */;
+			buildConfigurationList = 2332D41D1CCDF60D00BFB174 /* Build configuration list for PBXProject "FNetworking" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 2396F5351CC49F5900F7373A;
-			productRefGroup = 2396F5401CC49F5900F7373A /* Products */;
+			mainGroup = 2332D4191CCDF60D00BFB174;
+			productRefGroup = 2332D4241CCDF60D00BFB174 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2396F53E1CC49F5900F7373A /* FNetworking */,
-				2396F5481CC49F5900F7373A /* FNetworkingTests */,
+				2332D4221CCDF60D00BFB174 /* FNetworking */,
+				2332D42C1CCDF60D00BFB174 /* FNetworkingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2396F53D1CC49F5900F7373A /* Resources */ = {
+		2332D4211CCDF60D00BFB174 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2396F5471CC49F5900F7373A /* Resources */ = {
+		2332D42B1CCDF60D00BFB174 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -213,35 +200,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2396F53A1CC49F5900F7373A /* Sources */ = {
+		2332D41E1CCDF60D00BFB174 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2396F5451CC49F5900F7373A /* Sources */ = {
+		2332D4291CCDF60D00BFB174 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2396F54F1CC49F5900F7373A /* FNetworkingTests.swift in Sources */,
+				2332D4331CCDF60D00BFB174 /* FNetworkingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2396F54C1CC49F5900F7373A /* PBXTargetDependency */ = {
+		2332D4301CCDF60D00BFB174 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2396F53E1CC49F5900F7373A /* FNetworking */;
-			targetProxy = 2396F54B1CC49F5900F7373A /* PBXContainerItemProxy */;
+			target = 2332D4221CCDF60D00BFB174 /* FNetworking */;
+			targetProxy = 2332D42F1CCDF60D00BFB174 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2396F5511CC49F5900F7373A /* Debug */ = {
+		2332D4351CCDF60D00BFB174 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2396F5B31CC52BA700F7373A /* Base.xcconfig */;
+			baseConfigurationReference = 2332D4661CCDF67600BFB174 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -281,7 +268,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -289,9 +275,9 @@
 			};
 			name = Debug;
 		};
-		2396F5521CC49F5900F7373A /* Release */ = {
+		2332D4361CCDF60D00BFB174 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2396F5B31CC52BA700F7373A /* Base.xcconfig */;
+			baseConfigurationReference = 2332D4661CCDF67600BFB174 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -324,7 +310,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -332,7 +317,7 @@
 			};
 			name = Release;
 		};
-		2396F5541CC49F5900F7373A /* Debug */ = {
+		2332D4381CCDF60D00BFB174 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
@@ -348,7 +333,7 @@
 			};
 			name = Debug;
 		};
-		2396F5551CC49F5900F7373A /* Release */ = {
+		2332D4391CCDF60D00BFB174 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
@@ -364,7 +349,7 @@
 			};
 			name = Release;
 		};
-		2396F5571CC49F5900F7373A /* Debug */ = {
+		2332D43B1CCDF60D00BFB174 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = FNetworkingTests/Info.plist;
@@ -374,7 +359,7 @@
 			};
 			name = Debug;
 		};
-		2396F5581CC49F5900F7373A /* Release */ = {
+		2332D43C1CCDF60D00BFB174 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = FNetworkingTests/Info.plist;
@@ -387,34 +372,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2396F5391CC49F5900F7373A /* Build configuration list for PBXProject "FNetworking" */ = {
+		2332D41D1CCDF60D00BFB174 /* Build configuration list for PBXProject "FNetworking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2396F5511CC49F5900F7373A /* Debug */,
-				2396F5521CC49F5900F7373A /* Release */,
+				2332D4351CCDF60D00BFB174 /* Debug */,
+				2332D4361CCDF60D00BFB174 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2396F5531CC49F5900F7373A /* Build configuration list for PBXNativeTarget "FNetworking" */ = {
+		2332D4371CCDF60D00BFB174 /* Build configuration list for PBXNativeTarget "FNetworking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2396F5541CC49F5900F7373A /* Debug */,
-				2396F5551CC49F5900F7373A /* Release */,
+				2332D4381CCDF60D00BFB174 /* Debug */,
+				2332D4391CCDF60D00BFB174 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2396F5561CC49F5900F7373A /* Build configuration list for PBXNativeTarget "FNetworkingTests" */ = {
+		2332D43A1CCDF60D00BFB174 /* Build configuration list for PBXNativeTarget "FNetworkingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2396F5571CC49F5900F7373A /* Debug */,
-				2396F5581CC49F5900F7373A /* Release */,
+				2332D43B1CCDF60D00BFB174 /* Debug */,
+				2332D43C1CCDF60D00BFB174 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2396F5361CC49F5900F7373A /* Project object */;
+	rootObject = 2332D41A1CCDF60D00BFB174 /* Project object */;
 }

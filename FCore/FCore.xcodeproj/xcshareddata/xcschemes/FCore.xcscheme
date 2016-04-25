@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2396F5861CC49FB900F7373A"
+               BlueprintIdentifier = "2332D4461CCDF61600BFB174"
                BuildableName = "FCore.framework"
                BlueprintName = "FCore"
                ReferencedContainer = "container:FCore.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2396F5901CC49FB900F7373A"
+               BlueprintIdentifier = "2332D4501CCDF61600BFB174"
                BuildableName = "FCoreTests.xctest"
                BlueprintName = "FCoreTests"
                ReferencedContainer = "container:FCore.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2396F5861CC49FB900F7373A"
+            BlueprintIdentifier = "2332D4461CCDF61600BFB174"
             BuildableName = "FCore.framework"
             BlueprintName = "FCore"
             ReferencedContainer = "container:FCore.xcodeproj">
@@ -64,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2396F5861CC49FB900F7373A"
+            BlueprintIdentifier = "2332D4461CCDF61600BFB174"
             BuildableName = "FCore.framework"
             BlueprintName = "FCore"
             ReferencedContainer = "container:FCore.xcodeproj">
@@ -82,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2396F5861CC49FB900F7373A"
+            BlueprintIdentifier = "2332D4461CCDF61600BFB174"
             BuildableName = "FCore.framework"
             BlueprintName = "FCore"
             ReferencedContainer = "container:FCore.xcodeproj">

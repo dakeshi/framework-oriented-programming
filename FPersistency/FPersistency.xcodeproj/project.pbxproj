@@ -7,111 +7,91 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2396F5671CC49F7000F7373A /* FPersistency.h in Headers */ = {isa = PBXBuildFile; fileRef = 2396F5661CC49F7000F7373A /* FPersistency.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2396F56E1CC49F7000F7373A /* FPersistency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F5631CC49F7000F7373A /* FPersistency.framework */; };
-		2396F5731CC49F7000F7373A /* FPersistencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396F5721CC49F7000F7373A /* FPersistencyTests.swift */; };
-		2396F5AE1CC50F0700F7373A /* FFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F5AD1CC50F0700F7373A /* FFoundation.framework */; };
-		2396F5C31CC52CFA00F7373A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F5A91CC50B3200F7373A /* Realm.framework */; };
-		2396F5C41CC52CFA00F7373A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396F5AB1CC50B4000F7373A /* RealmSwift.framework */; };
+		2332D4031CCDF5FB00BFB174 /* FPersistency.h in Headers */ = {isa = PBXBuildFile; fileRef = 2332D4021CCDF5FB00BFB174 /* FPersistency.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2332D40A1CCDF5FB00BFB174 /* FPersistency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2332D3FF1CCDF5FB00BFB174 /* FPersistency.framework */; };
+		2332D40F1CCDF5FB00BFB174 /* FPersistencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332D40E1CCDF5FB00BFB174 /* FPersistencyTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2396F56F1CC49F7000F7373A /* PBXContainerItemProxy */ = {
+		2332D40B1CCDF5FB00BFB174 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2396F55A1CC49F7000F7373A /* Project object */;
+			containerPortal = 2332D3F61CCDF5FB00BFB174 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2396F5621CC49F7000F7373A;
+			remoteGlobalIDString = 2332D3FE1CCDF5FB00BFB174;
 			remoteInfo = FPersistency;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2396F5631CC49F7000F7373A /* FPersistency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FPersistency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2396F5661CC49F7000F7373A /* FPersistency.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPersistency.h; sourceTree = "<group>"; };
-		2396F5681CC49F7000F7373A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2396F56D1CC49F7000F7373A /* FPersistencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FPersistencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2396F5721CC49F7000F7373A /* FPersistencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPersistencyTests.swift; sourceTree = "<group>"; };
-		2396F5741CC49F7000F7373A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2396F5A41CC509B900F7373A /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Config/Base.xcconfig; sourceTree = "<group>"; };
-		2396F5A91CC50B3200F7373A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2396F5AB1CC50B4000F7373A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2396F5AD1CC50F0700F7373A /* FFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2332D3FF1CCDF5FB00BFB174 /* FPersistency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FPersistency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2332D4021CCDF5FB00BFB174 /* FPersistency.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPersistency.h; sourceTree = "<group>"; };
+		2332D4041CCDF5FB00BFB174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2332D4091CCDF5FB00BFB174 /* FPersistencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FPersistencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2332D40E1CCDF5FB00BFB174 /* FPersistencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPersistencyTests.swift; sourceTree = "<group>"; };
+		2332D4101CCDF5FB00BFB174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2332D4621CCDF64600BFB174 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Config/Base.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2396F55F1CC49F7000F7373A /* Frameworks */ = {
+		2332D3FB1CCDF5FB00BFB174 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2396F5C31CC52CFA00F7373A /* Realm.framework in Frameworks */,
-				2396F5C41CC52CFA00F7373A /* RealmSwift.framework in Frameworks */,
-				2396F5AE1CC50F0700F7373A /* FFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2396F56A1CC49F7000F7373A /* Frameworks */ = {
+		2332D4061CCDF5FB00BFB174 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2396F56E1CC49F7000F7373A /* FPersistency.framework in Frameworks */,
+				2332D40A1CCDF5FB00BFB174 /* FPersistency.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2396F5591CC49F7000F7373A = {
+		2332D3F51CCDF5FB00BFB174 = {
 			isa = PBXGroup;
 			children = (
-				2396F5A31CC509A900F7373A /* Config */,
-				2396F5A21CC5099F00F7373A /* Frameworks */,
-				2396F5651CC49F7000F7373A /* FPersistency */,
-				2396F5711CC49F7000F7373A /* FPersistencyTests */,
-				2396F5641CC49F7000F7373A /* Products */,
+				2332D4611CCDF63700BFB174 /* Config */,
+				2332D4011CCDF5FB00BFB174 /* FPersistency */,
+				2332D40D1CCDF5FB00BFB174 /* FPersistencyTests */,
+				2332D4001CCDF5FB00BFB174 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2396F5641CC49F7000F7373A /* Products */ = {
+		2332D4001CCDF5FB00BFB174 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2396F5631CC49F7000F7373A /* FPersistency.framework */,
-				2396F56D1CC49F7000F7373A /* FPersistencyTests.xctest */,
+				2332D3FF1CCDF5FB00BFB174 /* FPersistency.framework */,
+				2332D4091CCDF5FB00BFB174 /* FPersistencyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2396F5651CC49F7000F7373A /* FPersistency */ = {
+		2332D4011CCDF5FB00BFB174 /* FPersistency */ = {
 			isa = PBXGroup;
 			children = (
-				2396F5661CC49F7000F7373A /* FPersistency.h */,
-				2396F5681CC49F7000F7373A /* Info.plist */,
+				2332D4021CCDF5FB00BFB174 /* FPersistency.h */,
+				2332D4041CCDF5FB00BFB174 /* Info.plist */,
 			);
 			path = FPersistency;
 			sourceTree = "<group>";
 		};
-		2396F5711CC49F7000F7373A /* FPersistencyTests */ = {
+		2332D40D1CCDF5FB00BFB174 /* FPersistencyTests */ = {
 			isa = PBXGroup;
 			children = (
-				2396F5721CC49F7000F7373A /* FPersistencyTests.swift */,
-				2396F5741CC49F7000F7373A /* Info.plist */,
+				2332D40E1CCDF5FB00BFB174 /* FPersistencyTests.swift */,
+				2332D4101CCDF5FB00BFB174 /* Info.plist */,
 			);
 			path = FPersistencyTests;
 			sourceTree = "<group>";
 		};
-		2396F5A21CC5099F00F7373A /* Frameworks */ = {
+		2332D4611CCDF63700BFB174 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				2396F5AD1CC50F0700F7373A /* FFoundation.framework */,
-				2396F5AB1CC50B4000F7373A /* RealmSwift.framework */,
-				2396F5A91CC50B3200F7373A /* Realm.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2396F5A31CC509A900F7373A /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				2396F5A41CC509B900F7373A /* Base.xcconfig */,
+				2332D4621CCDF64600BFB174 /* Base.xcconfig */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -119,25 +99,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2396F5601CC49F7000F7373A /* Headers */ = {
+		2332D3FC1CCDF5FB00BFB174 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2396F5671CC49F7000F7373A /* FPersistency.h in Headers */,
+				2332D4031CCDF5FB00BFB174 /* FPersistency.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2396F5621CC49F7000F7373A /* FPersistency */ = {
+		2332D3FE1CCDF5FB00BFB174 /* FPersistency */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2396F5771CC49F7000F7373A /* Build configuration list for PBXNativeTarget "FPersistency" */;
+			buildConfigurationList = 2332D4131CCDF5FB00BFB174 /* Build configuration list for PBXNativeTarget "FPersistency" */;
 			buildPhases = (
-				2396F55E1CC49F7000F7373A /* Sources */,
-				2396F55F1CC49F7000F7373A /* Frameworks */,
-				2396F5601CC49F7000F7373A /* Headers */,
-				2396F5611CC49F7000F7373A /* Resources */,
+				2332D3FA1CCDF5FB00BFB174 /* Sources */,
+				2332D3FB1CCDF5FB00BFB174 /* Frameworks */,
+				2332D3FC1CCDF5FB00BFB174 /* Headers */,
+				2332D3FD1CCDF5FB00BFB174 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -145,72 +125,72 @@
 			);
 			name = FPersistency;
 			productName = FPersistency;
-			productReference = 2396F5631CC49F7000F7373A /* FPersistency.framework */;
+			productReference = 2332D3FF1CCDF5FB00BFB174 /* FPersistency.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2396F56C1CC49F7000F7373A /* FPersistencyTests */ = {
+		2332D4081CCDF5FB00BFB174 /* FPersistencyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2396F57A1CC49F7000F7373A /* Build configuration list for PBXNativeTarget "FPersistencyTests" */;
+			buildConfigurationList = 2332D4161CCDF5FB00BFB174 /* Build configuration list for PBXNativeTarget "FPersistencyTests" */;
 			buildPhases = (
-				2396F5691CC49F7000F7373A /* Sources */,
-				2396F56A1CC49F7000F7373A /* Frameworks */,
-				2396F56B1CC49F7000F7373A /* Resources */,
+				2332D4051CCDF5FB00BFB174 /* Sources */,
+				2332D4061CCDF5FB00BFB174 /* Frameworks */,
+				2332D4071CCDF5FB00BFB174 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2396F5701CC49F7000F7373A /* PBXTargetDependency */,
+				2332D40C1CCDF5FB00BFB174 /* PBXTargetDependency */,
 			);
 			name = FPersistencyTests;
 			productName = FPersistencyTests;
-			productReference = 2396F56D1CC49F7000F7373A /* FPersistencyTests.xctest */;
+			productReference = 2332D4091CCDF5FB00BFB174 /* FPersistencyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2396F55A1CC49F7000F7373A /* Project object */ = {
+		2332D3F61CCDF5FB00BFB174 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = com.fop;
 				TargetAttributes = {
-					2396F5621CC49F7000F7373A = {
+					2332D3FE1CCDF5FB00BFB174 = {
 						CreatedOnToolsVersion = 7.3;
 					};
-					2396F56C1CC49F7000F7373A = {
+					2332D4081CCDF5FB00BFB174 = {
 						CreatedOnToolsVersion = 7.3;
 					};
 				};
 			};
-			buildConfigurationList = 2396F55D1CC49F7000F7373A /* Build configuration list for PBXProject "FPersistency" */;
+			buildConfigurationList = 2332D3F91CCDF5FB00BFB174 /* Build configuration list for PBXProject "FPersistency" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 2396F5591CC49F7000F7373A;
-			productRefGroup = 2396F5641CC49F7000F7373A /* Products */;
+			mainGroup = 2332D3F51CCDF5FB00BFB174;
+			productRefGroup = 2332D4001CCDF5FB00BFB174 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2396F5621CC49F7000F7373A /* FPersistency */,
-				2396F56C1CC49F7000F7373A /* FPersistencyTests */,
+				2332D3FE1CCDF5FB00BFB174 /* FPersistency */,
+				2332D4081CCDF5FB00BFB174 /* FPersistencyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2396F5611CC49F7000F7373A /* Resources */ = {
+		2332D3FD1CCDF5FB00BFB174 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2396F56B1CC49F7000F7373A /* Resources */ = {
+		2332D4071CCDF5FB00BFB174 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -220,35 +200,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2396F55E1CC49F7000F7373A /* Sources */ = {
+		2332D3FA1CCDF5FB00BFB174 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2396F5691CC49F7000F7373A /* Sources */ = {
+		2332D4051CCDF5FB00BFB174 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2396F5731CC49F7000F7373A /* FPersistencyTests.swift in Sources */,
+				2332D40F1CCDF5FB00BFB174 /* FPersistencyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2396F5701CC49F7000F7373A /* PBXTargetDependency */ = {
+		2332D40C1CCDF5FB00BFB174 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2396F5621CC49F7000F7373A /* FPersistency */;
-			targetProxy = 2396F56F1CC49F7000F7373A /* PBXContainerItemProxy */;
+			target = 2332D3FE1CCDF5FB00BFB174 /* FPersistency */;
+			targetProxy = 2332D40B1CCDF5FB00BFB174 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2396F5751CC49F7000F7373A /* Debug */ = {
+		2332D4111CCDF5FB00BFB174 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2396F5A41CC509B900F7373A /* Base.xcconfig */;
+			baseConfigurationReference = 2332D4621CCDF64600BFB174 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -288,7 +268,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -296,9 +275,9 @@
 			};
 			name = Debug;
 		};
-		2396F5761CC49F7000F7373A /* Release */ = {
+		2332D4121CCDF5FB00BFB174 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2396F5A41CC509B900F7373A /* Base.xcconfig */;
+			baseConfigurationReference = 2332D4621CCDF64600BFB174 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -331,7 +310,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -339,7 +317,7 @@
 			};
 			name = Release;
 		};
-		2396F5781CC49F7000F7373A /* Debug */ = {
+		2332D4141CCDF5FB00BFB174 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
@@ -355,7 +333,7 @@
 			};
 			name = Debug;
 		};
-		2396F5791CC49F7000F7373A /* Release */ = {
+		2332D4151CCDF5FB00BFB174 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
@@ -371,7 +349,7 @@
 			};
 			name = Release;
 		};
-		2396F57B1CC49F7000F7373A /* Debug */ = {
+		2332D4171CCDF5FB00BFB174 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = FPersistencyTests/Info.plist;
@@ -381,7 +359,7 @@
 			};
 			name = Debug;
 		};
-		2396F57C1CC49F7000F7373A /* Release */ = {
+		2332D4181CCDF5FB00BFB174 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = FPersistencyTests/Info.plist;
@@ -394,34 +372,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2396F55D1CC49F7000F7373A /* Build configuration list for PBXProject "FPersistency" */ = {
+		2332D3F91CCDF5FB00BFB174 /* Build configuration list for PBXProject "FPersistency" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2396F5751CC49F7000F7373A /* Debug */,
-				2396F5761CC49F7000F7373A /* Release */,
+				2332D4111CCDF5FB00BFB174 /* Debug */,
+				2332D4121CCDF5FB00BFB174 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2396F5771CC49F7000F7373A /* Build configuration list for PBXNativeTarget "FPersistency" */ = {
+		2332D4131CCDF5FB00BFB174 /* Build configuration list for PBXNativeTarget "FPersistency" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2396F5781CC49F7000F7373A /* Debug */,
-				2396F5791CC49F7000F7373A /* Release */,
+				2332D4141CCDF5FB00BFB174 /* Debug */,
+				2332D4151CCDF5FB00BFB174 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2396F57A1CC49F7000F7373A /* Build configuration list for PBXNativeTarget "FPersistencyTests" */ = {
+		2332D4161CCDF5FB00BFB174 /* Build configuration list for PBXNativeTarget "FPersistencyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2396F57B1CC49F7000F7373A /* Debug */,
-				2396F57C1CC49F7000F7373A /* Release */,
+				2332D4171CCDF5FB00BFB174 /* Debug */,
+				2332D4181CCDF5FB00BFB174 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2396F55A1CC49F7000F7373A /* Project object */;
+	rootObject = 2332D3F61CCDF5FB00BFB174 /* Project object */;
 }
