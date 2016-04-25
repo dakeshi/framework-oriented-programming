@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		233629281CCE7D5A000276A9 /* FFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233629271CCE7D5A000276A9 /* FFoundation.framework */; };
+		233629291CCE7D5A000276A9 /* FFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 233629271CCE7D5A000276A9 /* FFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2336292B1CCE7EAD000276A9 /* FNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2336292A1CCE7EAD000276A9 /* FNetworking.framework */; };
+		2336292C1CCE7EAD000276A9 /* FNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2336292A1CCE7EAD000276A9 /* FNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2336292E1CCE7EBB000276A9 /* FPersistency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2336292D1CCE7EBB000276A9 /* FPersistency.framework */; };
+		2336292F1CCE7EBB000276A9 /* FPersistency.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2336292D1CCE7EBB000276A9 /* FPersistency.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		233629311CCE7EDE000276A9 /* FCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233629301CCE7EDE000276A9 /* FCore.framework */; };
+		233629321CCE7EDE000276A9 /* FCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 233629301CCE7EDE000276A9 /* FCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		233629341CCE7EF1000276A9 /* FDesign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233629331CCE7EF1000276A9 /* FDesign.framework */; };
+		233629351CCE7EF1000276A9 /* FDesign.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 233629331CCE7EF1000276A9 /* FDesign.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		23A4B8F61CCE002C001BBF15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A4B8F51CCE002C001BBF15 /* AppDelegate.swift */; };
 		23A4B8F81CCE002C001BBF15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A4B8F71CCE002C001BBF15 /* ViewController.swift */; };
 		23A4B8FB1CCE002C001BBF15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A4B8F91CCE002C001BBF15 /* Main.storyboard */; };
@@ -47,6 +57,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		233629221CCE7C9F000276A9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				233629291CCE7D5A000276A9 /* FFoundation.framework in Embed Frameworks */,
+				2336292C1CCE7EAD000276A9 /* FNetworking.framework in Embed Frameworks */,
+				233629321CCE7EDE000276A9 /* FCore.framework in Embed Frameworks */,
+				2336292F1CCE7EBB000276A9 /* FPersistency.framework in Embed Frameworks */,
+				233629351CCE7EF1000276A9 /* FDesign.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		23A4B92F1CCE002C001BBF15 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,6 +97,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		233629271CCE7D5A000276A9 /* FFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2336292A1CCE7EAD000276A9 /* FNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = FNetworking.framework; path = FNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2336292D1CCE7EBB000276A9 /* FPersistency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = FPersistency.framework; path = FPersistency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		233629301CCE7EDE000276A9 /* FCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = FCore.framework; path = FCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		233629331CCE7EF1000276A9 /* FDesign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = FDesign.framework; path = FDesign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A4B8F21CCE002C001BBF15 /* WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A4B8F51CCE002C001BBF15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23A4B8F71CCE002C001BBF15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +128,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				233629281CCE7D5A000276A9 /* FFoundation.framework in Frameworks */,
+				2336292B1CCE7EAD000276A9 /* FNetworking.framework in Frameworks */,
+				233629311CCE7EDE000276A9 /* FCore.framework in Frameworks */,
+				2336292E1CCE7EBB000276A9 /* FPersistency.framework in Frameworks */,
+				233629341CCE7EF1000276A9 /* FDesign.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,9 +153,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		233629261CCE7D53000276A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				233629331CCE7EF1000276A9 /* FDesign.framework */,
+				233629301CCE7EDE000276A9 /* FCore.framework */,
+				2336292D1CCE7EBB000276A9 /* FPersistency.framework */,
+				2336292A1CCE7EAD000276A9 /* FNetworking.framework */,
+				233629271CCE7D5A000276A9 /* FFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		23A4B8E91CCE002C001BBF15 = {
 			isa = PBXGroup;
 			children = (
+				233629261CCE7D53000276A9 /* Frameworks */,
 				23A4B8F41CCE002C001BBF15 /* WatchApp */,
 				23A4B9091CCE002C001BBF15 /* WatchAppTests */,
 				23A4B9131CCE002C001BBF15 /* WatchApp WatchKit App */,
@@ -194,6 +242,7 @@
 				23A4B8EF1CCE002C001BBF15 /* Frameworks */,
 				23A4B8F01CCE002C001BBF15 /* Resources */,
 				23A4B9331CCE002C001BBF15 /* Embed Watch Content */,
+				233629221CCE7C9F000276A9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
