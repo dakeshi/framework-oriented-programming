@@ -38,6 +38,46 @@
                ReferencedContainer = "container:FCore.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2332D47F1CCDFD7B00BFB174"
+               BuildableName = "FDesignTests.xctest"
+               BlueprintName = "FDesignTests"
+               ReferencedContainer = "container:../FDesign/FDesign.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "233628DD1CCE17CE000276A9"
+               BuildableName = "FFoundationTests.xctest"
+               BlueprintName = "FFoundationTests"
+               ReferencedContainer = "container:../FFoundation/FFoundation.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2332D42C1CCDF60D00BFB174"
+               BuildableName = "FNetworkingTests.xctest"
+               BlueprintName = "FNetworkingTests"
+               ReferencedContainer = "container:../FNetworking/FNetworking.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "233628971CCE0975000276A9"
+               BuildableName = "FPersistencyTests.xctest"
+               BlueprintName = "FPersistencyTests"
+               ReferencedContainer = "container:../FPersistency/FPersistency.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
