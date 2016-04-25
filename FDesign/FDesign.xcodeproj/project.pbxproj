@@ -11,6 +11,13 @@
 		2332D4861CCDFD7B00BFB174 /* AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332D4851CCDFD7B00BFB174 /* AppKit.swift */; };
 		233628B61CCE0BE3000276A9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233628B51CCE0BE3000276A9 /* Quick.framework */; };
 		233628B81CCE0BE9000276A9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233628B71CCE0BE9000276A9 /* Nimble.framework */; };
+		233628BB1CCE1189000276A9 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233628BA1CCE1189000276A9 /* Font.swift */; };
+		233628BD1CCE1190000276A9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233628BC1CCE1190000276A9 /* Color.swift */; };
+		233628C01CCE122D000276A9 /* Font+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233628BF1CCE122D000276A9 /* Font+UIKit.swift */; };
+		233628C21CCE15C2000276A9 /* Font+AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233628C11CCE15C2000276A9 /* Font+AppKit.swift */; };
+		233628C41CCE1625000276A9 /* Color+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233628C31CCE1625000276A9 /* Color+UIKit.swift */; };
+		233628C61CCE1679000276A9 /* Color+AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233628C51CCE1679000276A9 /* Color+AppKit.swift */; };
+		233628C91CCE16F0000276A9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233628C81CCE16F0000276A9 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +40,13 @@
 		233628A31CCE09E5000276A9 /* Base-Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Base-Test.xcconfig"; path = "../Config/Base-Test.xcconfig"; sourceTree = "<group>"; };
 		233628B51CCE0BE3000276A9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		233628B71CCE0BE9000276A9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		233628BA1CCE1189000276A9 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		233628BC1CCE1190000276A9 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		233628BF1CCE122D000276A9 /* Font+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+UIKit.swift"; sourceTree = "<group>"; };
+		233628C11CCE15C2000276A9 /* Font+AppKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+AppKit.swift"; sourceTree = "<group>"; };
+		233628C31CCE1625000276A9 /* Color+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+UIKit.swift"; sourceTree = "<group>"; };
+		233628C51CCE1679000276A9 /* Color+AppKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+AppKit.swift"; sourceTree = "<group>"; };
+		233628C81CCE16F0000276A9 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +93,9 @@
 		2332D4781CCDFD7B00BFB174 /* FDesign */ = {
 			isa = PBXGroup;
 			children = (
+				233628C71CCE16EB000276A9 /* Values */,
+				233628BE1CCE1222000276A9 /* Extensions */,
+				233628B91CCE1183000276A9 /* Models */,
 				2332D47B1CCDFD7B00BFB174 /* Info.plist */,
 			);
 			path = FDesign;
@@ -109,6 +126,34 @@
 				233628B51CCE0BE3000276A9 /* Quick.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		233628B91CCE1183000276A9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				233628BA1CCE1189000276A9 /* Font.swift */,
+				233628BC1CCE1190000276A9 /* Color.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		233628BE1CCE1222000276A9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				233628BF1CCE122D000276A9 /* Font+UIKit.swift */,
+				233628C11CCE15C2000276A9 /* Font+AppKit.swift */,
+				233628C31CCE1625000276A9 /* Color+UIKit.swift */,
+				233628C51CCE1679000276A9 /* Color+AppKit.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		233628C71CCE16EB000276A9 /* Values */ = {
+			isa = PBXGroup;
+			children = (
+				233628C81CCE16F0000276A9 /* Colors.swift */,
+			);
+			path = Values;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +263,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				233628C41CCE1625000276A9 /* Color+UIKit.swift in Sources */,
+				233628BB1CCE1189000276A9 /* Font.swift in Sources */,
+				233628C61CCE1679000276A9 /* Color+AppKit.swift in Sources */,
+				233628C91CCE16F0000276A9 /* Colors.swift in Sources */,
+				233628C01CCE122D000276A9 /* Font+UIKit.swift in Sources */,
+				233628BD1CCE1190000276A9 /* Color.swift in Sources */,
+				233628C21CCE15C2000276A9 /* Font+AppKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2332D4911CCDFD9700BFB174 /* Base.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -345,6 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fop.FDesign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2332D4911CCDFD9700BFB174 /* Base.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
