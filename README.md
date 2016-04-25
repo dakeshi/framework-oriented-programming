@@ -1,6 +1,8 @@
 # Framework Oriented Programming (iOS/OSX/tvOS/watchOS)
 #### *Iteration 0.0.1*
 
+[![Build Status](https://travis-ci.org/pepibumur/framework-oriented-programming.svg?branch=master)](https://travis-ci.org/pepibumur/framework-oriented-programming)
+
 > The concept of Framework Oriented Programming is formulated as a set of principles that are getting improved as I iterate over this idea in real scenarios. Some of these principles might change. **Any open question that you might have feel free to propose it via email [pepibumur@gmail.com](mailto://pepibumur@gmail.com)**
 
 The ideas behind this paper are not new. They're based on existing principles and programming paradigms. My goal is to put them together, motivating and introducing Swift/Objective-C developers into something I called "Framework Oriented Programming (FOP)".
