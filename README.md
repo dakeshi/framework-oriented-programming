@@ -20,11 +20,15 @@ The ideas behind this paper are not new. They're based on existing principles an
 ## Checklist
 
 - [ ] Include a testing section.
+- [ ] Give use cases for Foundation framework *(e.g. Reactive programming frameworks)*.
 - [ ] Explain migration approaches.
+- [ ] Link principles with SOLID principles *(some of them are related)*.
 
 ## Changelog
 
 # 1 - Context
+
+![Apple available platforms](Assets/apple-software.png)
 
 We've always been told as a developers to follow one basic principle of design, try to make your code *reusable*. Design your classes, your business logic, your projects to be reusable. Project them into the future and imagine how these components could be used on different scenarios and contexts, pay special attention to the dependencies and prefer abstractions over concrections... There are bunch of principles and philosophies that can be applied to create reusable code from a low level perspective. However, when it's about going higher in the stack, we forget about it and we end up having projects tied to the platform and tied to our product use case. **What if we could design our apps in a way that could be easy to reuse and platform independent?**
 <br><br>
@@ -67,16 +71,23 @@ Defining the responsibility of a framework is not easy. Think about a Framework 
 
 > Build single purpose boxes
 
+![](/Assets/Framework-Responsibilities.png)
+
+
 ### 2. Vertical dependencies over horizontal
 
 Design your frameworks graph as a stack with multiple layers where the application is on the top. Avoid horizontal dependencies between frameworks in the same layer and prefer vertical dependencies down in the stack. If any framework needed to know about other, you might need a layer that *"puts them in touch"*, on top of them. A very simple example would be the data synchronization in your app. We might have a framework for an HTTP interaction with your API, another one for persisting the data and think about getting to know each other to persist the responses from one using the other one. You're unconsciously coupling these two frameworks horizontally. Let's come up with a new framework on top of these responsible of that *synchronization* between local and remote.
 
 > Design your stack dependencies vertically
 
+![](/Assets/Framework-Vertical.png)
+
 ### 3 - Lower in the stack, fewer dependencies
 The number of external dependencies should be directly proportional with the level of the framework in the stack *(i.e, the lower in the stack the less the external dependencies it should have)*. Dependencies of lower levels are also dependencies of upper levels, thus, the more dependencies we we have in these levels the more complex the graph and the setup becomes. Figure out if your Framework really needs that external dependency that you are thinking about. Most of the times we end up checking out dependencies to use only a few components from them. Checkout only these components/extensions/classes that you really need, or implement them by your own whenever it's possible.
 
 > Reduce external dependencies as you go lower in the stack.
+
+![](/Assets/Framework-External.png)
 
 ### 4. One step dependencies
 
@@ -86,15 +97,21 @@ This makes replacement in the future easier. For example if you used another per
 
 > Don't expose lower dependencies to upper levels. Wrap them!
 
+![](/Assets/Framework-OneStep.png)
+
 ### 5. Internal by default
 If you're using **Swift**, congrats :tada:, you get this for free. All components are by default `internal` and they won't be visible form other frameworks unless you specify it with the `public` modifier. As soon as you start *"consuming"* your frameworks you'll figure out which components have to be `public`. In case of **Objective-C** keep the headers private in the target headers configuration and make `public` only these that must be visible. When a component is `public` the developers that are depending on that frameworks feel the *"freedom"* and *"flexibility"* that leads to a misuse and coupling with private code.
 
 > Make framework components internal by default and make public only these needed.
 
+![](/Assets/Framework-Internal.png)
+
 ### 6. Framework models
 Each framework should implement their own models. If you share models between multiple frameworks you are coupling these frameworks to the frameworks that provide these models. That said, a `Networking` framework should have defined models representing API responses, and a `Database` framework should have their own `Database` models. If these models are combined in a business logic framework, `Core` then they should be wrapped into different models.
 
 > Each framework defines its own models
+
+![](/Assets/Framework-Models.png)
 
 ### 7. Platform abstraction
 Decouple your framework from platform specific frameworks. What does it mean? If there's a Framework that is `macOS` or `iOS` only, for example `UIKit` or `AppKit`, try not to couple your framework to it. Instead come up with these components that you might need, a `Color` or a `Font`  class/struct. You can create extensions and platform macros to convert these frameworks components into components that are easier to work with from the application.
@@ -104,17 +121,32 @@ Decouple your framework from platform specific frameworks. What does it mean? If
 
 > Decoupled from platforms, extended to make it nicer to play with for platforms.
 
+```swift
+#if os(OSX)
+// OSX only code
+#endif
+```
+
+![Single Responsibility](/Assets/Framework-Platform.png)
+
 ### 8. Protocol oriented interfaces
 Abstract your public interfaces with protocols. That decouples the access layer from the implementation. If a framework `A` depends on the protocol based interface of `B`, `B` can update its implementation without requiring any change in `A` *(since the exposed interface is the same)*. This principle is aligned with the Swift philosophy based on protocols, and that is well known as *Protocol Oriented Programming*. The same programming paradigm that applies to this principle. Your frameworks are responsible of certain tasks and you define them in a protocol based interface.
 
 > Define your Frameworks interfaces using protocols
 
+![](/Assets/Framework-Interface.png)
+
 # 4 - Example
 
+![FOP Example](/Assets/Framework-Stack.png)
+
 There's an example project in this repository that includes:
+
 - External dependencies resolved using CocoaPods.
 - Local dependencies added manually to the same workspace.
 - External dependencies for local frameworks using Carthage.
+
+The stack of frameworks of that project is the one shown above. Networking/Persistency are responsible for interacting with the Rest API and the local database/keychain respectively. Core is responsible of the example business logic. Design includes set of reusable design models and values and Foundation provides components that are used by all the application frameworks.
 
 To setup the project locally:
 
@@ -122,8 +154,8 @@ To setup the project locally:
 2. Install bundle dependencies `bundle install`
 3. Install carthage if you didn't have it installed `brew install carthage`
 4. Execute `bundle exec pod install` to resolve CocoaPods dependencies and create the workspace with them.
-5. Execute `carthage update` to resolve Carthage dependencies.
-6. Open the project using `Example.xcworkspace`.
+5. Execute `bash script/dependencies` to resolve Carthage dependencies.
+6. Open the project using `Frameworks.xcworkspace`.
 
 # 5 - Tutorial (Dynamic Frameworks)
 
