@@ -15,6 +15,8 @@
 		23123E7D1CCE039600516693 /* FPersistency.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23123E7B1CCE039600516693 /* FPersistency.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		23123E7F1CCE039600516693 /* FNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23123E7E1CCE039600516693 /* FNetworking.framework */; };
 		23123E801CCE039600516693 /* FNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23123E7E1CCE039600516693 /* FNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		233629141CCE1A1F000276A9 /* FFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233629131CCE1A1F000276A9 /* FFoundation.framework */; };
+		233629151CCE1A1F000276A9 /* FFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 233629131CCE1A1F000276A9 /* FFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2396F4CC1CC49EA800F7373A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396F4CB1CC49EA800F7373A /* AppDelegate.swift */; };
 		2396F4CE1CC49EA800F7373A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396F4CD1CC49EA800F7373A /* ViewController.swift */; };
 		2396F4D11CC49EA800F7373A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2396F4CF1CC49EA800F7373A /* Main.storyboard */; };
@@ -40,6 +42,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				23123E7A1CCE039600516693 /* FCore.framework in Embed Frameworks */,
+				233629151CCE1A1F000276A9 /* FFoundation.framework in Embed Frameworks */,
 				23123E771CCE039600516693 /* FDesign.framework in Embed Frameworks */,
 				23123E7D1CCE039600516693 /* FPersistency.framework in Embed Frameworks */,
 				23123E801CCE039600516693 /* FNetworking.framework in Embed Frameworks */,
@@ -54,6 +57,7 @@
 		23123E781CCE039600516693 /* FCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23123E7B1CCE039600516693 /* FPersistency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FPersistency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23123E7E1CCE039600516693 /* FNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		233629131CCE1A1F000276A9 /* FFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2396F4C81CC49EA800F7373A /* TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2396F4CB1CC49EA800F7373A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2396F4CD1CC49EA800F7373A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23123E791CCE039600516693 /* FCore.framework in Frameworks */,
+				233629141CCE1A1F000276A9 /* FFoundation.framework in Frameworks */,
 				23123E761CCE039600516693 /* FDesign.framework in Frameworks */,
 				23123E7C1CCE039600516693 /* FPersistency.framework in Frameworks */,
 				23123E7F1CCE039600516693 /* FNetworking.framework in Frameworks */,
@@ -90,6 +95,7 @@
 		23123E811CCE03AA00516693 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				233629131CCE1A1F000276A9 /* FFoundation.framework */,
 				23123E7E1CCE039600516693 /* FNetworking.framework */,
 				23123E7B1CCE039600516693 /* FPersistency.framework */,
 				23123E781CCE039600516693 /* FCore.framework */,

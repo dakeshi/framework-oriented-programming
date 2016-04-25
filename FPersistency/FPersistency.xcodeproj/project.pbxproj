@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		2336289B1CCE0975000276A9 /* AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336289A1CCE0975000276A9 /* AppKit.swift */; };
 		2336289D1CCE0975000276A9 /* FPersistency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2332D3FF1CCDF5FB00BFB174 /* FPersistency.framework */; };
-		233628AD1CCE0B63000276A9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233628AC1CCE0B63000276A9 /* Quick.framework */; };
-		233628AF1CCE0B68000276A9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233628AE1CCE0B68000276A9 /* Nimble.framework */; };
+		233629081CCE1941000276A9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233628AC1CCE0B63000276A9 /* Quick.framework */; };
+		233629091CCE1945000276A9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233628AE1CCE0B68000276A9 /* Nimble.framework */; };
+		2336290B1CCE194F000276A9 /* FFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2336290A1CCE194F000276A9 /* FFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		2336289C1CCE0975000276A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		233628AC1CCE0B63000276A9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		233628AE1CCE0B68000276A9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2336290A1CCE194F000276A9 /* FFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,8 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				233628AF1CCE0B68000276A9 /* Nimble.framework in Frameworks */,
-				233628AD1CCE0B63000276A9 /* Quick.framework in Frameworks */,
+				2336290B1CCE194F000276A9 /* FFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				233629091CCE1945000276A9 /* Nimble.framework in Frameworks */,
+				233629081CCE1941000276A9 /* Quick.framework in Frameworks */,
 				2336289D1CCE0975000276A9 /* FPersistency.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +108,7 @@
 		233628AB1CCE0B56000276A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2336290A1CCE194F000276A9 /* FFoundation.framework */,
 				233628AE1CCE0B68000276A9 /* Nimble.framework */,
 				233628AC1CCE0B63000276A9 /* Quick.framework */,
 			);

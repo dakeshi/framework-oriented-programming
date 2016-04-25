@@ -13,6 +13,7 @@
 		2332D4571CCDF61600BFB174 /* AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332D4561CCDF61600BFB174 /* AppKit.swift */; };
 		233628B11CCE0B9D000276A9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233628B01CCE0B9D000276A9 /* Quick.framework */; };
 		233628B31CCE0BA2000276A9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233628B21CCE0BA2000276A9 /* Nimble.framework */; };
+		2336290D1CCE1961000276A9 /* FFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2336290C1CCE1961000276A9 /* FFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		233628A41CCE0A33000276A9 /* Base-Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Base-Test.xcconfig"; path = "../Config/Base-Test.xcconfig"; sourceTree = "<group>"; };
 		233628B01CCE0B9D000276A9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		233628B21CCE0BA2000276A9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2336290C1CCE1961000276A9 /* FFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2336290D1CCE1961000276A9 /* FFoundation.framework in Frameworks */,
 				23123E5C1CCE02D600516693 /* FPersistency.framework in Frameworks */,
 				23123E5A1CCE02C200516693 /* FNetworking.framework in Frameworks */,
 			);
@@ -111,6 +114,7 @@
 		2332D46B1CCDFD6900BFB174 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2336290C1CCE1961000276A9 /* FFoundation.framework */,
 				233628B21CCE0BA2000276A9 /* Nimble.framework */,
 				233628B01CCE0B9D000276A9 /* Quick.framework */,
 				23123E5B1CCE02D600516693 /* FPersistency.framework */,
