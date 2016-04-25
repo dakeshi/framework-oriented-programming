@@ -11,6 +11,7 @@
 		233628E41CCE17CE000276A9 /* AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233628E31CCE17CE000276A9 /* AppKit.swift */; };
 		233629041CCE1855000276A9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233629031CCE1855000276A9 /* Quick.framework */; };
 		233629061CCE185A000276A9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233629051CCE185A000276A9 /* Nimble.framework */; };
+		2336291E1CCE1F79000276A9 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336291D1CCE1F79000276A9 /* Operation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		233629021CCE1812000276A9 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Config/Base.xcconfig; sourceTree = "<group>"; };
 		233629031CCE1855000276A9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		233629051CCE185A000276A9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2336291D1CCE1F79000276A9 /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		233628D61CCE17CE000276A9 /* FFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				2336291C1CCE1F71000276A9 /* Models */,
 				233628D91CCE17CE000276A9 /* Info.plist */,
 			);
 			path = FFoundation;
@@ -109,6 +112,14 @@
 				233629031CCE1855000276A9 /* Quick.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2336291C1CCE1F71000276A9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2336291D1CCE1F79000276A9 /* Operation.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2336291E1CCE1F79000276A9 /* Operation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 233629021CCE1812000276A9 /* Base.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -345,6 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fop.FFoundation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 233629021CCE1812000276A9 /* Base.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
