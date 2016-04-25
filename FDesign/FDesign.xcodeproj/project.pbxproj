@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2332D47A1CCDFD7B00BFB174 /* FDesign.h in Headers */ = {isa = PBXBuildFile; fileRef = 2332D4791CCDFD7B00BFB174 /* FDesign.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2332D4811CCDFD7B00BFB174 /* FDesign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2332D4761CCDFD7B00BFB174 /* FDesign.framework */; };
-		2332D4861CCDFD7B00BFB174 /* FDesignTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332D4851CCDFD7B00BFB174 /* FDesignTests.swift */; };
+		2332D4861CCDFD7B00BFB174 /* AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332D4851CCDFD7B00BFB174 /* AppKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,12 +23,12 @@
 
 /* Begin PBXFileReference section */
 		2332D4761CCDFD7B00BFB174 /* FDesign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FDesign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2332D4791CCDFD7B00BFB174 /* FDesign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDesign.h; sourceTree = "<group>"; };
 		2332D47B1CCDFD7B00BFB174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2332D4801CCDFD7B00BFB174 /* FDesignTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FDesignTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2332D4851CCDFD7B00BFB174 /* FDesignTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDesignTests.swift; sourceTree = "<group>"; };
+		2332D4851CCDFD7B00BFB174 /* AppKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKit.swift; sourceTree = "<group>"; };
 		2332D4871CCDFD7B00BFB174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2332D4911CCDFD9700BFB174 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Config/Base.xcconfig; sourceTree = "<group>"; };
+		233628A31CCE09E5000276A9 /* Base-Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Base-Test.xcconfig"; path = "../Config/Base-Test.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +72,6 @@
 		2332D4781CCDFD7B00BFB174 /* FDesign */ = {
 			isa = PBXGroup;
 			children = (
-				2332D4791CCDFD7B00BFB174 /* FDesign.h */,
 				2332D47B1CCDFD7B00BFB174 /* Info.plist */,
 			);
 			path = FDesign;
@@ -82,7 +80,7 @@
 		2332D4841CCDFD7B00BFB174 /* FDesignTests */ = {
 			isa = PBXGroup;
 			children = (
-				2332D4851CCDFD7B00BFB174 /* FDesignTests.swift */,
+				2332D4851CCDFD7B00BFB174 /* AppKit.swift */,
 				2332D4871CCDFD7B00BFB174 /* Info.plist */,
 			);
 			path = FDesignTests;
@@ -91,6 +89,7 @@
 		2332D4901CCDFD8E00BFB174 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				233628A31CCE09E5000276A9 /* Base-Test.xcconfig */,
 				2332D4911CCDFD9700BFB174 /* Base.xcconfig */,
 			);
 			name = Config;
@@ -103,7 +102,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2332D47A1CCDFD7B00BFB174 /* FDesign.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2332D4861CCDFD7B00BFB174 /* FDesignTests.swift in Sources */,
+				2332D4861CCDFD7B00BFB174 /* AppKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +317,7 @@
 		};
 		2332D48B1CCDFD7B00BFB174 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2332D4911CCDFD9700BFB174 /* Base.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -335,6 +334,7 @@
 		};
 		2332D48C1CCDFD7B00BFB174 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2332D4911CCDFD9700BFB174 /* Base.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -351,6 +351,7 @@
 		};
 		2332D48E1CCDFD7B00BFB174 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 233628A31CCE09E5000276A9 /* Base-Test.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FDesignTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -361,6 +362,7 @@
 		};
 		2332D48F1CCDFD7B00BFB174 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 233628A31CCE09E5000276A9 /* Base-Test.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FDesignTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

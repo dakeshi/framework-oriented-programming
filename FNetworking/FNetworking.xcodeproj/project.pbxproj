@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2332D4271CCDF60D00BFB174 /* FNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 2332D4261CCDF60D00BFB174 /* FNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2332D42E1CCDF60D00BFB174 /* FNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2332D4231CCDF60D00BFB174 /* FNetworking.framework */; };
-		2332D4331CCDF60D00BFB174 /* FNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332D4321CCDF60D00BFB174 /* FNetworkingTests.swift */; };
+		2332D4331CCDF60D00BFB174 /* AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332D4321CCDF60D00BFB174 /* AppKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,12 +23,12 @@
 
 /* Begin PBXFileReference section */
 		2332D4231CCDF60D00BFB174 /* FNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2332D4261CCDF60D00BFB174 /* FNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNetworking.h; sourceTree = "<group>"; };
 		2332D4281CCDF60D00BFB174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2332D42D1CCDF60D00BFB174 /* FNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2332D4321CCDF60D00BFB174 /* FNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNetworkingTests.swift; sourceTree = "<group>"; };
+		2332D4321CCDF60D00BFB174 /* AppKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKit.swift; sourceTree = "<group>"; };
 		2332D4341CCDF60D00BFB174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2332D4661CCDF67600BFB174 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Config/Base.xcconfig; sourceTree = "<group>"; };
+		233628A51CCE0A93000276A9 /* Base-Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Base-Test.xcconfig"; path = "../Config/Base-Test.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +72,6 @@
 		2332D4251CCDF60D00BFB174 /* FNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				2332D4261CCDF60D00BFB174 /* FNetworking.h */,
 				2332D4281CCDF60D00BFB174 /* Info.plist */,
 			);
 			path = FNetworking;
@@ -82,7 +80,7 @@
 		2332D4311CCDF60D00BFB174 /* FNetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
-				2332D4321CCDF60D00BFB174 /* FNetworkingTests.swift */,
+				2332D4321CCDF60D00BFB174 /* AppKit.swift */,
 				2332D4341CCDF60D00BFB174 /* Info.plist */,
 			);
 			path = FNetworkingTests;
@@ -91,6 +89,7 @@
 		2332D4651CCDF66B00BFB174 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				233628A51CCE0A93000276A9 /* Base-Test.xcconfig */,
 				2332D4661CCDF67600BFB174 /* Base.xcconfig */,
 			);
 			name = Config;
@@ -103,7 +102,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2332D4271CCDF60D00BFB174 /* FNetworking.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2332D4331CCDF60D00BFB174 /* FNetworkingTests.swift in Sources */,
+				2332D4331CCDF60D00BFB174 /* AppKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +317,7 @@
 		};
 		2332D4381CCDF60D00BFB174 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2332D4661CCDF67600BFB174 /* Base.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -335,6 +334,7 @@
 		};
 		2332D4391CCDF60D00BFB174 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2332D4661CCDF67600BFB174 /* Base.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -351,6 +351,7 @@
 		};
 		2332D43B1CCDF60D00BFB174 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 233628A51CCE0A93000276A9 /* Base-Test.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FNetworkingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -361,6 +362,7 @@
 		};
 		2332D43C1CCDF60D00BFB174 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 233628A51CCE0A93000276A9 /* Base-Test.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FNetworkingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

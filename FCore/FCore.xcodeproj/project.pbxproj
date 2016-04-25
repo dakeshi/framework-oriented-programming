@@ -9,9 +9,8 @@
 /* Begin PBXBuildFile section */
 		23123E5A1CCE02C200516693 /* FNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23123E591CCE02C200516693 /* FNetworking.framework */; };
 		23123E5C1CCE02D600516693 /* FPersistency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23123E5B1CCE02D600516693 /* FPersistency.framework */; };
-		2332D44B1CCDF61600BFB174 /* FCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2332D44A1CCDF61600BFB174 /* FCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2332D4521CCDF61600BFB174 /* FCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2332D4471CCDF61600BFB174 /* FCore.framework */; };
-		2332D4571CCDF61600BFB174 /* FCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332D4561CCDF61600BFB174 /* FCoreTests.swift */; };
+		2332D4571CCDF61600BFB174 /* AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332D4561CCDF61600BFB174 /* AppKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,12 +27,12 @@
 		23123E591CCE02C200516693 /* FNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23123E5B1CCE02D600516693 /* FPersistency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FPersistency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2332D4471CCDF61600BFB174 /* FCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2332D44A1CCDF61600BFB174 /* FCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCore.h; sourceTree = "<group>"; };
 		2332D44C1CCDF61600BFB174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2332D4511CCDF61600BFB174 /* FCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2332D4561CCDF61600BFB174 /* FCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCoreTests.swift; sourceTree = "<group>"; };
+		2332D4561CCDF61600BFB174 /* AppKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKit.swift; sourceTree = "<group>"; };
 		2332D4581CCDF61600BFB174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2332D4641CCDF65B00BFB174 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Config/Base.xcconfig; sourceTree = "<group>"; };
+		233628A41CCE0A33000276A9 /* Base-Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Base-Test.xcconfig"; path = "../Config/Base-Test.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +79,6 @@
 		2332D4491CCDF61600BFB174 /* FCore */ = {
 			isa = PBXGroup;
 			children = (
-				2332D44A1CCDF61600BFB174 /* FCore.h */,
 				2332D44C1CCDF61600BFB174 /* Info.plist */,
 			);
 			path = FCore;
@@ -89,7 +87,7 @@
 		2332D4551CCDF61600BFB174 /* FCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				2332D4561CCDF61600BFB174 /* FCoreTests.swift */,
+				2332D4561CCDF61600BFB174 /* AppKit.swift */,
 				2332D4581CCDF61600BFB174 /* Info.plist */,
 			);
 			path = FCoreTests;
@@ -98,6 +96,7 @@
 		2332D4631CCDF65300BFB174 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				233628A41CCE0A33000276A9 /* Base-Test.xcconfig */,
 				2332D4641CCDF65B00BFB174 /* Base.xcconfig */,
 			);
 			name = Config;
@@ -119,7 +118,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2332D44B1CCDF61600BFB174 /* FCore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2332D4571CCDF61600BFB174 /* FCoreTests.swift in Sources */,
+				2332D4571CCDF61600BFB174 /* AppKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +333,7 @@
 		};
 		2332D45C1CCDF61600BFB174 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2332D4641CCDF65B00BFB174 /* Base.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -351,6 +350,7 @@
 		};
 		2332D45D1CCDF61600BFB174 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2332D4641CCDF65B00BFB174 /* Base.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -367,6 +367,7 @@
 		};
 		2332D45F1CCDF61600BFB174 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 233628A41CCE0A33000276A9 /* Base-Test.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -377,6 +378,7 @@
 		};
 		2332D4601CCDF61600BFB174 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 233628A41CCE0A33000276A9 /* Base-Test.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

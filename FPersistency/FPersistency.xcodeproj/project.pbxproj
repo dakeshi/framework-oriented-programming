@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2332D4031CCDF5FB00BFB174 /* FPersistency.h in Headers */ = {isa = PBXBuildFile; fileRef = 2332D4021CCDF5FB00BFB174 /* FPersistency.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2332D40A1CCDF5FB00BFB174 /* FPersistency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2332D3FF1CCDF5FB00BFB174 /* FPersistency.framework */; };
-		2332D40F1CCDF5FB00BFB174 /* FPersistencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332D40E1CCDF5FB00BFB174 /* FPersistencyTests.swift */; };
+		2336289B1CCE0975000276A9 /* AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336289A1CCE0975000276A9 /* AppKit.swift */; };
+		2336289D1CCE0975000276A9 /* FPersistency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2332D3FF1CCDF5FB00BFB174 /* FPersistency.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2332D40B1CCDF5FB00BFB174 /* PBXContainerItemProxy */ = {
+		2336289E1CCE0975000276A9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2332D3F61CCDF5FB00BFB174 /* Project object */;
 			proxyType = 1;
@@ -23,13 +22,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23123EA61CCE062900516693 /* Base-Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Base-Test.xcconfig"; path = "../Config/Base-Test.xcconfig"; sourceTree = "<group>"; };
 		2332D3FF1CCDF5FB00BFB174 /* FPersistency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FPersistency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2332D4021CCDF5FB00BFB174 /* FPersistency.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPersistency.h; sourceTree = "<group>"; };
 		2332D4041CCDF5FB00BFB174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2332D4091CCDF5FB00BFB174 /* FPersistencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FPersistencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2332D40E1CCDF5FB00BFB174 /* FPersistencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPersistencyTests.swift; sourceTree = "<group>"; };
-		2332D4101CCDF5FB00BFB174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2332D4621CCDF64600BFB174 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Config/Base.xcconfig; sourceTree = "<group>"; };
+		233628981CCE0975000276A9 /* FPersistencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FPersistencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2336289A1CCE0975000276A9 /* AppKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKit.swift; sourceTree = "<group>"; };
+		2336289C1CCE0975000276A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,11 +39,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2332D4061CCDF5FB00BFB174 /* Frameworks */ = {
+		233628951CCE0975000276A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2332D40A1CCDF5FB00BFB174 /* FPersistency.framework in Frameworks */,
+				2336289D1CCE0975000276A9 /* FPersistency.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +55,7 @@
 			children = (
 				2332D4611CCDF63700BFB174 /* Config */,
 				2332D4011CCDF5FB00BFB174 /* FPersistency */,
-				2332D40D1CCDF5FB00BFB174 /* FPersistencyTests */,
+				233628991CCE0975000276A9 /* FPersistencyTests */,
 				2332D4001CCDF5FB00BFB174 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				2332D3FF1CCDF5FB00BFB174 /* FPersistency.framework */,
-				2332D4091CCDF5FB00BFB174 /* FPersistencyTests.xctest */,
+				233628981CCE0975000276A9 /* FPersistencyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,27 +72,27 @@
 		2332D4011CCDF5FB00BFB174 /* FPersistency */ = {
 			isa = PBXGroup;
 			children = (
-				2332D4021CCDF5FB00BFB174 /* FPersistency.h */,
 				2332D4041CCDF5FB00BFB174 /* Info.plist */,
 			);
 			path = FPersistency;
-			sourceTree = "<group>";
-		};
-		2332D40D1CCDF5FB00BFB174 /* FPersistencyTests */ = {
-			isa = PBXGroup;
-			children = (
-				2332D40E1CCDF5FB00BFB174 /* FPersistencyTests.swift */,
-				2332D4101CCDF5FB00BFB174 /* Info.plist */,
-			);
-			path = FPersistencyTests;
 			sourceTree = "<group>";
 		};
 		2332D4611CCDF63700BFB174 /* Config */ = {
 			isa = PBXGroup;
 			children = (
 				2332D4621CCDF64600BFB174 /* Base.xcconfig */,
+				23123EA61CCE062900516693 /* Base-Test.xcconfig */,
 			);
 			name = Config;
+			sourceTree = "<group>";
+		};
+		233628991CCE0975000276A9 /* FPersistencyTests */ = {
+			isa = PBXGroup;
+			children = (
+				2336289A1CCE0975000276A9 /* AppKit.swift */,
+				2336289C1CCE0975000276A9 /* Info.plist */,
+			);
+			path = FPersistencyTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,7 +102,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2332D4031CCDF5FB00BFB174 /* FPersistency.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,22 +126,22 @@
 			productReference = 2332D3FF1CCDF5FB00BFB174 /* FPersistency.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2332D4081CCDF5FB00BFB174 /* FPersistencyTests */ = {
+		233628971CCE0975000276A9 /* FPersistencyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2332D4161CCDF5FB00BFB174 /* Build configuration list for PBXNativeTarget "FPersistencyTests" */;
+			buildConfigurationList = 233628A01CCE0975000276A9 /* Build configuration list for PBXNativeTarget "FPersistencyTests" */;
 			buildPhases = (
-				2332D4051CCDF5FB00BFB174 /* Sources */,
-				2332D4061CCDF5FB00BFB174 /* Frameworks */,
-				2332D4071CCDF5FB00BFB174 /* Resources */,
+				233628941CCE0975000276A9 /* Sources */,
+				233628951CCE0975000276A9 /* Frameworks */,
+				233628961CCE0975000276A9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2332D40C1CCDF5FB00BFB174 /* PBXTargetDependency */,
+				2336289F1CCE0975000276A9 /* PBXTargetDependency */,
 			);
 			name = FPersistencyTests;
 			productName = FPersistencyTests;
-			productReference = 2332D4091CCDF5FB00BFB174 /* FPersistencyTests.xctest */;
+			productReference = 233628981CCE0975000276A9 /* FPersistencyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -159,7 +157,7 @@
 					2332D3FE1CCDF5FB00BFB174 = {
 						CreatedOnToolsVersion = 7.3;
 					};
-					2332D4081CCDF5FB00BFB174 = {
+					233628971CCE0975000276A9 = {
 						CreatedOnToolsVersion = 7.3;
 					};
 				};
@@ -177,7 +175,7 @@
 			projectRoot = "";
 			targets = (
 				2332D3FE1CCDF5FB00BFB174 /* FPersistency */,
-				2332D4081CCDF5FB00BFB174 /* FPersistencyTests */,
+				233628971CCE0975000276A9 /* FPersistencyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -190,7 +188,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2332D4071CCDF5FB00BFB174 /* Resources */ = {
+		233628961CCE0975000276A9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -207,21 +205,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2332D4051CCDF5FB00BFB174 /* Sources */ = {
+		233628941CCE0975000276A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2332D40F1CCDF5FB00BFB174 /* FPersistencyTests.swift in Sources */,
+				2336289B1CCE0975000276A9 /* AppKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2332D40C1CCDF5FB00BFB174 /* PBXTargetDependency */ = {
+		2336289F1CCE0975000276A9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2332D3FE1CCDF5FB00BFB174 /* FPersistency */;
-			targetProxy = 2332D40B1CCDF5FB00BFB174 /* PBXContainerItemProxy */;
+			targetProxy = 2336289E1CCE0975000276A9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -319,6 +317,7 @@
 		};
 		2332D4141CCDF5FB00BFB174 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2332D4621CCDF64600BFB174 /* Base.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -335,6 +334,7 @@
 		};
 		2332D4151CCDF5FB00BFB174 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2332D4621CCDF64600BFB174 /* Base.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -349,23 +349,33 @@
 			};
 			name = Release;
 		};
-		2332D4171CCDF5FB00BFB174 /* Debug */ = {
+		233628A11CCE0975000276A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23123EA61CCE062900516693 /* Base-Test.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = FPersistencyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fop.FPersistencyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		2332D4181CCDF5FB00BFB174 /* Release */ = {
+		233628A21CCE0975000276A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23123EA61CCE062900516693 /* Base-Test.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = FPersistencyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fop.FPersistencyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -390,14 +400,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2332D4161CCDF5FB00BFB174 /* Build configuration list for PBXNativeTarget "FPersistencyTests" */ = {
+		233628A01CCE0975000276A9 /* Build configuration list for PBXNativeTarget "FPersistencyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2332D4171CCDF5FB00BFB174 /* Debug */,
-				2332D4181CCDF5FB00BFB174 /* Release */,
+				233628A11CCE0975000276A9 /* Debug */,
+				233628A21CCE0975000276A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
