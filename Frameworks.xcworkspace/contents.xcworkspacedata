@@ -2,13 +2,22 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:WatchApp/WatchApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:OSX/OSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TV/TV.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:iOS/iOS.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Carthage/Checkouts/Nimble/Nimble.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Carthage/Checkouts/Quick/Quick.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:WatchApp/WatchApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:FDesign/FDesign.xcodeproj">
@@ -21,14 +30,5 @@
    </FileRef>
    <FileRef
       location = "group:FNetworking/FNetworking.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:OSX/OSX.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:TV/TV.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:iOS/iOS.xcodeproj">
    </FileRef>
 </Workspace>

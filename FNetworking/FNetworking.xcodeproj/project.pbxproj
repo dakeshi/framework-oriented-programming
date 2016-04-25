@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2332D42E1CCDF60D00BFB174 /* FNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2332D4231CCDF60D00BFB174 /* FNetworking.framework */; };
 		2332D4331CCDF60D00BFB174 /* AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332D4321CCDF60D00BFB174 /* AppKit.swift */; };
+		233628A71CCE0AF1000276A9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233628A61CCE0AF1000276A9 /* Quick.framework */; };
+		233628A91CCE0AF6000276A9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233628A81CCE0AF6000276A9 /* Nimble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		2332D4341CCDF60D00BFB174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2332D4661CCDF67600BFB174 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Config/Base.xcconfig; sourceTree = "<group>"; };
 		233628A51CCE0A93000276A9 /* Base-Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Base-Test.xcconfig"; path = "../Config/Base-Test.xcconfig"; sourceTree = "<group>"; };
+		233628A61CCE0AF1000276A9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		233628A81CCE0AF6000276A9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				233628A91CCE0AF6000276A9 /* Nimble.framework in Frameworks */,
+				233628A71CCE0AF1000276A9 /* Quick.framework in Frameworks */,
 				2332D42E1CCDF60D00BFB174 /* FNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +59,7 @@
 		2332D4191CCDF60D00BFB174 = {
 			isa = PBXGroup;
 			children = (
+				233628AA1CCE0B06000276A9 /* Frameworks */,
 				2332D4651CCDF66B00BFB174 /* Config */,
 				2332D4251CCDF60D00BFB174 /* FNetworking */,
 				2332D4311CCDF60D00BFB174 /* FNetworkingTests */,
@@ -93,6 +100,15 @@
 				2332D4661CCDF67600BFB174 /* Base.xcconfig */,
 			);
 			name = Config;
+			sourceTree = "<group>";
+		};
+		233628AA1CCE0B06000276A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				233628A81CCE0AF6000276A9 /* Nimble.framework */,
+				233628A61CCE0AF1000276A9 /* Quick.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

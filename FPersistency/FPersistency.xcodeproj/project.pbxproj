@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2336289B1CCE0975000276A9 /* AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336289A1CCE0975000276A9 /* AppKit.swift */; };
 		2336289D1CCE0975000276A9 /* FPersistency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2332D3FF1CCDF5FB00BFB174 /* FPersistency.framework */; };
+		233628AD1CCE0B63000276A9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233628AC1CCE0B63000276A9 /* Quick.framework */; };
+		233628AF1CCE0B68000276A9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233628AE1CCE0B68000276A9 /* Nimble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		233628981CCE0975000276A9 /* FPersistencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FPersistencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2336289A1CCE0975000276A9 /* AppKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKit.swift; sourceTree = "<group>"; };
 		2336289C1CCE0975000276A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		233628AC1CCE0B63000276A9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		233628AE1CCE0B68000276A9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				233628AF1CCE0B68000276A9 /* Nimble.framework in Frameworks */,
+				233628AD1CCE0B63000276A9 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +59,7 @@
 		2332D3F51CCDF5FB00BFB174 = {
 			isa = PBXGroup;
 			children = (
+				233628AB1CCE0B56000276A9 /* Frameworks */,
 				2332D4611CCDF63700BFB174 /* Config */,
 				2332D4011CCDF5FB00BFB174 /* FPersistency */,
 				233628991CCE0975000276A9 /* FPersistencyTests */,
@@ -93,6 +100,15 @@
 				2336289C1CCE0975000276A9 /* Info.plist */,
 			);
 			path = FPersistencyTests;
+			sourceTree = "<group>";
+		};
+		233628AB1CCE0B56000276A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				233628AE1CCE0B68000276A9 /* Nimble.framework */,
+				233628AC1CCE0B63000276A9 /* Quick.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
