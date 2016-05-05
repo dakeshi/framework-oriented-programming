@@ -21,6 +21,7 @@ The ideas behind this paper are not new. They're based on existing principles an
 
 ## Checklist
 
+- [ ] Include final principle
 - [ ] Include a testing section.
 - [ ] Give use cases for Foundation framework *(e.g. Reactive programming frameworks)*.
 - [ ] Explain migration approaches.
