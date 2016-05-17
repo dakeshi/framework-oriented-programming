@@ -101,7 +101,7 @@
 ---
 
 # OMG
-#### **That'as awesome**
+#### **That's awesome**
 
 ![fill](images/The-Hills.gif)
 
@@ -261,7 +261,7 @@ Best Practices, Principles, Advices..
 
 ---
 
-# 10. More principles comming...
+# 10. Foundation
 
 ---
 
@@ -387,21 +387,11 @@ VALID_ARCHS[sdk=macosx*] = x86_64
 ---
 
 # Conclusions
-
----
-
-# Example
-
-**Repository**
-[github/pepibumur/framework-oriented-programming](https://github.com/pepibumur/framework-oriented-programming)
-
-### Dependencies
-
-- **Application Dependencies:** [CocoaPods](https://cocoapods.org)
-- **Frameworks (external) Dependencies:** [Carthage](https://github.com/carthage/carthage)
-- **Frameworks (local):** Manually :hand:
+//TODO
 
 ---
 
 # References
-//TODO
+
+- [**Library Oriented Programming**: Justin Spahr-Summers](https://realm.io/news/justin-spahr-summers-library-oriented-programming/)
+- [**The Unofficial Guide to xcconfig files**](https://pewpewthespells.com/blog/xcconfig_guide.html)

@@ -1,5 +1,5 @@
 # Framework Oriented Programming (iOS/OSX/tvOS/watchOS)
-#### *Iteration 0.0.1*
+#### *Iteration 0.0.2*
 
 [![Build Status](https://travis-ci.org/pepibumur/framework-oriented-programming.svg?branch=master)](https://travis-ci.org/pepibumur/framework-oriented-programming)
 
@@ -28,6 +28,8 @@ The ideas behind this paper are not new. They're based on existing principles an
 - [ ] Link principles with SOLID principles *(some of them are related)*.
 
 ## Changelog
+- **0.0.2** *(17/05/2016)*: Add two extra principles, Final and Core.
+- **0.0.1** *(15/04/2016)*: First draft of Framework Oriented Programming.
 
 # 1 - Context
 
@@ -63,6 +65,7 @@ I called it *"Framework Oriented Programming"* and brought the joyfulness of pla
 # 3 - Principles
 
 ### 1. Single responsibility
+**Based on the 1st SOLID principle: Single Responsibility**
 
 SOLID principles also apply to a framework. Frameworks should satisfy the single responsibility framework. They should have only one responsibility. If any of your designed frameworks might have multiple responsibility, think about slicing it in more layers.
 
@@ -109,14 +112,24 @@ If you're using **Swift**, congrats :tada:, you get this for free. All component
 
 ![](/Assets/Framework-Internal.png)
 
-### 6. Framework models
-Each framework should implement their own models. If you share models between multiple frameworks you are coupling these frameworks to the frameworks that provide these models. That said, a `Networking` framework should have defined models representing API responses, and a `Database` framework should have their own `Database` models. If these models are combined in a business logic framework, `Core` then they should be wrapped into different models.
+### 6. Final
+**Based on the 2nd SOLID principle: Open/Closed**
+
+Design your Frameworks components based on the open/closed SOLID principle. Allow extension *(open)* but without diving into the base class implementation *(closed)*. Modifying the base class might lead to unexpected behavior cascading through all the components that rely on the modified one *(it could be detected with a good testing suite)*. Swift allows restricting the modification of a class/method with the **final** keyword. You'll find more information about Swift inheritance and restricting overriding [here](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Inheritance.html).
+
+With the final keyword you prevent overrides from your Frameworks and force the developers to look for extension alternatives other than overriding.
+
+> Make your Frameworks open to extension but closed to modifications.
+
+
+### 7. Framework models
+Each framework should implement their own models. If you share models between multiple frameworks you are coupling these frameworks to the frameworks that provide these models. That said, a `Networking` framework should have defined models representing API responses, and a `Database` framework should have their own `Database` models. If these models are combined in a business logic framework, `Core` then they should be wrapped into different models. You
 
 > Each framework defines its own models
 
 ![](/Assets/Framework-Models.png)
 
-### 7. Platform abstraction
+### 8. Platform abstraction
 Decouple your framework from platform specific frameworks. What does it mean? If there's a Framework that is `macOS` or `iOS` only, for example `UIKit` or `AppKit`, try not to couple your framework to it. Instead come up with these components that you might need, a `Color` or a `Font`  class/struct. You can create extensions and platform macros to convert these frameworks components into components that are easier to work with from the application.
 
 - Swift Preprocessor Directives: [Link](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/InteractingWithCAPIs.html#//apple_ref/doc/uid/TP40014216-CH8-XID_20)
@@ -132,12 +145,25 @@ Decouple your framework from platform specific frameworks. What does it mean? If
 
 ![Single Responsibility](/Assets/Framework-Platform.png)
 
-### 8. Protocol oriented interfaces
+### 9. Protocol oriented interfaces
+
+**Based on the 5th SOLID principle: Dependency Inversion**
+
 Abstract your public interfaces with protocols. That decouples the access layer from the implementation. If a framework `A` depends on the protocol based interface of `B`, `B` can update its implementation without requiring any change in `A` *(since the exposed interface is the same)*. This principle is aligned with the Swift philosophy based on protocols, and that is well known as *Protocol Oriented Programming*. The same programming paradigm that applies to this principle. Your frameworks are responsible of certain tasks and you define them in a protocol based interface.
 
 > Define your Frameworks interfaces using protocols
 
 ![](/Assets/Framework-Interface.png)
+
+### 10. Core
+
+Most of projects share code that is used by all the components around the app. These components are part of your application Foundation. As Apple does with Foundation that provides with the base structures that are needed for building any application, your Core will contain the base structures to build your application/s. Sort of elements that could be part of your Foundation framework are:
+
+- Logging helpers.
+- Extensions of existing Foundation classes *(e.g. extra instance methods added to Array/Collection implementing a behavior that is not natively provided)*
+- Architectural components *(e.g. if we go with the command pattern, we can define a base command class in Foundation)*
+
+To know if a component should be part of Core try to answer the following question: *Is that component going to be used by all the Frameworks in the stack or is it only needed by one of them?*
 
 # 4 - Example
 
