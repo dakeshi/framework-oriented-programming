@@ -20,12 +20,9 @@ The ideas behind this paper are not new. They're based on existing principles an
 | :book: |  [**Reference**](#reference) and resources that might be useful |
 
 ## Checklist
-
-- [ ] Include final principle
 - [ ] Include a testing section.
 - [ ] Give use cases for Foundation framework *(e.g. Reactive programming frameworks)*.
 - [ ] Explain migration approaches.
-- [ ] Link principles with SOLID principles *(some of them are related)*.
 
 ## Changelog
 - **0.0.2** *(17/05/2016)*: Add two extra principles, Final and Core.
