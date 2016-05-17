@@ -1,3 +1,0 @@
-SUPPORTED_PLATFORMS        = macosx
-VALID_ARCHS[sdk=macosx*]                = x86_64
-EMBEDDED_CONTENT_CONTAINS_SWIFT = YES

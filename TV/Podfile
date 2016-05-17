@@ -1,9 +1,0 @@
-use_frameworks!
-
-target 'TV' do
-
-end
-
-target 'TVTests' do
-
-end

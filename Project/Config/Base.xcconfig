@@ -1,0 +1,29 @@
+// Configuration for Frameworks
+
+SUPPORTED_PLATFORMS        = iphoneos iphonesimulator appletvsimulator appletvos macosx watchsimulator watchos
+
+VALID_ARCHS[sdk=iphone*]                = arm64 armv7 armv7s
+VALID_ARCHS[sdk=macosx*]                = x86_64
+
+LD_RUNPATH_SEARCH_PATHS[sdk=iphone*]    = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+LD_RUNPATH_SEARCH_PATHS[sdk=appletv*]   = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+LD_RUNPATH_SEARCH_PATHS[sdk=watch*]     = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]    = $(inherited) @executable_path/../Frameworks @loader_path/Frameworks @loader_path/../Frameworks
+
+IPHONEOS_DEPLOYMENT_TARGET[sdk=iphone*] = 8.0
+
+TARGETED_DEVICE_FAMILY[sdk=iphone*]     = 1,2
+TARGETED_DEVICE_FAMILY[sdk=appletv*]     = 3
+TARGETED_DEVICE_FAMILY[sdk=watch*]     = 4
+
+COMBINE_HIDPI_IMAGES[sdk=macosx*]       = YES
+DEAD_CODE_STRIPPING = NO
+DEFINES_MODULE = YES
+GCC_DYNAMIC_NO_PIC = NO
+INSTALL_PATH = @rpath
+LD_DYLIB_INSTALL_NAME = @rpath/$(PRODUCT_NAME).$(WRAPPER_EXTENSION)/$(PRODUCT_NAME)
+SKIP_INSTALL = YES
+APPLICATION_EXTENSION_API_ONLY = YES
+GCC_TREAT_WARNINGS_AS_ERRORS = YES
+
+EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
