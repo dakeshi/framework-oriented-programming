@@ -4,6 +4,13 @@
 
 ---
 
+# __Hello__
+## _It's me_
+### _(From ~~the other side~~ London)_
+![](images/adele.gif)
+
+---
+
 ## About Me
 - **iOS Developer at SoundCloud**
 - Email: [pepibumur@gmail.com](mailto://pepibumur@gmail.com)
@@ -19,7 +26,7 @@
 ---
 
 # __Framework__ Oriented Programming
-- Started reference with [**GitDo**](https://gitdo.io)
+- Started with [**GitDo**](https://gitdo.io)
 - Applying principles to [**SoundClound**](https://soundcloud.com)
 - Ideas/Principles together **(Reference)**
 
@@ -28,10 +35,10 @@
 # Index
 
 - Context
-- Motivation
 - Principles
-- Open Questions
+- Advantages
 - How to?
+- Open Questions
 - Conclusions
 
 ---
@@ -39,10 +46,10 @@
 # Index
 
 - **Context**
-- Motivation
 - Principles
-- Open Questions
+- Advantages
 - How to?
+- Open Questions
 - Conclusions
 
 ---
@@ -152,57 +159,24 @@
 
 Best Practices, Principles, Advices..
 
----
-
-# Index
-
-- Context
-- **Motivation** 😋
-- Principles
-- Open Questions
-- How to?
-- Conclusions
-
----
-
-# Multiplatform apps
-## **Only working on the UI**
-## :watch::iphone::tv::computer:
-
----
-
-# New products
-## **With similar core needs**
-### *Because you want to reuse code, right?*
-
----
-
-# Open Source
-## **And benefit from the community**
-### *Build pieces of code that you'd be proud of open sourcing*
-
----
-
-# Specialized teams
-## **From UI lovers to Core Data experts**
-### _(clearly defined team boundaries)_
-
----
-
-# Example *GitDo/SoundCloud*
-
-![inline](images/Framework-Stack.png)
+[github.com/pepibumur/framework-oriented-programming](https://github.com/pepibumur/framework-oriented-programming)
 
 ---
 
 # Index
 
 - Context
-- Motivation
 - **Principles**
-- Open Questions
+- Advantages
 - How to?
+- Open Questions
 - Conclusions
+
+---
+
+# Frameworks Stack
+
+![inline](images/stack.png)
 
 ---
 
@@ -214,64 +188,443 @@ Best Practices, Principles, Advices..
 
 # 1. Single Responsibility
 ## __SOLID inspired__
-![inline](images/Framework-Responsibilities.png)
+![inline](images/stack-single-networking.png)
+
+---
+
+# 1. Single Responsibility
+## __SOLID inspired__
+![inline](images/stack-single-persistence.png)
+
+---
+
+# Responsibility?
+### __CoreData access layer?__
+
+
+![fill](images/responsibility-gif.gif)
+
+---
+
+# Responsibility?
+### __CoreData access layer?__
+### __Storage access layer?__
+
+![fill](images/responsibility-gif.gif)
+
+---
+
+# Responsibility?
+### __CoreData access layer?__
+### __Storage access layer?__
+### __Keychain access layer?__
+
+![fill](images/responsibility-gif.gif)
+
+---
+
+# Responsibility?
+### __CoreData access layer?__
+### __Storage access layer?__
+### __Keychain access layer?__
+
+![fill](images/responsibility-gif.gif)
+
+---
+
+# Responsibility?
+### __CoreData access layer?__
+### __Storage access layer?__
+### __Keychain access layer?__
+### __Models?__
+
+![fill](images/responsibility-gif.gif)
+
+---
+
+# Responsibility?
+### __CoreData access layer?__
+### __Storage access layer?__
+### __Keychain access layer?__
+### __Models?__
+# 😩
+
+![fill](images/responsibility-gif.gif)
+
+---
+
+# 1. Single Responsibility
+## __Start from a high level__
+![inline](images/stack-single-persistence.png)
+
+---
+
+# 1. Single Responsibility
+## __Slice them progressively__
+![inline](images/stack-single-slice-1.png)
+
+---
+
+# 1. Single Responsibility
+## __Slice them progressively__
+![inline](images/stack-single-slice-2.png)
 
 ---
 
 # 2. Vertical dependencies
 ## __(Over Horizontal)__
-![inline](images/Framework-Vertical.png)
+![inline](images/stack-vertical.png)
+
+^ We want to have more cohesion between layers avoiding coupling between elements in the same layer.
 
 ---
 
 # 3. __Lower__ in the stack
-## __Fewer__ dependencies
+## __Fewer__ external dependencies
 
-![inline](images/Framework-External.png)
+![inline](images/stack-lower.png)
+
+^Dependencies of lower frameworks and are also dependencies of upper frameworks
 
 ---
 
 # 4. __One Step__ Dependencies
-![inline](images/Framework-OneStep.png)
+![inline](images/stack-one-1.png)
+
+^ Frameworks should depend only on the frameworks below them.
+
+---
+
+# 4. __One Step__ Dependencies
+![inline](images/stack-one-2.png)
+
+^ This would make replacement easier and the frameworks less coupled.
+^ Restrict the elements that are publicly exposed to other frameworks.
+^ Define the scope of your framework and expose only that scope.
 
 ---
 
 # 5. __Internal__ by default
-![inline](images/Framework-Internal.png)
+![inline](images/stack-internal.png)
+
+^Swift makes it easier since internal is the default visibility.
 
 ---
 
 # 6. Final
-//TODO - image
+## __SOLID inspired (open/closed)__
+
+![inline](images/stack-final.png)
+
+^ It's based in the open/closed principle of SOLID.
+^ Allow extension (open) but without modifying the implementation.
 
 ---
 
-# 7. Framework _models_
-![inline](images/Framework-Models.png)
+# 6. Final
+## __SOLID inspired (open/closed)__
+
+![inline](images/stack-final-1.png)
+
+---
+
+# 6. Final
+## __SOLID inspired (open/closed)__
+
+![inline](images/stack-final-2.png)
+
+---
+
+# 6. Final
+## __SOLID inspired (open/closed)__
+
+```swift
+final class Person {
+  let name: String
+}
+
+class Alien: Person { // Compiler complains
+}
+```
+
+---
+
+# 7. Framework __models__
+### __Don't share lower frameworks models upwards__
+
+![inline](images/stack-models-1.png)
+
+---
+
+
+# 7. Framework __models__
+### __Don't share lower frameworks models upwards__
+
+![inline](images/stack-models-2.png)
+
+---
+
+# 7. Framework __models__
+### __Don't share lower frameworks models upwards__
+
+```swift
+// Persistence
+class Author: NSManagedObjectModel {
+  let name: String
+}
+class Track: NSManagedObjectModel {
+  let author: Author
+}
+
+// ListenersKit
+struct StreamTrackEntity {
+  let name: String
+  let authorName: String
+}
+```
+
+---
+
+# 7. Framework __models__
+### __Don't share lower frameworks models upwards__
+
+```swift
+struct StreamTrackEntityAdapter {
+  func adapt(track: Track) -> StreamTrackEntity {
+    return StreamTrackEntity(name: track.name, authorName: track.author.name)
+  }
+}
+```
 
 ---
 
 # 8. Platform __Abstraction__
-![inline](images/Framework-Platform.png)
+![inline](images/stack-platform-1.png)
+
+---
+
+# __But...__
+### _There's platform specific logic_
+__Examples__
+<br>
+- No `NSFetchedResultsController` in macOS
+- `NSIndexPath` is slightly different for watchOS.
+
+![](images/dsori.gif)
+
+---
+
+# 8. Platform __Abstraction__
+## __Macros!__
+
+```swift
+#if os(OSX)
+  // OSX logic
+#else
+  // Other platforms logic
+#endif
+```
 
 ---
 
 # 9. __Protocol__ Oriented Interfaces
-![inline](images/Framework-Interface.png)
+![inline](images/stack-protocols-1.png)
 
 ---
 
-# 10. Foundation
+# 9. __Protocol__ Oriented Interfaces
+![inline](images/stack-protocols-2.png)
+
+---
+
+# 9. __Protocol__ Oriented Interfaces
+![inline](images/stack-protocols-3.png)
+
+---
+
+# 9. __Protocol__ Oriented Interfaces
+![inline](images/stack-protocols-4.png)
+
+---
+
+# 9. __Protocol__ Oriented Interfaces
+![inline](images/stack-protocols-5.png)
+
+---
+
+# 10. Core/Testing
+### __(aka your project Foundation frameworks)__
+
+![inline](images/stack-foundation.png)
+
+---
+
+# 10. Core/Testing
+### __Accessible from all the Frameworks__
+
+- Extensions
+- Logging
+- Analytics
+- Architectural components (e.g. Reactive)
 
 ---
 
 # Index
 
 - Context
-- Motivation
 - Principles
-- **Open Questions**
+- **Advantages** 😋
 - How to?
+- Open Questions
+- Conclusions
+
+---
+
+# Multiplatform apps
+## **Only working on the UI**
+## :watch::iphone::tv::computer:
+
+![inline](images/stack-multiplatform-1.png)
+
+---
+
+# Multiplatform apps
+## **Only working on the UI**
+## :watch::iphone::tv::computer:
+
+![inline](images/stack-multiplatform-2.png)
+
+
+---
+
+# New products
+## **With similar core needs**
+### *Because you want to reuse code, right?*
+
+![inline](images/stack-products-1.png)
+
+---
+
+# New products
+## **With similar core needs**
+### *Because you want to reuse code, right?*
+
+![inline](images/stack-products-2.png)
+
+---
+
+# Open Source
+## **And benefit from the community**
+### *Build pieces of code that you'd be proud of open sourcing*
+
+![inline](images/stack-opensource.png)
+
+---
+
+# Specialized teams
+## **From UI lovers to Core Data experts**
+### _(clearly defined team boundaries)_
+
+![inline](images/stack-teams-1.png)
+
+---
+
+# Specialized teams
+## **From UI lovers to Core Data experts**
+### _(clearly defined team boundaries)_
+
+![inline](images/stack-teams-2.png)
+
+---
+
+
+# Index
+
+- Context
+- Principles
+- Advantages
+- **How to?**
+- Open Questions
+- Conclusions
+
+---
+
+# How to?
+### **There are multiple options**
+#### _(I'll show you some)_
+
+---
+
+# How to?
+### **CocoaPods**
+![inline](images/stack-how-cocoapods.png)
+
+---
+
+# How to?
+### **CocoaPods**
+
+- ✅ Easy setup (each Framework `.podspec`)
+- ✅ You don't have to worry about Xcode Frameworks configuration
+- ✅ Same setup for local/external dependencies
+- ❌ `.podspec` cannot point to another local `.podspec`s
+
+---
+
+# How to?
+### **Local CocoaPods Dependencies**
+
+```ruby
+# Networking ~> Core dependency not found
+pod 'Networking'
+pod 'Core'
+pod 'AppKit'
+```
+
+---
+
+# How to?
+### **Local CocoaPods Dependencies**
+
+```ruby
+pod 'Core'
+pod 'Networking' # Core has already been resolved
+pod 'AppKit'
+```
+
+---
+
+# How to?
+### **Manual**
+
+- ✅ More control over the workspace.
+- ✅ External dependencies can be checked out with Carthage/Git Submodules.
+- ❌ It requires some knowledge about Xcode projects.
+
+---
+
+# How to?
+### **Hybrid**
+
+![inline](images/stack-how-3.png)
+
+---
+
+# How to?
+### **Hybrid**
+
+- ✅ More control over the workspace setup for your stack.
+- ✅ Automatic CocoaPods integration for the top layer.
+
+---
+
+# Index
+
+- Context
+- Principles
+- Advantages
+- How to?
+- **Open Questions**
 - Conclusions
 
 ---
@@ -308,90 +661,50 @@ Best Practices, Principles, Advices..
 
 ---
 
-# Index
+# Open Questions
+## **Migrate existing project**
 
-- Context
-- Motivation
-- Principles
-- Open Questions
-- **How to?**
-- Conclusions
+**RECOMMENDATION :warning:**
+- Start with `Core/Testing`
+- Move `Foundation` components down.
+- Continue building layers progressively.
 
----
+*You'll figure out how couple your code is 😂*
 
-# How to?
-### **In only 5 steps**
-
----
-
-# How to?
-## **1. Project to Workspace**
-### *(It can be the one created by CocoaPods)*
-![inline](images/Workspace.png)
-
----
-
-# How to?
-## **2. Each Framework as a project in the workspace**
-### *(You can create them as iOS Frameworks)*
-
-![inline](images/Projects.png)
-
----
-
-# How to?
-## **3. Use a `.xcconfig` file**
-### *(and make them multiplatform)*
-
-```
-SUPPORTED_PLATFORMS = iphoneos iphonesimulator appletvsimulator appletvos macosx watchsimulator watchos
-VALID_ARCHS[sdk=iphone*] = arm64 armv7 armv7s
-VALID_ARCHS[sdk=macosx*] = x86_64
-```
-
-![inline](images/Configuration.png)
-
----
-
-# How to?
-## **3. Link them**
-### *(Linked Frameworks and Libraries)*
-
-![inline](images/Linking.png)
-
----
-
-# How to?
-## **4. Update Location**
-### *(Relative to Build Products)*
-
-![inline](images/Framework-Location.png)
-
----
-
-# How to?
-## **5. Build/Test/Run**
-### *Don't forget about running tests for your Frameworks on CI*
-### *(And sharing the schemes of the frameworks)*
 ---
 
 # Index
 
 - Context
-- Motivation
 - Principles
-- Open Questions
+- Advantages
 - How to?
+- Open Questions
 - **Conclusions**
 
 ---
 
-# Conclusions
-//TODO
+# __Conclusions__
+
+- **Very useful** for multi-platform projects.
+- Contributes with **less coupled** code *(defined boundaries)*
+- Setup requires some **Xcode Build Settings knowledge**
+- **Swift & Dynamic** frameworks make things easier.
 
 ---
 
-# References
+# __References__
 
 - [**Library Oriented Programming**: Justin Spahr-Summers](https://realm.io/news/justin-spahr-summers-library-oriented-programming/)
 - [**The Unofficial Guide to xcconfig files**](https://pewpewthespells.com/blog/xcconfig_guide.html)
+- [**CocoaPods**](https://cocoapods.org)
+- [**Carthage**](https://github.com/carthage)
+- [**pepibumur/framework-oriented-programming**](https://github.com/pepibumur/framework-oriented-programming)
+- [**Static & Dynamic libraries**](https://pewpewthespells.com/blog/static_and_dynamic_libraries.html)
+- [**Creating your first iOS Framework**](https://github.com/pepibumur/framework-oriented-programming)
+
+---
+
+
+# Questions? :grinning:
+![gif](images/thanks.gif)
