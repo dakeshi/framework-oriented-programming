@@ -29,6 +29,7 @@
 - Started with [**GitDo**](https://gitdo.io)
 - Applying principles to [**SoundClound**](https://soundcloud.com)
 - Ideas/Principles together **(Reference)**
+- **Feedback** is welcome :grinning:
 
 ---
 
@@ -488,6 +489,23 @@ __Examples__
 
 ---
 
+# Experimentation
+## **`import MyAppKit`**
+
+- Prototyping.
+- Playgrounds.
+
+```swift
+// Playground
+import SoundCloudKit
+
+SoundCloud.search(term: "acdc").subscribeNext { tracks in
+  print(track.name)
+}
+```
+
+---
+
 # Multiplatform apps
 ## **Only working on the UI**
 ## :watch::iphone::tv::computer:
@@ -633,9 +651,10 @@ pod 'AppKit'
 ## **External Dependencies?**
 **RECOMMENDATION :warning:**
 
-- `carthage checkout` for Framework Dependencies
-- `pod install` for app Dependencies
-- You can also use Git Submodules
+- __If CocoaPods for local__: Use it also for external.
+- __If manual setup__ Use Carthage for checking out external dependencies `carthage update`
+  - With the binary.
+  - Adding the project to the workspace: `--no-build`
 
 ---
 
@@ -685,11 +704,51 @@ pod 'AppKit'
 ---
 
 # __Conclusions__
+## **Very useful** for multi-platform projects
 
-- **Very useful** for multi-platform projects.
-- Contributes with **less coupled** code *(defined boundaries)*
-- Setup requires some **Xcode Build Settings knowledge**
-- **Swift & Dynamic** frameworks make things easier.
+---
+
+# __Conclusions__
+##  Contributes with **less coupled** code
+### *(defined boundaries)*
+
+---
+
+# __Conclusions__
+## Setup requires some **Xcode Build Settings knowledge**
+### *Unless you use CocoaPods*
+
+---
+
+# __Conclusions__
+## **Swift & Dynamic frameworks** make things easier
+
+- Visibility.
+- Type safety.
+- Resources in Frameworks.
+
+---
+
+# __Conclusions__
+## **Minimise** external dependencies (KISS)
+### _(avoid more than 2 levels)_
+
+---
+
+# __Conclusions__
+## Use your **commonsense**
+### _When deciding the Frameworks you need_
+### _(don't get inspired from Javascript)_
+
+---
+
+# __Conclussion__
+## **Configuration** depends on your project
+- New project?
+- Existing project to migrate?
+- Many external dependencies?
+- Not that many?
+- Already using CocoaPods?
 
 ---
 
@@ -705,6 +764,10 @@ pod 'AppKit'
 
 ---
 
+![gif](images/thanks.gif)
+
+----
 
 # Questions? :grinning:
-![gif](images/thanks.gif)
+
+[SpeakerDeck Slides: http://bit.ly/22m4lwi](http://bit.ly/22m4lwi)
