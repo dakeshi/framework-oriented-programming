@@ -20,6 +20,8 @@ The ideas behind this paper are not new. They're based on existing principles an
 | :book: |  [**Reference**](#reference) and resources that might be useful |
 
 ## Checklist
+- [ ] Remove tutorial from README.
+- [ ] Add GitDo to the examples folder.
 - [ ] Include a testing section.
 - [ ] Explain migration approaches.
 
