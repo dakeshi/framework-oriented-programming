@@ -41,6 +41,7 @@
 - How to?
 - Open Questions
 - SoundCloud attempt
+- Downsides
 - Conclusions
 
 ---
@@ -53,6 +54,7 @@
 - How to?
 - Open Questions
 - SoundCloud attempt
+- Downsides
 - Conclusions
 
 ---
@@ -174,6 +176,7 @@ Best Practices, Principles, Advices..
 - How to?
 - Open Questions
 - SoundCloud attempt
+- Downsides
 - Conclusions
 
 ---
@@ -481,6 +484,7 @@ __Examples__
 - How to?
 - Open Questions
 - SoundCloud attempt
+- Downsides
 - Conclusions
 
 ---
@@ -571,6 +575,7 @@ SoundCloud.search(term: "acdc").subscribeNext { tracks in
 - **How to?**
 - Open Questions
 - SoundCloud attempt
+- Downsides
 - Conclusions
 
 ---
@@ -645,6 +650,7 @@ pod 'AppKit'
 - How to?
 - **Open Questions**
 - SoundCloud attempt
+- Downsides
 - Conclusions
 
 ---
@@ -702,6 +708,7 @@ pod 'AppKit'
 - How to?
 - Open Questions
 - **SoundCloud attempt**
+- Downsides
 - Conclusions
 
 ---
@@ -743,6 +750,37 @@ Local Pods + No versioning + Team = `It Sucks`
 - How to?
 - Open Questions
 - SoundCloud attempt
+- **Downsides**
+- Conclusions
+
+---
+
+# Lack of documentation
+### __Tip: Use CocoaPods and copy the configuration__
+
+---
+
+# Storyboards/Xibs in Frameworks
+# __Sucks 😥__
+### __Tip 1: Keep them in the application target__
+### __Tip 2: Reuse UI only if it's in code__
+
+---
+
+# Frameworks code recognition
+# __Sucks even more 😭__
+
+---
+
+# Index
+
+- Context
+- Principles
+- Advantages
+- How to?
+- Open Questions
+- SoundCloud attempt
+- Downsides
 - **Conclusions**
 
 ---
