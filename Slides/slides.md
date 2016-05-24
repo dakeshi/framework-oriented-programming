@@ -40,6 +40,7 @@
 - Advantages
 - How to?
 - Open Questions
+- SoundCloud attempt
 - Conclusions
 
 ---
@@ -51,6 +52,7 @@
 - Advantages
 - How to?
 - Open Questions
+- SoundCloud attempt
 - Conclusions
 
 ---
@@ -151,7 +153,7 @@
 
 - Allow embedded resources *(images, fonts, ...)*
 - Dynamically linked *(No duplicated symbols)*
-- Swift & Objective-C code
+- Swift code
 
 ---
 
@@ -171,6 +173,7 @@ Best Practices, Principles, Advices..
 - Advantages
 - How to?
 - Open Questions
+- SoundCloud attempt
 - Conclusions
 
 ---
@@ -477,6 +480,7 @@ __Examples__
 - **Advantages** 😋
 - How to?
 - Open Questions
+- SoundCloud attempt
 - Conclusions
 
 ---
@@ -489,11 +493,23 @@ __Examples__
 
 ---
 
+# Multiplatform apps
+## **Only working on the UI**
+## :watch::iphone::tv::computer:
+
+![inline](images/stack-multiplatform-2.png)
+
+---
+
 # Experimentation
 ## **`import MyAppKit`**
 
-- Prototyping.
-- Playgrounds.
+- Prototyping
+- Playgrounds
+
+---
+
+# Experimentation
 
 ```swift
 // Playground
@@ -503,15 +519,6 @@ SoundCloud.search(term: "acdc").subscribeNext { tracks in
   print(track.name)
 }
 ```
-
----
-
-# Multiplatform apps
-## **Only working on the UI**
-## :watch::iphone::tv::computer:
-
-![inline](images/stack-multiplatform-2.png)
-
 
 ---
 
@@ -563,6 +570,7 @@ SoundCloud.search(term: "acdc").subscribeNext { tracks in
 - Advantages
 - **How to?**
 - Open Questions
+- SoundCloud attempt
 - Conclusions
 
 ---
@@ -586,11 +594,12 @@ SoundCloud.search(term: "acdc").subscribeNext { tracks in
 - ✅ You don't have to worry about Xcode Frameworks configuration
 - ✅ Same setup for local/external dependencies
 - ❌ `.podspec` cannot point to another local `.podspec`s
+- ❌ CocoaPods sucks if you don't version.
 
 ---
 
 # How to?
-### **Local CocoaPods Dependencies**
+### **Local podspec discovery**
 
 ```ruby
 # Networking ~> Core dependency not found
@@ -602,7 +611,7 @@ pod 'AppKit'
 ---
 
 # How to?
-### **Local CocoaPods Dependencies**
+### **Local podspec discovery**
 
 ```ruby
 pod 'Core'
@@ -615,9 +624,9 @@ pod 'AppKit'
 # How to?
 ### **Manual**
 
-- ✅ More control over the workspace.
-- ✅ External dependencies can be checked out with Carthage/Git Submodules.
-- ❌ It requires some knowledge about Xcode projects.
+- ✅ More control over the workspace
+- ❌ Cumbersome setup *(Build Settings)*
+- External dependencies can be checked out with Carthage/Git Submodules.
 
 ---
 
@@ -628,14 +637,6 @@ pod 'AppKit'
 
 ---
 
-# How to?
-### **Hybrid**
-
-- ✅ More control over the workspace setup for your stack.
-- ✅ Automatic CocoaPods integration for the top layer.
-
----
-
 # Index
 
 - Context
@@ -643,6 +644,7 @@ pod 'AppKit'
 - Advantages
 - How to?
 - **Open Questions**
+- SoundCloud attempt
 - Conclusions
 
 ---
@@ -651,8 +653,8 @@ pod 'AppKit'
 ## **External Dependencies?**
 **RECOMMENDATION :warning:**
 
-- __If CocoaPods for local__: Use it also for external.
-- __If manual setup__ Use Carthage for checking out external dependencies `carthage update`
+- __If CocoaPods for local:__ Use it also for external.
+- __If manual setup:__ Use Carthage for checking out external dependencies `carthage update`
   - With the binary.
   - Adding the project to the workspace: `--no-build`
 
@@ -662,9 +664,9 @@ pod 'AppKit'
 ## **Versioning? Git repo per framework?**
 
 **RECOMMENDATION :warning:**
-- Keep it in the same repository *(fast iterations)*
-- Move it once it consolidates. *(sporadic changes)*
-- Then version it! *(snapshots in time)*
+1. Keep it in the same repository *(fast iterations)*
+2. Move it once it consolidates. *(sporadic changes)*
+3. Then version it! *(snapshots in time)*
 
 ---
 
@@ -699,51 +701,80 @@ pod 'AppKit'
 - Advantages
 - How to?
 - Open Questions
+- **SoundCloud attempt**
+- Conclusions
+
+---
+
+# We **failed** at our first try
+## Why?
+
+---
+
+# 1. We did setup with **CocoaPods**
+*I'm not against CocoaPods!*
+
+Local Pods + No versioning + Team = `It Sucks`
+
+---
+
+# 2. __Too many__ frameworks
+
+- No clear responsibilities
+- Crossed dependencies
+- Messy dependency tree
+- Very small responsibilities
+
+---
+
+![soundcloud-dependencies](images/soundcloud-dependencies.png)
+
+---
+
+![gitdo-dependencies](images/gitdo-dependencies.png)
+
+---
+
+# Index
+
+- Context
+- Principles
+- Advantages
+- How to?
+- Open Questions
+- SoundCloud attempt
 - **Conclusions**
 
 ---
 
-# __Conclusions__
-## **Very useful** for multi-platform projects
+# **Very time-saver**
+## for multi-platform projects
 
 ---
 
-# __Conclusions__
-##  Contributes with **less coupled** code
+#  Helps with **less coupled** code
 ### *(defined boundaries)*
 
 ---
 
-# __Conclusions__
-## Setup requires some **Xcode Build Settings knowledge**
+# Setup requires some
+## **Xcode Build Settings knowledge**
 ### *Unless you use CocoaPods*
 
 ---
 
-# __Conclusions__
-## **Swift & Dynamic frameworks** make things easier
-
-- Visibility.
-- Type safety.
-- Resources in Frameworks.
-
----
-
-# __Conclusions__
-## **Minimise** external dependencies (KISS)
+# **Minimize** external dependencies (KISS)
 ### _(avoid more than 2 levels)_
 
 ---
 
-# __Conclusions__
-## Use your **commonsense**
-### _When deciding the Frameworks you need_
+# Use your **commonsense**
+## _When deciding the Frameworks you need_
 ### _(don't get inspired from Javascript)_
 
 ---
 
-# __Conclussion__
-## **Configuration** depends on your project
+# **Configuration** depends on your project
 - New project?
 - Existing project to migrate?
 - Many external dependencies?

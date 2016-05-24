@@ -34,6 +34,10 @@ The ideas behind this paper are not new. They're based on existing principles an
 - The project includes slides in `/Slides`. They are written using [Deckset](http://www.decksetapp.com/).
 - They are also available on [Speakerdeck](http://bit.ly/22m4lwi).
 
+## Talks
+- **23/05/2016**: Introducción a la Programación Orientada a Frameworks:
+ [Link](https://www.youtube.com/watch?v=UFuDpcB4yTc)
+
 # 1 - Context
 
 ![Apple available platforms](Assets/apple-software.png)
