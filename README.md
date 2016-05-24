@@ -1,5 +1,5 @@
 # Framework Oriented Programming (iOS/OSX/tvOS/watchOS)
-#### *Iteration 0.0.3*
+#### *Iteration 0.0.4*
 
 [![Build Status](https://travis-ci.org/pepibumur/framework-oriented-programming.svg?branch=master)](https://travis-ci.org/pepibumur/framework-oriented-programming)
 
@@ -24,7 +24,9 @@ The ideas behind this paper are not new. They're based on existing principles an
 - [ ] Explain migration approaches.
 
 ## Changelog
-- **0.0.3** *(27/04/2016)*:
+- **0.0.4** *(24/05/2016)*:
+  - Add Examples support for contributors.
+- **0.0.3** *(23/05/2016)*:
   - Remove images from principles in the `README.md`
   - Add link to the Slides in the README.
 - **0.0.2** *(17/05/2016)*: Add two extra principles, Final and Core.
@@ -38,7 +40,7 @@ The ideas behind this paper are not new. They're based on existing principles an
 - **23/05/2016**: Introducción a la Programación Orientada a Frameworks:
  [Link](https://www.youtube.com/watch?v=UFuDpcB4yTc)
 
-# 1 - Context
+# Context
 
 ![Apple available platforms](Assets/apple-software.png)
 
@@ -58,7 +60,7 @@ Our box seemed to be also tied to our external dependencies and we could live wi
 
 Our code bases were not ready to these big changes. Then some of us took the **workaround** way, that term so familiar for many developers. Apple was pushing towards using dynamic frameworks for watch apps, why not following what Apple said? I create another target for the watch app, and share some classes between my application and the watch one. Problem solved! This solved part of the problem partially, and workarounds shouldn't be the way we solve our problems, they are breakable, fragile, and don't scale.
 
-# 2 - Motivation
+# Motivation
 
 It was then when I decided to invest some time in figuring out how applications nowadays should be structured and documented it on this paper. The main goal of this architecture proposal was:
 
@@ -69,7 +71,7 @@ It was then when I decided to invest some time in figuring out how applications 
 
 I called it *"Framework Oriented Programming"* and brought the joyfulness of playing with **LEGO** to the Swift/Objective-C development.
 
-# 3 - Principles
+# Principles
 
 ### 1. Single responsibility
 **Based on the 1st SOLID principle: Single Responsibility**
@@ -156,7 +158,7 @@ Most of projects share code that is used by all the components around the app. T
 
 To know if a component should be part of Core try to answer the following question: *Is that component going to be used by all the Frameworks in the stack or is it only needed by one of them?*
 
-# 4 - Example
+# Example
 
 ![FOP Example](/Assets/Framework-Stack.png)
 
@@ -177,7 +179,7 @@ To setup the project locally:
 5. Execute `bash script/dependencies` to resolve Carthage dependencies.
 6. Open the project using `Frameworks.xcworkspace`.
 
-# 5 - Tutorial (Dynamic Frameworks)
+# Tutorial (Dynamic Frameworks)
 
 ### 1. Workspace
 The first thing you need is a workspace where all the projects will be. If you already got the one from CocoaPods you can use that one. If not, from Xcode you can easily create it. From `File` select `Save as Workspace...`. Voila! :tada:, workspace created. Your workspace includes your application project.
@@ -230,7 +232,7 @@ If you build the app it should work! :tada:. Import your Frameworks and use them
 import Core
 ```
 
-# 6 - Open questions
+# Open questions
 
 ## Dependency managers
 
@@ -296,17 +298,25 @@ Ideally external dependencies should be simplified because otherwise your depend
   - Checkout using **Git Submodules**.
 
 
-# 7 - Contribute
-If you want to contribute with the paper, you can:
+# Contribute
 
-- **Create a PR:** With your proposal. Make sure to include an explicit description about what you're trying to merge into the source project.
-- **Open an Issue:** With any error or incoherence you might have found.
+**Proposing enhancements to the reference**
+  - **Create a PR:** With your proposal. Make sure to include an explicit description about what you're trying to merge into the source project.
+  - **Open an Issue:** With any error or incoherence you might have found.
 
-# 8 - Contributors
+**Adding your project stack**
+
+1. Add the stack to `/Examples`
+2. Update the `/Examples/README` including your company stack.
+3. Update the `README.md` document with you as a contributor.
+4. Thanks :beer:
+
+# Contributors
 
 - Felix Gabel - [@blinker13](https://github.com/blinker13)
+- Juan Cazalla -  [juancazalla](https://github.com/juancazalla)
 
-# 9 - Reference
+# Reference
 
 - **Library Oriented Programming** *(Justin Spahr-Summers)* - [Link](https://realm.io/news/justin-spahr-summers-library-oriented-programming/)
 - **Building Modern Frameworks** *(Apple)* - [Link](https://developer.apple.com/videos/play/wwdc2014/416/)

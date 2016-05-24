@@ -26,10 +26,12 @@
 ---
 
 # __Framework__ Oriented Programming
-- Started with [**GitDo**](https://gitdo.io)
+- Started with **GitDo**: [gitdo.io](https://gitdo.io)
 - Applying principles to [**SoundClound**](https://soundcloud.com)
-- Ideas/Principles together **(Reference)**
-- **Feedback** is welcome :grinning:
+- **Ideas/Principles** together in a repository *(Reference)*
+- **Feedback** is welcome 💌 *(pepibumur@gmail.com)*
+
+^
 
 ---
 
@@ -70,7 +72,7 @@
 # Context
 
 #### **2008**
-## Apple launches iPhone OSX Software Development Kit :iphone:
+## Apple launches iPhone Software Development Kit :iphone:
 #### _(Developers move to iOS. New platform, frameworks,... New exciting area)_
 
 ---
@@ -110,26 +112,29 @@
 
 # :watch: :tv:
 
+^ Something big took place.
+^ Two new platforms to code for.
+
 ---
 
 # OMG
-#### **That's awesome**
-
-![fill](images/The-Hills.gif)
-
----
-
-### **When your manager said**
-## _"We have plans to launch the company app for these platforms"_
+## **That's**
+## **Awesome**
 
 ![fill](images/dnc.gif)
 
+^ That was very exciting. New development area
+
 ---
-## Trying to __reuse__
-### your code base
-# :cold_sweat:
+
+# Trying to
+#  __reuse__ :cold_sweat:
+## your code base
 
 ![fill](images/tmhnks.gif)
+
+^ But when you tried to reuse your application logic
+^ You **figure out** it was a big nightmare.
 
 ---
 
@@ -140,12 +145,20 @@
 ## tvOS == **1 Bundle***
 ## watchOS == **1 Bundle***
 
+^ What initially was only one bundle.
+^ Turned into four bundles, one per platform.
+
 ---
 
 # How to reuse code?
 ### _(across platforms)_
 
 ## **Frameworks**
+
+^ The need of reusing logic came up.
+^ How can we do it?
+^ The answer is very simple.
+^ Using **Frameworks**
 
 ---
 
@@ -157,6 +170,11 @@
 - Dynamically linked *(No duplicated symbols)*
 - Swift code
 
+^ Swiff made it easier thanks to Frameworks.
+^ They allowed embedding resources such as images and fonts.
+^ It also allowed linking them dynamically (avoiding duplicated symbols problems).
+^ And having Swift code!
+
 ---
 
 # Framework Oriented Programming
@@ -165,6 +183,11 @@
 Best Practices, Principles, Advices..
 
 [github.com/pepibumur/framework-oriented-programming](https://github.com/pepibumur/framework-oriented-programming)
+
+^ Articles: If you do some research you can find some good articles and references about how to create Frameworks.
+^ Reference: However, there's no good reference of how to design and organize them.
+^ Companies: Some companies are already doing it but almost none of them share how they do it.
+^ FOP: I experimented with it and created a reference with best practices, principles and advices.
 
 ---
 
@@ -179,17 +202,23 @@ Best Practices, Principles, Advices..
 - Downsides
 - Conclusions
 
+^ Let's dive into the principles
+
 ---
 
 # Frameworks Stack
+### __SoundCloud Approach__
 
 ![inline](images/stack.png)
 
----
-
-# Principles
-## __Let's dive into the theory__
-### _(if you have better names, :bell: me)_
+^ Before: Before starting with the first principle I'd like to show you the stack approach that we are trying at SoundCloud.
+^ Broken line frameworks are those that are accessed by all frameworks of the stack. I'll explain later on what they are for.
+^ Low: In the low level we find three frameworks that we generally find in most of the apps, one for networking that includes the wrapper around NSURLSession and the models. Another wrapper for persistency that includes the wrapper around Realm/CoreData and the models. We can also include here another persistency solutions such as Keychain, NSFileManager or NSUserDefaults. And another framework for analytics.
+^ Middle: In the middle we find the Kit framework that is responsible of the business logic combining the frameworks from the frameworks below. We can have a big Kit for the whole app, or kits per feature.
+^ Side: On the side we have one Framework with design related stuff such as Fonts, Colors...
+^ Top: And on top of all of them we have different targets for each platform.
+^ Multiplatform: All these frameworks are multiplatform, which means we have to pay attention when designing them since they shouldn't use any component that is tied to an specific platform. For example UIColor or NSFont that are part of UIKit and AppKit respectively.
+^ SoundCloud: This was our approach but not the only one. I'll use it as a reference to go with you through the principles.
 
 ---
 
@@ -197,19 +226,31 @@ Best Practices, Principles, Advices..
 ## __SOLID inspired__
 ![inline](images/stack-single-networking.png)
 
+^ Inspired: The first principle is SOLID inspired.
+^ Our frameworks should have a single responsibility and we must ensure it from the beginning.
+^ Keep these responsibility boundaries always in mind when working with your frameworks.
+^ Thus Networking should be responsible of offering the API access layer and defining the response models.
+^ If our API is an authenticated API the authentication flow could be also part of it.
+
 ---
 
 # 1. Single Responsibility
 ## __SOLID inspired__
 ![inline](images/stack-single-persistence.png)
 
+^ The responsibility of persistence for example would be including the access layer to CoreData and the models. The Keychain access layer could also be part of this Framework and later on we could extract it out to its own Framework.
+
 ---
 
 # Responsibility?
 ### __CoreData access layer?__
 
-
 ![fill](images/responsibility-gif.gif)
+
+^ Defining the responsibility is hard
+^ It changes over time when your framework evolves.
+^ A lot of questions might arise when defining when defining our Frameworks Responsibility.
+^ Where should the CoreData Access layer be?
 
 ---
 
@@ -218,6 +259,8 @@ Best Practices, Principles, Advices..
 ### __Storage access layer?__
 
 ![fill](images/responsibility-gif.gif)
+
+^ Where should the Storage access layer be?
 
 ---
 
@@ -228,14 +271,7 @@ Best Practices, Principles, Advices..
 
 ![fill](images/responsibility-gif.gif)
 
----
-
-# Responsibility?
-### __CoreData access layer?__
-### __Storage access layer?__
-### __Keychain access layer?__
-
-![fill](images/responsibility-gif.gif)
+^ What about Keychain?
 
 ---
 
@@ -246,6 +282,8 @@ Best Practices, Principles, Advices..
 ### __Models?__
 
 ![fill](images/responsibility-gif.gif)
+
+^ And the models?
 
 ---
 
@@ -258,11 +296,16 @@ Best Practices, Principles, Advices..
 
 ![fill](images/responsibility-gif.gif)
 
+^ It's not something easy to decide about.
+
 ---
 
 # 1. Single Responsibility
 ## __Start from a high level__
 ![inline](images/stack-single-persistence.png)
+
+^ My recommendation is that you should start from a high level such as the examples I showed on the slides.
+^ Let's take Persistence as an example. Initially we have a framework that includes all the persistency wrappers in the same place and also the models.
 
 ---
 
@@ -270,11 +313,15 @@ Best Practices, Principles, Advices..
 ## __Slice them progressively__
 ![inline](images/stack-single-slice-1.png)
 
+^ We might find interesting to extract our application specific stuff into its own Framework (models) and separate them from the wrappers. That new framework could be use in a different project since it's not tied to your platform anymore.
+
 ---
 
 # 1. Single Responsibility
 ## __Slice them progressively__
 ![inline](images/stack-single-slice-2.png)
+
+^ Another step further could be just splitting the persistence solutions. For example have a Framework only for the database, and another one only for Keychain. Why not?
 
 ---
 
@@ -282,7 +329,10 @@ Best Practices, Principles, Advices..
 ## __(Over Horizontal)__
 ![inline](images/stack-vertical.png)
 
+^ The second principle states that dependencies should be vertical.
 ^ We want to have more cohesion between layers avoiding coupling between elements in the same layer.
+^ For example, Networking shouldn't know anything about how to persist data, or persistence shouldn't know anything about where the data comes from.
+^ Elements in the same layer shouldn't know about each other but about the frameworks in the layer below.
 
 ---
 
@@ -291,30 +341,35 @@ Best Practices, Principles, Advices..
 
 ![inline](images/stack-lower.png)
 
-^Dependencies of lower frameworks and are also dependencies of upper frameworks
+^ The third principle states that the number of external dependencies should increase as we go higher in the stack.
+^ The reason is that dependencies of low levels are also dependencies of the upper levels.
+^ Ideally you should avoid external dependencies as much as possible. But if you cannot try to respect this principle.
 
 ---
 
 # 4. __One Step__ Dependencies
 ![inline](images/stack-one-1.png)
 
-^ Frameworks should depend only on the frameworks below them.
+^ The fourth principle states that the dependencies should be only one step down but no more.
+^ In this example AppKit dependencies are one level below itself which would satisfy the principle.
 
 ---
 
 # 4. __One Step__ Dependencies
 ![inline](images/stack-one-2.png)
 
+^ But for example iOS shouldn't know anything about Networking/Persistence/Analytics
 ^ This would make replacement easier and the frameworks less coupled.
-^ Restrict the elements that are publicly exposed to other frameworks.
-^ Define the scope of your framework and expose only that scope.
 
 ---
 
 # 5. __Internal__ by default
 ![inline](images/stack-internal.png)
 
-^Swift makes it easier since internal is the default visibility.
+^ Components should be internal by default.
+^ You don't have to actually do anything if you use Swift since that's the default.
+^ Limit what can be accessed. Restrict the freedom and make public only your framework API.
+^ If you use Objective-C in Build Phases you can define which headers are public/project/private.
 
 ---
 
@@ -323,8 +378,10 @@ Best Practices, Principles, Advices..
 
 ![inline](images/stack-final.png)
 
+^ The sixth principle is the final principle.
 ^ It's based in the open/closed principle of SOLID.
 ^ Allow extension (open) but without modifying the implementation.
+^ That said if a framework exposes a component Pedro
 
 ---
 
@@ -333,12 +390,17 @@ Best Practices, Principles, Advices..
 
 ![inline](images/stack-final-1.png)
 
+^ He can be extended with a lookNice method
+^ Or a bePolice extension
+
 ---
 
 # 6. Final
 ## __SOLID inspired (open/closed)__
 
 ![inline](images/stack-final-2.png)
+
+^ But we could never change its implementation and make Pedro a Ghost
 
 ---
 
@@ -354,12 +416,18 @@ class Alien: Person { // Compiler complains
 }
 ```
 
+^ The way we can get this done is making our classes/methods final.
+^ With that we block any possible extension that would change our base classes.
+
 ---
 
 # 7. Framework __models__
 ### __Don't share lower frameworks models upwards__
 
 ![inline](images/stack-models-1.png)
+
+^ Each framework should expose publicly its own models and not share models from the frameworks below.
+^ That way we prevent coupling upper levels with the levels below.
 
 ---
 
@@ -368,6 +436,14 @@ class Alien: Person { // Compiler complains
 ### __Don't share lower frameworks models upwards__
 
 ![inline](images/stack-models-2.png)
+
+^ If we needed to expose a model up we should wrap them into a different object.
+^ I'm going to give you a typical example.
+^ Persistence exposes NSManagedObject models to AppKit.
+^ From AppKit we don't want to expose this models app for two main reasons:
+^ - We would be coupling the app to CoreData
+^ - We would be using context dependent objects.
+^ What we should instead is created value types, entities with the properties that are really needed.
 
 ---
 
@@ -408,6 +484,9 @@ struct StreamTrackEntityAdapter {
 # 8. Platform __Abstraction__
 ![inline](images/stack-platform-1.png)
 
+^ Make your Frameworks multiplatform.
+^ Multiplatform frameworks are highlighted in the stack. Only the apps are the platform specific targets.
+
 ---
 
 # __But...__
@@ -418,6 +497,8 @@ __Examples__
 - `NSIndexPath` is slightly different for watchOS.
 
 ![](images/dsori.gif)
+
+^ But what if there's platform specific logic?
 
 ---
 
@@ -432,30 +513,48 @@ __Examples__
 #endif
 ```
 
+^ You have Objective-C and Swift compilation macros where you decide which code should be included depending on the platform.
+
 ---
 
 # 9. __Protocol__ Oriented Interfaces
 ![inline](images/stack-protocols-1.png)
+
+^ Frameworks public interfaces should be abstractions, protocols.
+^ Why?
+^ In the example you see like instead of relying on these abstraction layers, we rely on the concrections.
 
 ---
 
 # 9. __Protocol__ Oriented Interfaces
 ![inline](images/stack-protocols-2.png)
 
+^ If someone updates the networking implementation.
+^ We'll be forced to also update our Framework.
+
 ---
 
 # 9. __Protocol__ Oriented Interfaces
 ![inline](images/stack-protocols-3.png)
+
+^ However, if we rely on these abstraction layers
 
 ---
 
 # 9. __Protocol__ Oriented Interfaces
 ![inline](images/stack-protocols-4.png)
 
+^ And someone decides to update the implementation.
+^ We won't be affected and we don't have to update our AppKit.
+
 ---
 
 # 9. __Protocol__ Oriented Interfaces
 ![inline](images/stack-protocols-5.png)
+
+^ Only in that case when the abstraction layer is updated.
+^ We'll be force to update our AppKit.
+^ But that's mostly when there's a new version of the Framework.
 
 ---
 
@@ -463,6 +562,11 @@ __Examples__
 ### __(aka your project Foundation frameworks)__
 
 ![inline](images/stack-foundation.png)
+
+^ And the last one, have a core/testing framework.
+^ They are the foundation of your project.
+^ They are accessible from all the frameworks in the stack.
+^ Testing for example should include any testing external library, helpers, fixtures and factories.
 
 ---
 
@@ -473,6 +577,9 @@ __Examples__
 - Logging
 - Analytics
 - Architectural components (e.g. Reactive)
+
+^ Regarding Core it would include Foundation extensions, logging and analytics tools, as well as architectural components.
+^ For example if you use Reactive Programming, you could offer the Reactive components form here.
 
 ---
 
@@ -495,6 +602,10 @@ __Examples__
 
 ![inline](images/stack-multiplatform-1.png)
 
+^ The first main advantage is that you can create multiple platform applications easily
+^ Once you have the stack define giving support to a new platform is about creating the application layer.
+^ Mostly the UI layer.
+
 ---
 
 # Multiplatform apps
@@ -511,6 +622,9 @@ __Examples__
 - Prototyping
 - Playgrounds
 
+^ More over you can experiment easily.
+^ Wouldn't you enjoy importing your Frameworks in a Playground and executing API requests directly from there?
+
 ---
 
 # Experimentation
@@ -524,6 +638,8 @@ SoundCloud.search(term: "acdc").subscribeNext { tracks in
 }
 ```
 
+^ How many of you would like to play on this way with your projects?
+
 ---
 
 # New products
@@ -531,6 +647,11 @@ SoundCloud.search(term: "acdc").subscribeNext { tracks in
 ### *Because you want to reuse code, right?*
 
 ![inline](images/stack-products-1.png)
+
+^ This setup is also great for creating new products that share similar core needs.
+^ In SoundCloud we have the listeners app that is the one you find on the Store as SoundCloud.
+^ But we also have a SoundCloud for creators app that we had to build using React Native.
+^ Sadly from the iOS team because we couldn't offer them any reusable component.
 
 ---
 
@@ -540,6 +661,10 @@ SoundCloud.search(term: "acdc").subscribeNext { tracks in
 
 ![inline](images/stack-products-2.png)
 
+^ Your reusable Frameworks can also be open sourced.
+^ Your project or company could benefit form the community contributions.
+^ Let's say we build a wrapper around CoreData. We could separate our application related components and offer the wrapper in open as other companies are doing.
+
 ---
 
 # Open Source
@@ -548,6 +673,10 @@ SoundCloud.search(term: "acdc").subscribeNext { tracks in
 
 ![inline](images/stack-opensource.png)
 
+^ You could have specialized teams focused in some framewors.
+^ If your team is not big enough you could have a team working in the whole app.
+^ But as soon as your team grows you could split responsibilities.
+
 ---
 
 # Specialized teams
@@ -555,6 +684,9 @@ SoundCloud.search(term: "acdc").subscribeNext { tracks in
 ### _(clearly defined team boundaries)_
 
 ![inline](images/stack-teams-1.png)
+
+^ Having people working on the UI layer.
+^ And some others working closer to the backend of the app.
 
 ---
 
@@ -758,12 +890,19 @@ Local Pods + No versioning + Team = `It Sucks`
 # Lack of documentation
 ### __Tip: Use CocoaPods and copy the configuration__
 
+^ Unless you have played a lot with Build Settings it's not a straightforward process.
+^ You'll get some errors, missing symbols, unrecognized components and you don't know why.
+^ If you know about it, go ahead with a manual process.
+^ If you don't there's a trick which is based on using CocoaPods.
+
 ---
 
 # Storyboards/Xibs in Frameworks
 # __Sucks 😥__
 ### __Tip 1: Keep them in the application target__
 ### __Tip 2: Reuse UI only if it's in code__
+
+
 
 ---
 
