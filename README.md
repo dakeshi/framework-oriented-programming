@@ -1,5 +1,5 @@
 # Framework Oriented Programming (iOS/OSX/tvOS/watchOS)
-#### *Iteration 0.0.4*
+#### *Iteration 0.0.5*
 
 [![Build Status](https://travis-ci.org/pepibumur/framework-oriented-programming.svg?branch=master)](https://travis-ci.org/pepibumur/framework-oriented-programming)
 
@@ -19,11 +19,14 @@ The ideas behind this paper are not new. They're based on existing principles an
 | :book: |  [**Reference**](#reference) and resources that might be useful |
 
 ## Checklist
-- [ ] Add GitDo to the examples folder.
 - [ ] Include a testing section.
 - [ ] Explain migration approaches.
 
 ## Changelog
+- **0.0.5**: *(25/05/2916)*:
+  - Add GitDo example.
+  - Create a `Documentation` folder.
+  - Some cleanup
 - **0.0.4** *(24/05/2016)*:
   - Add Examples support for contributors.
 - **0.0.3** *(23/05/2016)*:
