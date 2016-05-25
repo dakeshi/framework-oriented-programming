@@ -13,14 +13,12 @@ The ideas behind this paper are not new. They're based on existing principles an
 | :candy: |  [**Motivation**](#motivation) why we came up with this architecture |
 | :one: |  [**Principles**](#principles): for a right implementation |
 | :metal: |  [**Example**](#example) to dive into |
-| :surfer: |  [**Tutorial**](#tutorial) how to implement it in your projects|
 | :question: |  [**Open Questions**](#open-questions) that you might also have |
 | :point_up: |  [**Contribute**](#contribute) and improve FOP |
 | :family: |  [**Contributors**](#contributors) because we, all, are part of this |
 | :book: |  [**Reference**](#reference) and resources that might be useful |
 
 ## Checklist
-- [ ] Remove tutorial from README.
 - [ ] Add GitDo to the examples folder.
 - [ ] Include a testing section.
 - [ ] Explain migration approaches.
