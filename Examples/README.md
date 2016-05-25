@@ -1,4 +1,4 @@
-### Other companies examples
+# Other companies examples
 
 ## GitDo :octocat:
 
