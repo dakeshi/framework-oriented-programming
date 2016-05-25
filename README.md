@@ -261,7 +261,8 @@ Ideally external dependencies should be simplified because otherwise your depend
 # Contributors
 
 - Felix Gabel - [@blinker13](https://github.com/blinker13)
-- Juan Cazalla -  [juancazalla](https://github.com/juancazalla)
+- Juan Cazalla -  [@juancazalla](https://github.com/juancazalla)
+- Isaac Roldán - [@isaacroldan](https://github.com/isaacroldan)
 
 # Reference
 
