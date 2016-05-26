@@ -11,27 +11,18 @@
 
 ---
 
-## About Me
-- **iOS Developer at SoundCloud**
-- Email: [pepibumur@gmail.com](mailto://pepibumur@gmail.com)
-- GitHub: [github.com/pepibumur](https://github.com/pepibumur)
-- Twitter: [twitter.com/pepibumur](https://twitter.com/pepibumur)
-<br>
-- Open Source Project: [**SugarRecord**](https://github.com/pepibumur/sugarrecord)
-<br>
->  Mention me with your cool :camera:
-
-![right](images/me.jpg)
+![original fill](images/me.jpg)
+### iOS Developer at
+### SoundCloud
+### _@pepibumur_
 
 ---
 
 # __Framework__ Oriented Programming
-- Started with **GitDo**: [gitdo.io](https://gitdo.io)
+- Started with [**GitDo**](http://gitdo.io)
 - Applying principles to [**SoundClound**](https://soundcloud.com)
 - **Ideas/Principles** together in a repository *(Reference)*
-- **Feedback** is welcome 💌 *(pepibumur@gmail.com)*
-
-^
+- **Feedback** is welcome 💌
 
 ---
 
@@ -223,7 +214,7 @@ Best Practices, Principles, Advices..
 ---
 
 # 1. Single Responsibility
-## __SOLID inspired__
+#### __SOLID inspired__
 ![inline](images/stack-single-networking.png)
 
 ^ Inspired: The first principle is SOLID inspired.
@@ -235,7 +226,7 @@ Best Practices, Principles, Advices..
 ---
 
 # 1. Single Responsibility
-## __SOLID inspired__
+#### __SOLID inspired__
 ![inline](images/stack-single-persistence.png)
 
 ^ The responsibility of persistence for example would be including the access layer to CoreData and the models. The Keychain access layer could also be part of this Framework and later on we could extract it out to its own Framework.
@@ -374,7 +365,7 @@ Best Practices, Principles, Advices..
 ---
 
 # 6. Final
-## __SOLID inspired (open/closed)__
+#### __SOLID inspired (open/closed)__
 
 ![inline](images/stack-final.png)
 
@@ -386,7 +377,7 @@ Best Practices, Principles, Advices..
 ---
 
 # 6. Final
-## __SOLID inspired (open/closed)__
+#### __SOLID inspired (open/closed)__
 
 ![inline](images/stack-final-1.png)
 
@@ -396,7 +387,7 @@ Best Practices, Principles, Advices..
 ---
 
 # 6. Final
-## __SOLID inspired (open/closed)__
+#### __SOLID inspired (open/closed)__
 
 ![inline](images/stack-final-2.png)
 
@@ -405,7 +396,7 @@ Best Practices, Principles, Advices..
 ---
 
 # 6. Final
-## __SOLID inspired (open/closed)__
+#### __SOLID inspired (open/closed)__
 
 ```swift
 final class Person {
@@ -482,6 +473,7 @@ struct StreamTrackEntityAdapter {
 ---
 
 # 8. Platform __Abstraction__
+#### __SOLID inspired (DI)__
 ![inline](images/stack-platform-1.png)
 
 ^ Make your Frameworks multiplatform.
@@ -518,6 +510,8 @@ __Examples__
 ---
 
 # 9. __Protocol__ Oriented Interfaces
+#### __SOLID inspired (DI)__
+
 ![inline](images/stack-protocols-1.png)
 
 ^ Frameworks public interfaces should be abstractions, protocols.
@@ -527,6 +521,8 @@ __Examples__
 ---
 
 # 9. __Protocol__ Oriented Interfaces
+#### __SOLID inspired (DI)__
+
 ![inline](images/stack-protocols-2.png)
 
 ^ If someone updates the networking implementation.
@@ -535,6 +531,8 @@ __Examples__
 ---
 
 # 9. __Protocol__ Oriented Interfaces
+#### __SOLID inspired (DI)__
+
 ![inline](images/stack-protocols-3.png)
 
 ^ However, if we rely on these abstraction layers
@@ -542,6 +540,8 @@ __Examples__
 ---
 
 # 9. __Protocol__ Oriented Interfaces
+#### __SOLID inspired (DI)__
+
 ![inline](images/stack-protocols-4.png)
 
 ^ And someone decides to update the implementation.
@@ -550,6 +550,8 @@ __Examples__
 ---
 
 # 9. __Protocol__ Oriented Interfaces
+#### __SOLID inspired (DI)__
+
 ![inline](images/stack-protocols-5.png)
 
 ^ Only in that case when the abstraction layer is updated.
@@ -624,21 +626,6 @@ __Examples__
 
 ^ More over you can experiment easily.
 ^ Wouldn't you enjoy importing your Frameworks in a Playground and executing API requests directly from there?
-
----
-
-# Experimentation
-
-```swift
-// Playground
-import SoundCloudKit
-
-SoundCloud.search(term: "acdc").subscribeNext { tracks in
-  print(track.name)
-}
-```
-
-^ How many of you would like to play on this way with your projects?
 
 ---
 
@@ -850,7 +837,7 @@ pod 'AppKit'
 
 ---
 
-# 1. We did setup with **CocoaPods**
+# 1. We didn't version with **CocoaPods**
 *I'm not against CocoaPods!*
 
 Local Pods + No versioning + Team = `It Sucks`
@@ -866,11 +853,22 @@ Local Pods + No versioning + Team = `It Sucks`
 
 ---
 
+![](http://www.reactiongifs.com/r/rms.gif)
+
+---
+
 ![soundcloud-dependencies](images/soundcloud-dependencies.png)
+
+^ Arrows and Core.
+^ Tied to ReactiveCocoa
+^ Very small frameworks such as Alert, Font, Launcher
 
 ---
 
 ![gitdo-dependencies](images/gitdo-dependencies.png)
+
+^ We go with less frameworks.
+^ Not that many external dependencies.
 
 ---
 
@@ -888,6 +886,7 @@ Local Pods + No versioning + Team = `It Sucks`
 ---
 
 # Lack of documentation
+## _(Targets Configuration)_
 ### __Tip: Use CocoaPods and copy the configuration__
 
 ^ Unless you have played a lot with Build Settings it's not a straightforward process.
@@ -949,6 +948,8 @@ Local Pods + No versioning + Team = `It Sucks`
 ## _When deciding the Frameworks you need_
 ### _(don't get inspired from Javascript)_
 
+- Try to have only those that you really need.
+
 ---
 
 # **Configuration** depends on your project
@@ -957,6 +958,7 @@ Local Pods + No versioning + Team = `It Sucks`
 - Many external dependencies?
 - Not that many?
 - Already using CocoaPods?
+- How many people in your team?
 
 ---
 
@@ -972,10 +974,7 @@ Local Pods + No versioning + Team = `It Sucks`
 
 ---
 
-![gif](images/thanks.gif)
-
-----
-
-# Questions? :grinning:
+# __Thanks__
+## Questions? :grinning:
 
 [SpeakerDeck Slides: http://bit.ly/22m4lwi](http://bit.ly/22m4lwi)
