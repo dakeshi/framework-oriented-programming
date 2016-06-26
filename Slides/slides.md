@@ -4,13 +4,14 @@
 
 ---
 
-# __Hello__
+<!-- # __Hello__
 ## _It's me_
 ### _(From ~~the other side~~ London)_
 ![](images/adele.gif)
 
----
+--- -->
 
+## __Pedro__
 ![original fill](images/me.jpg)
 ### iOS Developer at
 ### SoundCloud
@@ -718,7 +719,7 @@ __Examples__
 - ✅ You don't have to worry about Xcode Frameworks configuration
 - ✅ Same setup for local/external dependencies
 - ❌ `.podspec` cannot point to another local `.podspec`s
-- ❌ CocoaPods sucks if you don't version.
+- ❌ It sucks if you don't version.
 
 ---
 
@@ -968,13 +969,13 @@ Local Pods + No versioning + Team = `It Sucks`
 - [**The Unofficial Guide to xcconfig files**](https://pewpewthespells.com/blog/xcconfig_guide.html)
 - [**CocoaPods**](https://cocoapods.org)
 - [**Carthage**](https://github.com/carthage)
-- [**pepibumur/framework-oriented-programming**](https://github.com/pepibumur/framework-oriented-programming)
 - [**Static & Dynamic libraries**](https://pewpewthespells.com/blog/static_and_dynamic_libraries.html)
 - [**Creating your first iOS Framework**](https://github.com/pepibumur/framework-oriented-programming)
+- [**pepibumur/framework-oriented-programming**](https://github.com/pepibumur/framework-oriented-programming)
 
 ---
 
 # __Thanks__
 ## Questions? :grinning:
-
+__pepibumur - pepibumur@gmail.com__
 [SpeakerDeck Slides: http://bit.ly/22m4lwi](http://bit.ly/22m4lwi)
