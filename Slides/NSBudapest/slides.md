@@ -354,47 +354,6 @@ struct StreamTrackEntityAdapter {
 
 ---
 
-# But...
-### _There's platform specific logic_
-## __Examples__
-
-```swift
-NSFetchedResultsController // Not available on macOS
-NSIndexPath // Different API on watchOS
-```
-
-^ But what if there's platform specific logic?
-
----
-
-# 8. Platform _Abstraction_
-## __Macros!__
-
-```swift
-#if os(OSX)
-  // OSX logic
-#else
-  // Other platforms logic
-#endif
-```
-
-^ You have Objective-C and Swift compilation macros where you decide which code should be included depending on the platform.
-
----
-
-# 8. Platform _Abstraction_
-## __Platform binaries... Framework Search Path__
-
-```bash
-Fabric/
-  iOS/Fabric.framework
-  OSX/Fabric.framework
-  tvOS/Fabric.framework
-  // No watchOS framework
-```
-
----
-
 # 9. _Protocol_ Oriented Interfaces
 ## _SOLID inspired (DI)_
 
@@ -578,59 +537,47 @@ requestFactory.request(path: "/myPath/").subscribeNext { response in
 
 ---
 
-# How to?
-### **CocoaPods**
+# **CocoaPods**
+
 ![inline](images/stack-how-cocoapods.png)
 
 ---
 
-# How to?
-### **CocoaPods**
+# **CocoaPods**
 
 - ✅ Easy setup (each Framework `.podspec`)
-- ✅ You don't have to worry about Xcode Frameworks configuration
 - ✅ Same setup for local/external dependencies
-- ❌ `.podspec` cannot point to another local `.podspec`s
-- ❌ It sucks if you don't version.
+- ❌ It sucks if you don't version
+- ❌ Fully frameworks approach *(load time)*
 
 ---
 
-# How to?
-### **Local podspec discovery**
-
-```ruby
-# Networking ~> Core dependency not found
-pod 'Networking'
-pod 'Core'
-pod 'AppKit'
-```
-
----
-
-# How to?
-### **Local podspec discovery**
-
-```ruby
-pod 'Core'
-pod 'Networking' # Core has already been resolved
-pod 'AppKit'
-```
-
----
-
-# How to?
-### **Manual**
+# **Manual**
 
 - ✅ More control over the workspace
+- ✅ Custom setup *(you design it)*
 - ❌ Cumbersome setup *(Build Settings)*
-- External dependencies can be checked out with Carthage/Git Submodules.
+
+> External dependencies can be checked out with Carthage/Git Submodules
 
 ---
 
-# How to?
-### **Hybrid**
+# XCConfig
+### *And making your Framework multiplatform*
+
+---
+
+# **Hybrid**
 
 ![inline](images/stack-how-3.png)
+
+---
+
+# **Hybrid**
+
+- ✅ *CocoaPods* resolves/integrates app dependencies
+- ✅ *Carthage* resolves frameworks dependencies
+- ✅ Custom stack setup
 
 ---
 
@@ -657,7 +604,7 @@ pod 'AppKit'
 ---
 
 - _If CocoaPods for local:_ Use it also for external
-- _If manual setup:_ Use Carthage or Git Submodules.
+- _If manual setup:_ Use Carthage or Git Submodules
 
 ---
 
@@ -674,6 +621,7 @@ pod 'AppKit'
 
 ## How many _dynamic_ frameworks?
 ### _The more, the worse loading time_
+#### _Will :apple: improve it?_ 🤔
 
 ---
 
@@ -722,8 +670,7 @@ Core.framework
 
 ## Storyboards/Xibs in Frameworks
 ### __Sucks 😥__
-#### Tip 1: Keep them in the application target
-#### Tip 2: Reuse UI only if it's in code
+#### Tip: Keep them in the application target
 
 ---
 
@@ -732,48 +679,124 @@ Core.framework
 
 ---
 
+## Some external dependencies
+### Are distributed as *Platform Binaries*
+
+---
+
+```bash
+## XCConfig
+LD_RUNPATH_SEARCH_PATHS[sdk=macosx*] = $(inherited) Fabric/OSX
+LD_RUNPATH_SEARCH_PATHS[sdk=appletv*] = $(inherited) Fabric/tvOS
+LD_RUNPATH_SEARCH_PATHS[sdk=iphone*] = $(inherited) Fabric/iOS
+```
+
+---
+
+### Some even don't provide
+## *binaries for all the platforms*
+
+---
+
+## Proxy them using *Macros*
+
+---
+
+## Macros!
+
+```swift
+#if !os(watchOS)
+  import Fabric
+#end
+
+def log(message: String) {
+  #if !os(watchOS)
+    // Log using Fabric
+  #end
+}
+```
+
+---
+
+## *APIs*
+### Might differ between platforms
+
+---
+
+- *NSFetchedResultsController* not for macOS
+- *NSIndexPath* for watchOS has no row/section
+
+---
+
+## _Proxy them_
+### Also using macros!
+
+---
+
 # Conclusions
 ![fill](images/JjdWbOCTlemWMuvC0BeF_DSC_0867edit.jpg)
 
 ---
 
-# **Very time-saver**
-## for multi-platform projects
+## **Very time-saver**
+### *for multi-platform projects*
 
 ---
 
-#  Helps with **less coupled** code
-### *(defined boundaries)*
+##  Aims less coupled code
+### **(defined boundaries)**
+## :package:
 
 ---
 
-# Setup requires some
-## **Xcode Build Settings knowledge**
-### *Unless you use CocoaPods*
+## Setup requires some
+### **Xcode Build Settings knowledge**
+#### *(Unless you use CocoaPods)* 😬
 
 ---
 
-# **Minimize** external dependencies (KISS)
+### *Minimize* dependencies
 # 6 dependencies
-### _(avoid more than 2 levels)_
+### _(KISS)_
 
 ---
 
-# Use your **commonsense**
-## _When deciding the Frameworks you need_
-### _(don't get inspired from Javascript)_
-
-- Try to have only those that you really need.
+## Use your *commonsense*
+### When designing your stack
 
 ---
 
-# **Configuration** depends on your project
-- New project?
-- Existing project to migrate?
-- Many external dependencies?
-- Not that many?
-- Already using CocoaPods?
-- How many people in your team?
+## Use your *commonsense*
+### **Don't be a Javascript developer**
+### :package::package::package::package::package::package::package::package::package::package::package:
+
+---
+
+
+## And remember
+### _The stack depends on your needs_
+
+---
+
+### Is it a company or a freelance project?
+
+---
+
+### *Is it a company or a freelance project?*
+### Is it a new project?
+
+---
+
+### *Is it a company or a freelance project?*
+### *Is it a new project?*
+### Am I using any dependencies tool?
+
+---
+
+### *Is it a company or a freelance project?*
+### *Is it a new project?*
+### *Am I using any dependencies tool?*
+### How many people in the team?
 
 ---
 
