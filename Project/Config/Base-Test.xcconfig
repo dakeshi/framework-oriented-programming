@@ -1,6 +1,0 @@
-// Configuration for Frameworks Testing
-
-SUPPORTED_PLATFORMS        = macosx
-VALID_ARCHS = x86_64
-EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
-LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]    = $(inherited) @executable_path/../Frameworks @loader_path/Frameworks @loader_path/../Frameworks

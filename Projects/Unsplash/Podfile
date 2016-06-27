@@ -1,0 +1,8 @@
+target 'Unsplash' do
+  use_frameworks!
+
+  target 'UnsplashTests' do
+    inherit! :search_paths
+  end
+
+end
