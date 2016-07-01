@@ -287,7 +287,7 @@ class Alien: Person { // Compiler complains
 ---
 
 # 7. Framework _models_
-### _Don't share lower frameworks models upwards_
+### _Don't share frameworks' models upwards_
 
 ![inline](images/stack-models-1.png)
 
@@ -297,7 +297,7 @@ class Alien: Person { // Compiler complains
 ---
 
 # 7. Framework _models_
-### _Don't share lower frameworks models upwards_
+### _Don't share frameworks' models upwards_
 
 ![inline](images/stack-models-2.png)
 
@@ -312,7 +312,7 @@ class Alien: Person { // Compiler complains
 ---
 
 # 7. Framework _models_
-### _Don't share lower frameworks models upwards_
+### _Don't share frameworks' models upwards_
 
 ```swift
 // Persistence
@@ -333,7 +333,7 @@ struct StreamTrackEntity {
 ---
 
 # 7. Framework _models_
-### _Don't share lower frameworks models upwards_
+### _Don't share frameworks' models upwards_
 
 ```swift
 struct StreamTrackEntityAdapter {
@@ -567,6 +567,23 @@ requestFactory.request(path: "/myPath/").subscribeNext { response in
 
 ---
 
+```bash
+SUPPORTED_PLATFORMS        = iphoneos iphonesimulator appletvsimulator appletvos macosx watchsimulator watchos
+
+TARGETED_DEVICE_FAMILY[sdk=iphone*] = 1,2
+TARGETED_DEVICE_FAMILY[sdk=watch*]   = 4
+TARGETED_DEVICE_FAMILY[sdk=appletv*] = 3
+
+VALID_ARCHS[sdk=macosx*] = x86_64
+
+LD_RUNPATH_SEARCH_PATHS[sdk=iphone*] = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+LD_RUNPATH_SEARCH_PATHS[sdk=macosx*] = $(inherited) @executable_path/../Frameworks @loader_path/../Frameworks
+LD_RUNPATH_SEARCH_PATHS[sdk=watch*]   = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+LD_RUNPATH_SEARCH_PATHS[sdk=appletv*] = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+```
+
+---
+
 # **Hybrid**
 
 ![inline](images/stack-how-3.png)
@@ -638,19 +655,6 @@ Core.framework
 ```
 
 ---
-
-## _Migrate_ from existing project?
-
----
-
-- Start with **Core/Testing**
-- Move **Foundation** components down.
-- Continue building layers progressively.
-
-*You'll figure out how coupled your code is 😂*
-
----
-
 
 # Downsides :pensive:
 ![fill](images/photo-1463412855783-af97e375664b.jpeg)
@@ -816,8 +820,21 @@ def log(message: String) {
 
 ---
 
+![fill](images/one_more_thing.png)
+
+---
+
+# Szimpla
+### __Network Testing in Swift__
+#### github.com/pepibumur/szimpla
+
+![image](images/szimpla.jpg)
+
+---
+
 # __Köszönöm__ :grinning:
 ### Questions?
+#### Slides (SpeakerDeck) - [http://bit.ly/29ekocn](http://bit.ly/29ekocn)
 #### __pepibumur - pepibumur@gmail.com__
 
 ![fill](images/IMG_1647.jpg)
